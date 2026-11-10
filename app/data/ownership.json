@@ -1,0 +1,3021 @@
+{
+  "version": 1,
+  "savedAt": "2026-11-10T13:42:53.367Z",
+  "plots": {
+    "95": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Plot number not in the ZK workbook (061026_ZK DD Prečko.xlsx).",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "118": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Plot number not in the ZK workbook (061026_ZK DD Prečko.xlsx).",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3557": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1, M1-4\nk.o. Stenjevec Jug · ZK uložak 74 · total area 2668 m²\nArea per kazeta/street (ZK): M1-1 1783 m², M1-4 898 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK, REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM BANK UND REVISIONSVERBAND REGISTRIERTE GENOSSENSCHAFT MIT BESCHRÄNK; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3558": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "MUDROVČIĆ VESNICA",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1\nk.o. Stenjevec Jug · ZK uložak 559 · total area 1652 m²\nArea per kazeta/street (ZK): M1-1 749 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3559": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ŠKRINJARIĆ SLAVKO",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1\nk.o. Stenjevec Jug · ZK uložak 58 · total area 1008 m²\nArea per kazeta/street (ZK): M1-1 518 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3560": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ŠKRINJARIĆ SLAVKO",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1\nk.o. Stenjevec Jug · ZK uložak 60 · total area 559 m²\nArea per kazeta/street (ZK): M1-1 72 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3564": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "VRABEC DANICA",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1\nk.o. Stenjevec Jug · ZK uložak 269 · total area 492 m²\nArea per kazeta/street (ZK): M1-1 433 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3565": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "VRABEC DANICA",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1, M1-4\nk.o. Stenjevec Jug · ZK uložak 270 · total area 2176 m²\nArea per kazeta/street (ZK): M1-1 1681 m², M1-4 475 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3630": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "PULEK ZDRAVKO",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1, M1-2, Ulica 2\nk.o. Stenjevec Jug · ZK uložak 27 · total area 2220 m²\nArea per kazeta/street (ZK): M1-1 300 m², M1-2 1534 m², Ulica 2 371 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3632": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "HORVATEK ŽELJKO",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1, M1-2, Ulica 2\nk.o. Stenjevec Jug · ZK uložak 80 · total area 1447 m²\nArea per kazeta/street (ZK): M1-1 179 m², M1-2 1007 m², Ulica 2 235 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3634": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB - JAVNO DOBRO U OPĆOJ UPORABI U NEOTUĐIVOM VLASNIŠTVU",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2\nk.o. Stenjevec Jug · ZK uložak 659 · total area 188 m²\nArea per kazeta/street (ZK): M1-2 187 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3645": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-4\nk.o. Stenjevec Jug · ZK uložak 31 · total area 718 m²\nArea per kazeta/street (ZK): M1-4 722 m²\nEncumbrances (List C): 15.000.000,00 KN – PROJEKT MAKSIMUS d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3646": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-4\nk.o. Stenjevec Jug · ZK uložak 335 · total area 2815 m²\nArea per kazeta/street (ZK): M1-4 2817 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 46.900.000,00 KN – DALEKOVOD D.D; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3647": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-4\nk.o. Stenjevec Jug · ZK uložak 336 · total area 2884 m²\nArea per kazeta/street (ZK): M1-4 2872 m²\nEncumbrances (List C): 15.000.000,00 KN – PROJEKT MAKSIMUS d.o.o; 6.500.000,00 KN – LANDMARK GROUP d.o.o; 15.000.000,00 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3649": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-4\nk.o. Stenjevec Jug · ZK uložak 552 · total area 355 m²\nArea per kazeta/street (ZK): M1-4 147 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3664": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "NIKL SANDRA",
+          "share": "837/1906"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1069/1906"
+        }
+      ],
+      "ourShare": "1069/1906",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-4\nk.o. Stenjevec Jug · ZK uložak 125 · total area 1906 m²\nArea per kazeta/street (ZK): M1-4 1224 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): založno pravo; teret",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3665": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "MONERIS NEKRETNINE d.o.o.",
+          "share": "2/57"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "55/57"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-5, Z1-3\nk.o. Stenjevec Jug · ZK uložak 222 · total area 615 m²\nArea per kazeta/street (ZK): M1-5 22 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026, Z-47744/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 46.900.000,00 KN – DALEKOVOD D.D; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3670": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "MONERIS NEKRETNINE d.o.o.",
+          "share": "87/100"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "13/100"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-5, Z1-3\nk.o. Stenjevec Jug · ZK uložak 547 · total area 1789 m²\nArea per kazeta/street (ZK): M1-5 1570 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026, Z-47744/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3671": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-5\nk.o. Stenjevec Jug · ZK uložak 548 · total area 3030 m²\nArea per kazeta/street (ZK): M1-5 3018 m²\nPending registrations (plombe): Z-47532/2026\nEncumbrances (List C): 8.440.649,32 HRK – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3672": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "MONERIS NEKRETNINE d.o.o.",
+          "share": "1022/1077"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "55/1077"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-5, Z1-4\nk.o. Stenjevec Jug · ZK uložak 223 · total area 3851 m²\nArea per kazeta/street (ZK): M1-5 3687 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026, Z-47744/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 46.900.000,00 KN – DALEKOVOD D.D; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3675": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets D4, Z1-4\nk.o. Stenjevec Jug · ZK uložak 126 · total area 2268 m²\nArea per kazeta/street (ZK): D4 313 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3677": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "59/96"
+        },
+        {
+          "name": "KUKRIĆ ĐURO",
+          "share": "1/48"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "13/96"
+        },
+        {
+          "name": "Verstovšek Helena",
+          "share": "1/144"
+        },
+        {
+          "name": "Verstovšek Magdalena",
+          "share": "1/144"
+        },
+        {
+          "name": "Verstovšek Iva",
+          "share": "1/144"
+        },
+        {
+          "name": "LANDMARK GROUP d.o.o.",
+          "share": "5/24"
+        }
+      ],
+      "ourShare": "23/24",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets D4\nk.o. Stenjevec Jug · ZK uložak 567 · total area 3432 m²\nArea per kazeta/street (ZK): D4 655 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6360": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6, D4\nk.o. Donje Vrapče · ZK uložak 129 · total area 626 m²\nArea per kazeta/street (ZK): M1-6 189 m², D4 1 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6365": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "Stažnik Hilda",
+          "share": "1/2"
+        },
+        {
+          "name": "ŠINKO PREDRAG",
+          "share": "1/2"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6\nk.o. Donje Vrapče · ZK uložak 131 · total area 3542 m²\nArea per kazeta/street (ZK): M1-6 72 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6366": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "65/1548"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1/774"
+        },
+        {
+          "name": "SOMEK KRISTINA",
+          "share": "1481/3096"
+        },
+        {
+          "name": "Somek Damir",
+          "share": "1481/3096"
+        }
+      ],
+      "ourShare": "67/1548",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6\nk.o. Donje Vrapče · ZK uložak 163 · total area 1548 m²\nArea per kazeta/street (ZK): M1-6 65 m²\nPending registrations (plombe): UP/I 932-07/2026-02/2839, Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK, REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM BANK UND REVISIONSVERBAND REGISTRIERTE GENOSSENSCHAFT MIT BESCHRÄNK; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6368": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRDAKOVIĆ DRAGUTIN",
+          "share": "47/600"
+        },
+        {
+          "name": "BENAC ANĐELA",
+          "share": "47/600"
+        },
+        {
+          "name": "ŠIJAN BRANKO",
+          "share": "47/600"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "3/200"
+        },
+        {
+          "name": "SOMEK KRISTINA",
+          "share": "3/8"
+        },
+        {
+          "name": "Somek Damir",
+          "share": "3/8"
+        }
+      ],
+      "ourShare": "3/200",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6\nk.o. Donje Vrapče · ZK uložak 145 · total area 1564 m²\nArea per kazeta/street (ZK): M1-6 88 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): založno pravo; teret",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6369": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "LANDMARK GROUP d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6, Z1-5\nk.o. Donje Vrapče · ZK uložak 146 · total area 2775 m²\nArea per kazeta/street (ZK): M1-6 114 m²",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6372": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "JUREŠA SLAVICA",
+          "share": "283/960"
+        },
+        {
+          "name": "SVILKOVIĆ TOMISLAV",
+          "share": "17/96"
+        },
+        {
+          "name": "SVILKOVIĆ DRAGICA, R. CAPEK",
+          "share": "113/960"
+        },
+        {
+          "name": "SVILKOVIĆ JURAJ",
+          "share": "113/960"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "9/160"
+        },
+        {
+          "name": "Martinec Elvira",
+          "share": "227/1920"
+        },
+        {
+          "name": "Krisper Željko",
+          "share": "227/1920"
+        }
+      ],
+      "ourShare": "9/160",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7, Z1-5\nk.o. Donje Vrapče · ZK uložak 225 · total area 5072 m²\nArea per kazeta/street (ZK): M1-7 281 m²\nPending registrations (plombe): Z-44312/2026, Z-46173/2026\nEncumbrances (List C): založno pravo; teret",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6390": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "LANDMARK GROUP d.o.o.",
+          "share": "1/2"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1/2"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 271 · total area 1331 m²\nArea per kazeta/street (ZK): M1-7 543 m²\nEncumbrances (List C): 7.000.000,00 EUR – ALFI d.o.o; 28.000.000,00 EUR – AAC Partnerji, d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6398": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "Stažnik Hilda",
+          "share": "1/2"
+        },
+        {
+          "name": "ŠINKO PREDRAG",
+          "share": "1/2"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6\nk.o. Donje Vrapče · ZK uložak 132 · total area 447 m²\nArea per kazeta/street (ZK): M1-6 446 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6399": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6\nk.o. Donje Vrapče · ZK uložak 144 · total area 228 m²\nArea per kazeta/street (ZK): M1-6 224 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK, REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM BANK UND REVISIONSVERBAND REGISTRIERTE GENOSSENSCHAFT MIT BESCHRÄNK; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6400": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6\nk.o. Donje Vrapče · ZK uložak 143 · total area 228 m²\nArea per kazeta/street (ZK): M1-6 230 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 46.900.000,00 KN – DALEKOVOD D.D; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6401": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "197/260"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "63/260"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6, Z1-5\nk.o. Donje Vrapče · ZK uložak 142 · total area 260 m²\nArea per kazeta/street (ZK): M1-6 198 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 46.900.000,00 KN – DALEKOVOD D.D; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6402": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "41/1632"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1591/1632"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6, M1-7, Z1-5\nk.o. Donje Vrapče · ZK uložak 141 · total area 1632 m²\nArea per kazeta/street (ZK): M1-6 40 m², M1-7 1065 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 46.900.000,00 KN – DALEKOVOD D.D; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6403": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 159 · total area 443 m²\nArea per kazeta/street (ZK): M1-7 441 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK, REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM BANK UND REVISIONSVERBAND REGISTRIERTE GENOSSENSCHAFT MIT BESCHRÄNK; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6404": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 160 · total area 353 m²\nArea per kazeta/street (ZK): M1-7 346 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 46.900.000,00 KN – DALEKOVOD D.D; 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6405": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 252 · total area 400 m²\nArea per kazeta/street (ZK): M1-7 402 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 46.900.000,00 KN – DALEKOVOD D.D; 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 142.570.096,50 KN – ALPE ADRIA POSLOVODSTVO D.O.O; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6406": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "LANDMARK GROUP d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 257 · total area 400 m²\nArea per kazeta/street (ZK): M1-7 399 m²\nEncumbrances (List C): 7.000.000,00 EUR – ALFI d.o.o; 28.000.000,00 EUR – AAC Partnerji, d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6407": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 269 · total area 432 m²\nArea per kazeta/street (ZK): M1-7 424 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK, REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM BANK UND REVISIONSVERBAND REGISTRIERTE GENOSSENSCHAFT MIT BESCHRÄNK; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6408": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 251 · total area 372 m²\nArea per kazeta/street (ZK): M1-7 375 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE ADRIA POSLOVODSTVO D.O.O; 46.900.000,00 KN – DALEKOVOD D.D; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6409": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 175 · total area 389 m²\nArea per kazeta/street (ZK): M1-7 369 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 46.900.000,00 KN – DALEKOVOD D.D; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6410": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 559 · total area 215 m²\nArea per kazeta/street (ZK): M1-7 215 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 46.900.000,00 KN – DALEKOVOD D.D; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6411": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "LANDMARK GROUP d.o.o.",
+          "share": "25/32"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "7/32"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7, Ulica 4\nk.o. Donje Vrapče · ZK uložak 557 · total area 247 m²\nArea per kazeta/street (ZK): M1-7 227 m², Ulica 4 20 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 7.000.000,00 EUR – ALFI d.o.o; 28.000.000,00 EUR – AAC Partnerji, d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6414": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 4\nk.o. Donje Vrapče · ZK uložak 474 · total area 131 m²\nArea per kazeta/street (ZK): Ulica 4 131 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6417": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "SVILKOVIĆ JOSIP",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 4\nk.o. Donje Vrapče · ZK uložak 794 · total area 915 m²\nArea per kazeta/street (ZK): Ulica 4 100 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "8191": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Plot number not in the ZK workbook (061026_ZK DD Prečko.xlsx).",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3633/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "119/729"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "610/729"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1\nk.o. Stenjevec Jug · ZK uložak 468 · total area 178 m²\nArea per kazeta/street (ZK): M1-1 178 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3633/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "119/729"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "610/729"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2\nk.o. Stenjevec Jug · ZK uložak 467 · total area 1042 m²\nArea per kazeta/street (ZK): M1-2 1054 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3633/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "119/729"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "610/729"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 2\nk.o. Stenjevec Jug · ZK uložak 469 · total area 238 m²\nArea per kazeta/street (ZK): Ulica 2 240 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3631/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1\nk.o. Stenjevec Jug · ZK uložak 461 · total area 283 m²\nArea per kazeta/street (ZK): M1-1 281 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3631/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2\nk.o. Stenjevec Jug · ZK uložak 457 · total area 1607 m²\nArea per kazeta/street (ZK): M1-2 1618 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3631/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 2\nk.o. Stenjevec Jug · ZK uložak 464 · total area 359 m²\nArea per kazeta/street (ZK): Ulica 2 362 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3629/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1\nk.o. Stenjevec Jug · ZK uložak 453 · total area 278 m²\nArea per kazeta/street (ZK): M1-1 276 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3629/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2\nk.o. Stenjevec Jug · ZK uložak 451 · total area 1319 m²\nArea per kazeta/street (ZK): M1-2 1323 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3629/4": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 2\nk.o. Stenjevec Jug · ZK uložak 455 · total area 368 m²\nArea per kazeta/street (ZK): Ulica 2 368 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3937/9": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB - JAVNO DOBRO U OPĆOJ UPORABI U NEOTUĐIVOM VLASNIŠTVU",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2, M1-3, Z1-1\nk.o. Stenjevec Jug · ZK uložak 661 · total area 482 m²\nArea per kazeta/street (ZK): M1-2 130 m², M1-3 284 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "5569/4": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ZAGREBAČKA-HORVAĆANSKA RESIDENCE 1 d.o.o.",
+          "share": "6101/6437"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "336/6437"
+        }
+      ],
+      "ourShare": "336/6437",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M2-1\nk.o. Donje Vrapče · ZK uložak 231 · total area 9 m²\nArea per kazeta/street (ZK): M2-1 9 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 12.500.000,00 EUR – Maverick Wealth Management d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3635/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "HALER MILAN",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2, M1-3, Z1-1\nk.o. Stenjevec Jug · ZK uložak 68 · total area 2958 m²\nArea per kazeta/street (ZK): M1-2 529 m², M1-3 1140 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3640/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "297/391"
+        },
+        {
+          "name": "MONERIS NEKRETNINE d.o.o.",
+          "share": "73/782"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "5/34"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2, Z1-1\nk.o. Stenjevec Jug · ZK uložak 489 · total area 1242 m²\nArea per kazeta/street (ZK): M1-2 633 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026, Z-47744/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK  REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM, BANK UND REVISIONSVERBAND",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3640/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "297/391"
+        },
+        {
+          "name": "MONERIS NEKRETNINE d.o.o.",
+          "share": "73/782"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "5/34"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-5, Z1-4\nk.o. Stenjevec Jug · ZK uložak 483 · total area 809 m²\nArea per kazeta/street (ZK): M1-5 263 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026, Z-47744/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK  REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM, BANK UND REVISIONSVERBAND",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3640/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "297/391"
+        },
+        {
+          "name": "MONERIS NEKRETNINE d.o.o.",
+          "share": "73/782"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "5/34"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 1a\nk.o. Stenjevec Jug · ZK uložak 487 · total area 572 m²\nArea per kazeta/street (ZK): Ulica 1a 569 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026, Z-47744/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK  REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM, BANK UND REVISIONSVERBAND",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3638/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "719/1174"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "455/1174"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3\nk.o. Stenjevec Jug · ZK uložak 478 · total area 1780 m²\nArea per kazeta/street (ZK): M1-3 1783 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3638/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "719/1174"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "455/1174"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets D4, Z1-4\nk.o. Stenjevec Jug · ZK uložak 476 · total area 2000 m²\nArea per kazeta/street (ZK): D4 1178 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3638/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "719/1174"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "455/1174"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 1a\nk.o. Stenjevec Jug · ZK uložak 477 · total area 805 m²\nArea per kazeta/street (ZK): Ulica 1a 803 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3639/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "271/370"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "99/370"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3, Z1-1\nk.o. Stenjevec Jug · ZK uložak 480 · total area 1106 m²\nArea per kazeta/street (ZK): M1-3 711 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3639/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "271/370"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "99/370"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 1a\nk.o. Stenjevec Jug · ZK uložak 481 · total area 374 m²\nArea per kazeta/street (ZK): Ulica 1a 374 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3566/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "20/709"
+        },
+        {
+          "name": "AEQUUS NEKRETNINE d.o.o.",
+          "share": "87/709"
+        },
+        {
+          "name": "MATARA NEKRETNINE d.o.o.",
+          "share": "602/709"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1, M1-4\nk.o. Stenjevec Jug · ZK uložak 353 · total area 2632 m²\nArea per kazeta/street (ZK): M1-1 2166 m², M1-4 469 m²\nPending registrations (plombe): Z-44312/2026, Z-45207/2026, Z-45216/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3641/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "241/1530"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1289/1530"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1\nk.o. Stenjevec Jug · ZK uložak 471 · total area 335 m²\nArea per kazeta/street (ZK): M1-1 330 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3641/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "241/1530"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1289/1530"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2\nk.o. Stenjevec Jug · ZK uložak 470 · total area 2243 m²\nArea per kazeta/street (ZK): M1-2 2240 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3641/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "241/1530"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1289/1530"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 2\nk.o. Stenjevec Jug · ZK uložak 472 · total area 482 m²\nArea per kazeta/street (ZK): Ulica 2 481 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3642/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1\nk.o. Stenjevec Jug · ZK uložak 474 · total area 165 m²\nArea per kazeta/street (ZK): M1-1 183 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3642/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2\nk.o. Stenjevec Jug · ZK uložak 473 · total area 1046 m²\nArea per kazeta/street (ZK): M1-2 1050 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3642/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 2\nk.o. Stenjevec Jug · ZK uložak 475 · total area 240 m²\nArea per kazeta/street (ZK): Ulica 2 241 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3644/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "805/2218"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1033/2218"
+        },
+        {
+          "name": "MONERIS NEKRETNINE d.o.o.",
+          "share": "190/1109"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-4, M1-5, Z1-3\nk.o. Stenjevec Jug · ZK uložak 500 · total area 677 m²\nArea per kazeta/street (ZK): M1-4 230 m², M1-5 381 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026, Z-47744/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3644/2 + 3644/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "56255/154999"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "5553/11923"
+        },
+        {
+          "name": "MONERIS NEKRETNINE d.o.o.",
+          "share": "26555/154999"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Combined piece – the 2009 shape cannot be split between these current plots, so shares are weighted by each plot's area here: 3644/2 (1059 m²), 3644/3 (491 m²)\n\n[3644/2]\nSource: 061026_ZK DD Prečko.xlsx – sheets Ulica 1a\nk.o. Stenjevec Jug · ZK uložak 501 · total area 1052 m²\nArea per kazeta/street (ZK): Ulica 1a 1059 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026, Z-47744/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o\n\n[3644/3]\nSource: 061026_ZK DD Prečko.xlsx – sheets Ulica 2\nk.o. Stenjevec Jug · ZK uložak 502 · total area 489 m²\nArea per kazeta/street (ZK): Ulica 2 491 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026, Z-47744/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3643/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "433/723"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "290/723"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1, M1-4\nk.o. Stenjevec Jug · ZK uložak 496 · total area 156 m²\nArea per kazeta/street (ZK): M1-1 62 m², M1-4 92 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3643/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "433/723"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "290/723"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2\nk.o. Stenjevec Jug · ZK uložak 490 · total area 424 m²\nArea per kazeta/street (ZK): M1-2 426 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3643/2 + 3643/4": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. U STEČAJU",
+          "share": "10289/17180"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "6891/17180"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Combined piece – the 2009 shape cannot be split between these current plots, so shares are weighted by each plot's area here: 3643/2 (515 m²), 3643/4 (344 m²)\n\n[3643/2]\nSource: 061026_ZK DD Prečko.xlsx – sheets Ulica 1a\nk.o. Stenjevec Jug · ZK uložak 494 · total area 520 m²\nArea per kazeta/street (ZK): Ulica 1a 515 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o\n\n[3643/4]\nSource: 061026_ZK DD Prečko.xlsx – sheets Ulica 2\nk.o. Stenjevec Jug · ZK uložak 499 · total area 346 m²\nArea per kazeta/street (ZK): Ulica 2 344 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3637/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3\nk.o. Stenjevec Jug · ZK uložak 506 · total area 273 m²\nArea per kazeta/street (ZK): M1-3 274 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3637/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M2-2\nk.o. Stenjevec Jug · ZK uložak 508 · total area 8 m²\nArea per kazeta/street (ZK): M2-2 8 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3637/3": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 3\nk.o. Stenjevec Jug · ZK uložak 509 · total area 196 m²\nArea per kazeta/street (ZK): Ulica 3 196 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6356/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "2216/2803"
+        },
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "587/2803"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M2-2, M2-3, Z1-2\nk.o. Donje Vrapče · ZK uložak 1000 · total area 2629 m²\nArea per kazeta/street (ZK): M2-2 1621 m², M2-3 590 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6356/4 + 6356/9": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "6559/8700"
+        },
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "3643/17400"
+        },
+        {
+          "name": "SIGILLUM NEKRETNINE d.o.o.",
+          "share": "213/5800"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Combined piece – the 2009 shape cannot be split between these current plots, so shares are weighted by each plot's area here: 6356/4 (164 m²), 6356/9 (10 m²)\n\n[6356/4]\nSource: 061026_ZK DD Prečko.xlsx – sheets Ulica 1b\nk.o. Donje Vrapče · ZK uložak 1002 · total area 163 m²\nArea per kazeta/street (ZK): Ulica 1b 164 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o\n\n[6356/9]\nSource: 061026_ZK DD Prečko.xlsx – sheets Ulica 1a\nk.o. Donje Vrapče · ZK uložak 1005 · total area 11 m²\nArea per kazeta/street (ZK): Ulica 1a 10 m²\nPending registrations (plombe): Z-44312/2026, Z-45203/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "3556/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1\nk.o. Stenjevec Jug · ZK uložak 224 · total area 764 m²\nArea per kazeta/street (ZK): M1-1 764 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): založno pravo 142.570.096,50 KN, ALPE-ADRIA POSLOVODSTVO D.O.O. (sporedna hipoteka); založno pravo 46.900.000,00 KN, DALEKOVOD D.D. (sporedni uložak); založno pravo 4.500.000,00 EUR, LANDMARK GROUP D.O.O. (ustupljeno od ZVEZA BANK); podzaložno pravo 7.000.000,00 EUR, ALFI D.O.O.",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "3622/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ZAGREBAČKA-HORVAĆANSKA RESIDENCE 1 d.o.o.",
+          "share": "5081/5435"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "354/5435"
+        }
+      ],
+      "ourShare": "354/5435",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3\nk.o. Stenjevec Jug · ZK uložak 282 · total area 212 m²\nArea per kazeta/street (ZK): M1-3 210 m²\nEncumbrances (List C): 12.500.000,00 EUR – Maverick Wealth Management d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3623/4": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ZAGREBAČKA-HORVAĆANSKA RESIDENCE 1 d.o.o.",
+          "share": "1352/1601"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "249/1601"
+        }
+      ],
+      "ourShare": "249/1601",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3\nk.o. Stenjevec Jug · ZK uložak 977 · total area 335 m²\nArea per kazeta/street (ZK): M1-3 338 m²\nEncumbrances (List C): 12.500.000,00 EUR – Maverick Wealth Management d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6356/3": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "PULEK ZORA, ROĐ. POSTRUŽIN",
+          "share": "3/4"
+        },
+        {
+          "name": "VLAHOVIČEK IVANKA",
+          "share": "1/4"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6, M2-2, M2-3, Z1-2, Ulica 1b\nk.o. Donje Vrapče · ZK uložak 190 · total area 1172 m²\nArea per kazeta/street (ZK): M1-6 205 m², M2-2 12 m², M2-3 383 m², Ulica 1b 421 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "5562/23 + 6341/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Combined piece – the 2009 shape cannot be split between these current plots, so shares are weighted by each plot's area here: 5562/23 (1006 m²), 6341/1 (1471 m²)\n\n[5562/23]\nSource: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 683 · total area 994 m²\nArea per kazeta/street (ZK): M1-7 1006 m²\n\n[6341/1]\nSource: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 204 · total area 1480 m²\nArea per kazeta/street (ZK): M1-7 1471 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "5562/27": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M2-1\nk.o. Donje Vrapče · ZK uložak 241 · total area 33 m²\nArea per kazeta/street (ZK): M2-1 33 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "5562/12 + 5562/14 + 5562/18 + 5562/19 + 6341/2 + 6356/3": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "772/5171"
+        },
+        {
+          "name": "LANDMARK GROUP d.o.o.",
+          "share": "38/5171"
+        },
+        {
+          "name": "GRAD ZAGREB",
+          "share": "3978/5171"
+        },
+        {
+          "name": "PULEK ZORA, ROĐ. POSTRUŽIN",
+          "share": "1149/20684"
+        },
+        {
+          "name": "VLAHOVIČEK IVANKA",
+          "share": "383/20684"
+        }
+      ],
+      "ourShare": "810/5171",
+      "contact": "",
+      "notes": "Combined piece – the 2009 shape cannot be split between these current plots, so shares are weighted by each plot's area here: 5562/12 (772 m²), 5562/14 (38 m²), 5562/18 (1112 m²), 5562/19 (1372 m²), 6341/2 (1494 m²), 6356/3 (383 m²)\n\n[5562/12]\nSource: 061026_ZK DD Prečko.xlsx – sheets M2-3\nk.o. Donje Vrapče · ZK uložak 988 · total area 772 m²\nArea per kazeta/street (ZK): M2-3 772 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o\n\n[5562/14]\nSource: 061026_ZK DD Prečko.xlsx – sheets M2-3, Z1-2, Ulica 4\nk.o. Donje Vrapče · ZK uložak 226 · total area 1220 m²\nArea per kazeta/street (ZK): M2-3 38 m², Ulica 4 335 m²\nEncumbrances (List C): 7.000.000,00 EUR – ALFI d.o.o; 28.000.000,00 EUR – AAC Partnerji, d.o.o\n\n[5562/18]\nSource: 061026_ZK DD Prečko.xlsx – sheets M2-3\nk.o. Donje Vrapče · ZK uložak 681 · total area 1097 m²\nArea per kazeta/street (ZK): M2-3 1112 m²\n\n[5562/19]\nSource: 061026_ZK DD Prečko.xlsx – sheets M2-3, Z1-2\nk.o. Donje Vrapče · ZK uložak 682 · total area 1518 m²\nArea per kazeta/street (ZK): M2-3 1372 m²\n\n[6341/2]\nSource: 061026_ZK DD Prečko.xlsx – sheets M2-3\nk.o. Donje Vrapče · ZK uložak 205 · total area 1504 m²\nArea per kazeta/street (ZK): M2-3 1494 m²\n\n[6356/3]\nSource: 061026_ZK DD Prečko.xlsx – sheets M1-6, M2-2, M2-3, Z1-2, Ulica 1b\nk.o. Donje Vrapče · ZK uložak 190 · total area 1172 m²\nArea per kazeta/street (ZK): M1-6 205 m², M2-2 12 m², M2-3 383 m², Ulica 1b 421 m²",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "3624/4": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ZAGREBAČKA-HORVAĆANSKA RESIDENCE 1 d.o.o.",
+          "share": "2069/2560"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "429/2560"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "31/1280"
+        }
+      ],
+      "ourShare": "491/2560",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3, Z1-1\nk.o. Stenjevec Jug · ZK uložak 250 · total area 328 m²\nArea per kazeta/street (ZK): M1-3 263 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 12.500.000,00 EUR – Maverick Wealth Management d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3625/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ZAGREBAČKA-HORVAĆANSKA RESIDENCE 1 d.o.o.",
+          "share": "1039/1317"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "39/439"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "161/1317"
+        }
+      ],
+      "ourShare": "278/1317",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2, M1-3, Z1-1\nk.o. Stenjevec Jug · ZK uložak 228 · total area 184 m²\nArea per kazeta/street (ZK): M1-2 1 m², M1-3 22 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 12.500.000,00 EUR – Maverick Wealth Management d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3621/6": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ZAGREBAČKA-HORVAĆANSKA RESIDENCE 1 d.o.o.",
+          "share": "879/932"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "53/932"
+        }
+      ],
+      "ourShare": "53/932",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3\nk.o. Stenjevec Jug · ZK uložak 221 · total area 2 m²\nArea per kazeta/street (ZK): M1-3 2 m²\nPending registrations (plombe): Z-21148/2025\nEncumbrances (List C): 12.500.000,00 EUR – Maverick Wealth Management d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3626/5": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ALLEGHENY FINANCIAL D.O.O.",
+          "share": "1955/2637"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "682/2637"
+        }
+      ],
+      "ourShare": "682/2637",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2, Z1-1\nk.o. Stenjevec Jug · ZK uložak 145 · total area 443 m²\nArea per kazeta/street (ZK): M1-2 301 m²\nPending registrations (plombe): Z-47532/2026\nEncumbrances (List C): 12.500.000,00 EUR – Maverick Wealth Management d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3627/3": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ZAGREBAČKA-HORVAĆANSKA RESIDENCE 1 d.o.o.",
+          "share": "2172/2219"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "47/2219"
+        }
+      ],
+      "ourShare": "47/2219",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2\nk.o. Stenjevec Jug · ZK uložak 148 · total area 2 m²\nArea per kazeta/street (ZK): M1-2 2 m²\nEncumbrances (List C): 12.500.000,00 EUR – Maverick Wealth Management d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3628/3": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "PARLOV MILAN",
+          "share": "1/2"
+        },
+        {
+          "name": "PARLOV DINKA",
+          "share": "1/2"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-1\nk.o. Stenjevec Jug · ZK uložak 301 · total area 16 m²\nArea per kazeta/street (ZK): M1-1 16 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3628/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "PARLOV MILAN",
+          "share": "1/2"
+        },
+        {
+          "name": "PARLOV DINKA",
+          "share": "1/2"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-2\nk.o. Stenjevec Jug · ZK uložak 304 · total area 183 m²\nArea per kazeta/street (ZK): M1-2 179 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "5570/5": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "197/751"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "554/751"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3\nk.o. Donje Vrapče · ZK uložak 992 · total area 196 m²\nArea per kazeta/street (ZK): M1-3 191 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "5570/1 + 5570/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "72111/285800"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "202789/285800"
+        },
+        {
+          "name": "GRAD ZAGREB",
+          "share": "109/2858"
+        }
+      ],
+      "ourShare": "2749/2858",
+      "contact": "",
+      "notes": "Combined piece – the 2009 shape cannot be split between these current plots, so shares are weighted by each plot's area here: 5570/1 (2749 m²), 5570/2 (109 m²)\n\n[5570/1]\nSource: 061026_ZK DD Prečko.xlsx – sheets M2-1\nk.o. Donje Vrapče · ZK uložak 991 · total area 2766 m²\nArea per kazeta/street (ZK): M2-1 2749 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o\n\n[5570/2]\nSource: 061026_ZK DD Prečko.xlsx – sheets M2-1\nk.o. Donje Vrapče · ZK uložak 224 · total area 166 m²\nArea per kazeta/street (ZK): M2-1 109 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "5570/6": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "197/751"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "554/751"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 3\nk.o. Donje Vrapče · ZK uložak 993 · total area 851 m²\nArea per kazeta/street (ZK): Ulica 3 847 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3636/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3\nk.o. Stenjevec Jug · ZK uložak 503 · total area 4755 m²\nArea per kazeta/street (ZK): M1-3 4745 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3636/2 + 3636/3": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Combined piece – the 2009 shape cannot be split between these current plots, so shares are weighted by each plot's area here: 3636/2 (183 m²), 3636/3 (614 m²)\n\n[3636/2]\nSource: 061026_ZK DD Prečko.xlsx – sheets Ulica 1a\nk.o. Stenjevec Jug · ZK uložak 504 · total area 183 m²\nArea per kazeta/street (ZK): Ulica 1a 183 m²\n\n[3636/3]\nSource: 061026_ZK DD Prečko.xlsx – sheets Ulica 1a, Ulica 3\nk.o. Stenjevec Jug · ZK uložak 505 · total area 612 m²\nArea per kazeta/street (ZK): Ulica 1a 28 m², Ulica 3 586 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3635/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3\nk.o. Stenjevec Jug · ZK uložak 76 · total area 822 m²\nArea per kazeta/street (ZK): M1-3 834 m²\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6353/3": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ALLEGHENY FINANCIAL D.O.O.",
+          "share": "2795/4434"
+        },
+        {
+          "name": "TL-COMMERCE D.O.O.",
+          "share": "1639/4434"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3\nk.o. Donje Vrapče · ZK uložak 597 · total area 428 m²\nArea per kazeta/street (ZK): M1-3 429 m²\nEncumbrances (List C): založno pravo",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "5671/1 + 6353/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "JAVNO DOBRO U OPĆOJ UPORABI U NEOTUĐIVOM VLASNIŠTVU GRAD ZAGREB, OIB: 61817894937",
+          "share": "169/864"
+        },
+        {
+          "name": "ALLEGHENY FINANCIAL D.O.O.",
+          "share": "4381/8640"
+        },
+        {
+          "name": "TL-COMMERCE D.O.O.",
+          "share": "2569/8640"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Combined piece – the 2009 shape cannot be split between these current plots, so shares are weighted by each plot's area here: 5671/1 (169 m²), 6353/1 (695 m²)\n\n[5671/1]\nSource: 061026_ZK DD Prečko.xlsx – sheets M2-1, Z1-2, Ulica 4\nk.o. Donje Vrapče · ZK uložak 242 · total area 54785 m²\nArea per kazeta/street (ZK): M2-1 169 m², Ulica 4 201 m²\n\n[6353/1]\nSource: 061026_ZK DD Prečko.xlsx – sheets M2-1, M2-2, Z1-2\nk.o. Donje Vrapče · ZK uložak 596 · total area 2914 m²\nArea per kazeta/street (ZK): M2-1 695 m², M2-2 799 m²\nEncumbrances (List C): založno pravo",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6353/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ALLEGHENY FINANCIAL D.O.O.",
+          "share": "2795/4434"
+        },
+        {
+          "name": "TL-COMMERCE D.O.O.",
+          "share": "1639/4434"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M2-1, M2-2, Z1-2\nk.o. Donje Vrapče · ZK uložak 596 · total area 2914 m²\nArea per kazeta/street (ZK): M2-1 695 m², M2-2 799 m²\nEncumbrances (List C): založno pravo",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6353/4": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ALLEGHENY FINANCIAL D.O.O.",
+          "share": "2795/4434"
+        },
+        {
+          "name": "TL-COMMERCE D.O.O.",
+          "share": "1639/4434"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 3\nk.o. Donje Vrapče · ZK uložak 598 · total area 1092 m²\nArea per kazeta/street (ZK): Ulica 3 1094 m²\nEncumbrances (List C): založno pravo",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6354/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "262/5605"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "142/1121"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "16/95"
+        },
+        {
+          "name": "SIGILLUM NEKRETNINE d.o.o.",
+          "share": "3689/5605"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-3\nk.o. Donje Vrapče · ZK uložak 608 · total area 6 m²\nArea per kazeta/street (ZK): M1-3 7 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6354/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "262/5605"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "142/1121"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "4633/5605"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M2-2, M2-3, Z1-2\nk.o. Donje Vrapče · ZK uložak 605 · total area 4895 m²\nArea per kazeta/street (ZK): M2-2 3695 m², M2-3 261 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6354/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "262/5605"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "142/1121"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "16/95"
+        },
+        {
+          "name": "SIGILLUM NEKRETNINE d.o.o.",
+          "share": "3689/5605"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 3\nk.o. Donje Vrapče · ZK uložak 607 · total area 704 m²\nArea per kazeta/street (ZK): Ulica 3 705 m²\nPending registrations (plombe): Z-44312/2026, Z-45203/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6355/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "2147/2671"
+        },
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "449/2671"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "75/2671"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M2-2, M2-3, Z1-2\nk.o. Donje Vrapče · ZK uložak 610 · total area 2596 m²\nArea per kazeta/street (ZK): M2-2 1700 m², M2-3 447 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6355/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "SIGILLUM NEKRETNINE d.o.o.",
+          "share": "1708/2671"
+        },
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "449/2671"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "75/2671"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "439/2671"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 3\nk.o. Donje Vrapče · ZK uložak 611 · total area 75 m²\nArea per kazeta/street (ZK): Ulica 3 75 m²\nPending registrations (plombe): Z-44312/2026, Z-45203/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3678/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "2/5"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "443/820"
+        },
+        {
+          "name": "LANDMARK GROUP d.o.o.",
+          "share": "49/820"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6, M2-2, D4, Ulica 1a, Ulica 1b, Ulica 3\nk.o. Stenjevec Jug · ZK uložak 220 · total area 1476 m²\nArea per kazeta/street (ZK): M1-6 608 m², M2-2 22 m², D4 247 m², Ulica 1a 499 m², Ulica 1b 22 m², Ulica 3 64 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "3678/3": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "HALER MILAN",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets D4, Ulica 1a\nk.o. Stenjevec Jug · ZK uložak 28 · total area 1721 m²\nArea per kazeta/street (ZK): D4 1260 m², Ulica 1a 461 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3674/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "ZOGRAFSKI GORAN",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Z1-4\nk.o. Stenjevec Jug · ZK uložak 110 · total area 366 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6356/5": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "454/647"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "43/1941"
+        },
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "536/1941"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6\nk.o. Donje Vrapče · ZK uložak 1003 · total area 43 m²\nArea per kazeta/street (ZK): M1-6 42 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6356/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "454/647"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "43/1941"
+        },
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "536/1941"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M2-2, M2-3, Z1-2\nk.o. Donje Vrapče · ZK uložak 1001 · total area 1227 m²\nArea per kazeta/street (ZK): M2-2 388 m², M2-3 531 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6356/6": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "454/647"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "43/1941"
+        },
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "536/1941"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 1b\nk.o. Donje Vrapče · ZK uložak 1004 · total area 671 m²\nArea per kazeta/street (ZK): Ulica 1b 669 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "3676/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "JURENDIĆ DANICA",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets D4\nk.o. Stenjevec Jug · ZK uložak 565 · total area 1216 m²\nArea per kazeta/street (ZK): D4 1235 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3678/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "59/96"
+        },
+        {
+          "name": "KUKRIĆ ĐURO",
+          "share": "1/48"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "13/96"
+        },
+        {
+          "name": "Verstovšek Helena",
+          "share": "1/144"
+        },
+        {
+          "name": "Verstovšek Magdalena",
+          "share": "1/144"
+        },
+        {
+          "name": "Verstovšek Iva",
+          "share": "1/144"
+        },
+        {
+          "name": "LANDMARK GROUP d.o.o.",
+          "share": "5/24"
+        }
+      ],
+      "ourShare": "23/24",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6, D4\nk.o. Stenjevec Jug · ZK uložak 571 · total area 6396 m²\nArea per kazeta/street (ZK): M1-6 1588 m², D4 2609 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6359/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "1114/1179"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "65/1179"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6, Z1-5\nk.o. Donje Vrapče · ZK uložak 994 · total area 3459 m²\nArea per kazeta/street (ZK): M1-6 3338 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6359/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "1114/1179"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "65/1179"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 1b\nk.o. Donje Vrapče · ZK uložak 995 · total area 78 m²\nArea per kazeta/street (ZK): Ulica 1b 79 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6397/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6, M1-7, Z1-5\nk.o. Donje Vrapče · ZK uložak 476 · total area 471 m²\nArea per kazeta/street (ZK): M1-6 110 m², M1-7 312 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6412/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 996 · total area 116 m²\nArea per kazeta/street (ZK): M1-7 119 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 6.500.000,00 KN – CREDO BANKA DIONIČKO DRUŠTVO \"U STEČAJU\"; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6412/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 4\nk.o. Donje Vrapče · ZK uložak 997 · total area 102 m²\nArea per kazeta/street (ZK): Ulica 4 100 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 6.500.000,00 KN – CREDO BANKA DIONIČKO DRUŠTVO \"U STEČAJU\"; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6413/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 998 · total area 29 m²\nArea per kazeta/street (ZK): M1-7 31 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK, REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM BANK UND REVISIONSVERBAND REGISTRIERTE GENOSSENSCHAFT MIT BESCHRÄNK; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6413/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 4\nk.o. Donje Vrapče · ZK uložak 999 · total area 139 m²\nArea per kazeta/street (ZK): Ulica 4 142 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK, REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM BANK UND REVISIONSVERBAND REGISTRIERTE GENOSSENSCHAFT MIT BESCHRÄNK; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6394/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "427/1241"
+        },
+        {
+          "name": "CVILJAK ŽELJKO",
+          "share": "407/1241"
+        },
+        {
+          "name": "DOLANJSKI MIHAELA",
+          "share": "407/1241"
+        }
+      ],
+      "ourShare": "427/1241",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 183 · total area 815 m²\nArea per kazeta/street (ZK): M1-7 281 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6394/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "427/1241"
+        },
+        {
+          "name": "CVILJAK ŽELJKO",
+          "share": "407/1241"
+        },
+        {
+          "name": "DOLANJSKI MIHAELA",
+          "share": "407/1241"
+        }
+      ],
+      "ourShare": "427/1241",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 4\nk.o. Donje Vrapče · ZK uložak 184 · total area 145 m²\nArea per kazeta/street (ZK): Ulica 4 146 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6389/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 200 · total area 141 m²\nArea per kazeta/street (ZK): M1-7 140 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6389/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 4\nk.o. Donje Vrapče · ZK uložak 201 · total area 97 m²\nArea per kazeta/street (ZK): Ulica 4 97 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6388/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "POLJAK MIROSLAV",
+          "share": "734/2643"
+        },
+        {
+          "name": "CURIS NEKRETNINE",
+          "share": "147/881"
+        },
+        {
+          "name": "ĐURIN MIRA",
+          "share": "734/2643"
+        },
+        {
+          "name": "Martinec Ljiljanka",
+          "share": "734/7929"
+        },
+        {
+          "name": "Jagušt Martina",
+          "share": "734/7929"
+        },
+        {
+          "name": "Čvek Marina",
+          "share": "734/7929"
+        }
+      ],
+      "ourShare": "147/881",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 563 · total area 442 m²\nArea per kazeta/street (ZK): M1-7 442 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): založno pravo; teret",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6387/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 561 · total area 432 m²\nArea per kazeta/street (ZK): M1-7 432 m²\nEncumbrances (List C): 6.500.000,00 KN – CREDO BANKA DIONIČKO DRUŠTVO \"U STEČAJU\"; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6386/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "SVILKOVIĆ TOMISLAV",
+          "share": "413/23040"
+        },
+        {
+          "name": "LANDMARK GROUP d.o.o.",
+          "share": "59/960"
+        },
+        {
+          "name": "VRABEC DANICA",
+          "share": "25/32"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "341/23040"
+        },
+        {
+          "name": "NEUPISANI SUVLASNIČKI UDIO",
+          "share": "287/2304"
+        }
+      ],
+      "ourShare": "1757/23040",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 573 · total area 448 m²\nArea per kazeta/street (ZK): M1-7 448 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): založno pravo 4.500.000,00 EUR, ZVEZA BANK (na suvl. dio 341/23040, sporedni uložak); založno pravo 142.570.096,50 KN, ALPE-ADRIA POSLOVODSTVO D.O.O. (na suvl. dio 341/23040, sporedni uložak)\nNote: includes an unregistered co-ownership share (neupisani suvlasnički udio).",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6384/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 560 · total area 322 m²\nArea per kazeta/street (ZK): M1-7 322 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 46.900.000,00 KN – LANDMARK GROUP d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6383/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 212 · total area 402 m²\nArea per kazeta/street (ZK): M1-7 402 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE ADRIA POSLOVODSTVO D.O.O; 46.900.000,00 KN – DALEKOVOD D.D; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6380/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 254 · total area 272 m²\nArea per kazeta/street (ZK): M1-7 272 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE ADRIA POSLOVODSTVO D.O.O; 46.900.000,00 KN – DALEKOVOD D.D; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6379/1 + 6379/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "Maršanić Slavko",
+          "share": "111/245"
+        },
+        {
+          "name": "Maršanić Anđelko",
+          "share": "111/245"
+        },
+        {
+          "name": "LANDMARK GROUP d.o.o.",
+          "share": "23/245"
+        }
+      ],
+      "ourShare": "23/245",
+      "contact": "",
+      "notes": "Combined piece – the 2009 shape cannot be split between these current plots, so shares are weighted by each plot's area here: 6379/1 (222 m²), 6379/2 (23 m²)\n\n[6379/1]\nSource: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 12039 · total area 2323 m²\nArea per kazeta/street (ZK): M1-7 222 m²\n\n[6379/2]\nSource: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 270 · total area 245 m²\nArea per kazeta/street (ZK): M1-7 23 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK, REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM BANK UND REVISIONSVERBAND REGISTRIERTE GENOSSENSCHAFT MIT BESCHRÄNK; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6379/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "Maršanić Slavko",
+          "share": "1/2"
+        },
+        {
+          "name": "Maršanić Anđelko",
+          "share": "1/2"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 12039 · total area 2323 m²\nArea per kazeta/street (ZK): M1-7 222 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6377/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "LANDMARK GROUP d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 255 · total area 204 m²\nArea per kazeta/street (ZK): M1-7 204 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK, REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM BANK UND REVISIONSVERBAND REGISTRIERTE GENOSSENSCHAFT MIT BESCHRÄNK; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6376/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 253 · total area 183 m²\nArea per kazeta/street (ZK): M1-7 183 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE ADRIA POSLOVODSTVO D.O.O; 46.900.000,00 KN – DALEKOVOD D.D; 15.000.000,00 KN – PROJEKT MAKSIMUS d.o.o; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6374/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "11/80"
+        },
+        {
+          "name": "CURIS NEKRETNINE D.O.O.",
+          "share": "1/240"
+        },
+        {
+          "name": "MARŠANIĆ MARIJA",
+          "share": "91/240"
+        },
+        {
+          "name": "VESELIN SANJA",
+          "share": "23/96"
+        },
+        {
+          "name": "MARŠANIĆ IVAN",
+          "share": "23/96"
+        }
+      ],
+      "ourShare": "17/120",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 185 · total area 166 m²\nArea per kazeta/street (ZK): M1-7 166 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): založno pravo 4.500.000,00 EUR, ZVEZA BANK (na suvl. dio 44/480); založno pravo 142.570.096,50 KN, ALPE-ADRIA POSLOVODSTVO D.O.O. (na suvl. dio 44/480 i 22/480); podzaložno pravo 7.000.000,00 EUR, ALFI D.O.O.; podzaložno pravo 28.000.000,00 EUR, AAC PARTNERJI D.O.O.; založno pravo 15.000.000,00 KN, PROJEKT MAKSIMUS D.O.O. (na suvl. dio 2/480)",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6373/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "LANDMARK GROUP d.o.o. za savjetovanje u vezi s poslovanjem i upravljanjem",
+          "share": "1"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 211 · total area 196 m²\nArea per kazeta/street (ZK): M1-7 196 m²\nPending registrations (plombe): Z-44312/2026\nEncumbrances (List C): 4.500.000,00 EUR – ZVEZA BANK, REGISTRIRANA ZADRUGA Z OMEJENIM JAMSTVOM BANK UND REVISIONSVERBAND REGISTRIERTE GENOSSENSCHAFT MIT BESCHRÄNK; 142.570.096,50 KN – Alpe-Adria poslovodstvo d.o.o",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6371/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "55/71"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "16/71"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7, Z1-5\nk.o. Donje Vrapče · ZK uložak 154 · total area 142 m²\nArea per kazeta/street (ZK): M1-7 33 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o; 46.900.000,00 KN – DALEKOVOD D.D",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6371/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "Davidović Gordana",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Z1-5\nk.o. Donje Vrapče · ZK uložak 12036 · total area 2621 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6370/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "JURETIĆ STJEPAN",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6, Z1-5\nk.o. Donje Vrapče · ZK uložak 139 · total area 1898 m²\nArea per kazeta/street (ZK): M1-6 7 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6367/1 + 6367/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "Martinec Dragutin",
+          "share": "1732/1825"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "181/3650"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "1/730"
+        }
+      ],
+      "ourShare": "93/1825",
+      "contact": "",
+      "notes": "Combined piece – the 2009 shape cannot be split between these current plots, so shares are weighted by each plot's area here: 6367/1 (69 m²), 6367/2 (4 m²)\n\n[6367/1]\nSource: 061026_ZK DD Prečko.xlsx – sheets M1-6\nk.o. Donje Vrapče · ZK uložak 147 · total area 1398 m²\nArea per kazeta/street (ZK): M1-6 69 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): založno pravo; teret\n\n[6367/2]\nSource: 061026_ZK DD Prečko.xlsx – sheets M1-6\nk.o. Donje Vrapče · ZK uložak 147 · total area 73 m²\nArea per kazeta/street (ZK): M1-6 4 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): založno pravo; teret",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6367/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "Martinec Dragutin",
+          "share": "1396/1471"
+        },
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "73/1471"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "2/1471"
+        }
+      ],
+      "ourShare": "75/1471",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6\nk.o. Donje Vrapče · ZK uložak 147 · total area 1398 m²\nArea per kazeta/street (ZK): M1-6 69 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): založno pravo; teret",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6927/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "JAVNO DOBRO U OPĆOJ UPORABI - NERAZVRSTANA CESTA U NEOTUĐIVOM VLASNIŠTVU GRAD ZAGREB, OIB: 61817894937",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 203 · total area 1055 m²\nArea per kazeta/street (ZK): M1-7 3 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6927/4": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "JAVNO DOBRO U OPĆOJ UPORABI - NERAZVRSTANA CESTA U NEOTUĐIVOM VLASNIŠTVU GRAD ZAGREB, OIB: 61817894937",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 4\nk.o. Donje Vrapče · ZK uložak 199 · total area 79 m²\nArea per kazeta/street (ZK): Ulica 4 79 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6396/1": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "CVILJAK ŽELJKO",
+          "share": "1/4"
+        },
+        {
+          "name": "DOLANJSKI MIHAELA",
+          "share": "1/4"
+        },
+        {
+          "name": "SOMEK KRISTINA",
+          "share": "1/4"
+        },
+        {
+          "name": "Somek Damir",
+          "share": "1/4"
+        },
+        {
+          "name": "LANDMARK GROUP d.o.o. (predbilježba)",
+          "share": "121/346"
+        }
+      ],
+      "ourShare": "121/346",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 207 · total area 1038 m²\nArea per kazeta/street (ZK): M1-7 363 m²",
+      "updatedAt": "2026-11-10T13:42:53.367Z"
+    },
+    "6396/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "CVILJAK ŽELJKO",
+          "share": "1/4"
+        },
+        {
+          "name": "DOLANJSKI MIHAELA",
+          "share": "1/4"
+        },
+        {
+          "name": "SOMEK KRISTINA",
+          "share": "1/4"
+        },
+        {
+          "name": "Somek Damir",
+          "share": "1/4"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 4\nk.o. Donje Vrapče · ZK uložak 210 · total area 410 m²\nArea per kazeta/street (ZK): Ulica 4 414 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6357/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "1384/3953"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "2569/3953"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 1006 · total area 2364 m²\nArea per kazeta/street (ZK): M1-7 2382 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6357/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "1384/3953"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "2569/3953"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M2-3, Z1-2\nk.o. Donje Vrapče · ZK uložak 1007 · total area 545 m²\nArea per kazeta/street (ZK): M2-3 532 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6357/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O.",
+          "share": "1384/3953"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "2569/3953"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 1b\nk.o. Donje Vrapče · ZK uložak 1008 · total area 1044 m²\nArea per kazeta/street (ZK): Ulica 1b 1045 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6358/1": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "204/2443"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "2239/2443"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-6, M1-7, Z1-5\nk.o. Donje Vrapče · ZK uložak 1009 · total area 1912 m²\nArea per kazeta/street (ZK): M1-6 205 m², M1-7 667 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6358/2": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "204/2443"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "2239/2443"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Z1-2\nk.o. Donje Vrapče · ZK uložak 1010 · total area 3 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6358/3": {
+      "status": "owned",
+      "owners": [
+        {
+          "name": "PROJEKT MAKSIMUS d.o.o.",
+          "share": "204/2443"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o.",
+          "share": "2239/2443"
+        }
+      ],
+      "ourShare": "1",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 1b\nk.o. Donje Vrapče · ZK uložak 1010 · total area 528 m²\nArea per kazeta/street (ZK): Ulica 1b 530 m²\nPending registrations (plombe): Z-44312/2026, Z-47532/2026\nEncumbrances (List C): 142.570.096,50 KN – ALPE-ADRIA POSLOVODSTVO D.O.O; 4.500.000,00 EUR – LANDMARK GROUP d.o.o",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6339/3": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets M1-7\nk.o. Donje Vrapče · ZK uložak 208 · total area 88 m²\nArea per kazeta/street (ZK): M1-7 93 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6339/4": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 4\nk.o. Donje Vrapče · ZK uložak 209 · total area 364 m²\nArea per kazeta/street (ZK): Ulica 4 368 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6338/3": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 4\nk.o. Donje Vrapče · ZK uložak 621 · total area 128 m²\nArea per kazeta/street (ZK): Ulica 4 135 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6337/2": {
+      "status": "not_owned",
+      "owners": [
+        {
+          "name": "GRAD ZAGREB",
+          "share": "1"
+        }
+      ],
+      "ourShare": "0",
+      "contact": "",
+      "notes": "Source: 061026_ZK DD Prečko.xlsx – sheets Ulica 4\nk.o. Donje Vrapče · ZK uložak 622 · total area 10 m²\nArea per kazeta/street (ZK): Ulica 4 11 m²",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3629 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "5569 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3566 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3556 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3622 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3623 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3624 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3625 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3621 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3626 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3627 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "3628 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "5570 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6394 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6388 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6387 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6386 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6384 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6383 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6380 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6377 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6376 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6374 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    },
+    "6373 (2009)": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "Part of the 2009 shape outside the UPU boundary; not in the ZK workbook.",
+      "updatedAt": "2026-11-10T13:31:51.181Z"
+    }
+  },
+  "reviews": {
+    "REVIEW-21": {
+      "type": "plot",
+      "plotNumber": "6365",
+      "resolvedAt": "2026-11-10T11:33:10.131Z"
+    },
+    "REVIEW-20": {
+      "type": "plot",
+      "plotNumber": "6371",
+      "resolvedAt": "2026-11-10T11:33:34.899Z"
+    },
+    "REVIEW-19": {
+      "type": "plot",
+      "plotNumber": "6372",
+      "resolvedAt": "2026-11-10T11:33:37.703Z"
+    },
+    "REVIEW-24": {
+      "type": "plot",
+      "plotNumber": "6390",
+      "resolvedAt": "2026-11-10T11:34:19.837Z"
+    },
+    "REVIEW-17": {
+      "type": "plot",
+      "plotNumber": "6412",
+      "resolvedAt": "2026-11-10T11:34:35.395Z"
+    },
+    "REVIEW-15": {
+      "type": "plot",
+      "plotNumber": "3636/1",
+      "resolvedAt": "2026-11-10T11:35:51.640Z"
+    },
+    "REVIEW-8": {
+      "type": "plot",
+      "plotNumber": "3646",
+      "resolvedAt": "2026-11-10T11:36:28.678Z"
+    },
+    "REVIEW-7": {
+      "type": "plot",
+      "plotNumber": "3649",
+      "resolvedAt": "2026-11-10T11:36:59.247Z"
+    },
+    "REVIEW-16": {
+      "type": "plot",
+      "plotNumber": "6353",
+      "resolvedAt": "2026-11-10T12:46:08.172Z"
+    },
+    "REVIEW-13": {
+      "type": "plot",
+      "plotNumber": "6356/3",
+      "resolvedAt": "2026-11-10T12:46:39.130Z"
+    },
+    "REVIEW-22": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T12:46:51.385Z"
+    },
+    "REVIEW-23": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T12:46:54.760Z"
+    },
+    "REVIEW-25": {
+      "type": "plot",
+      "plotNumber": "6337/2",
+      "resolvedAt": "2026-11-10T12:47:29.786Z"
+    },
+    "REVIEW-18": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T12:47:41.784Z"
+    },
+    "REVIEW-4": {
+      "type": "plot",
+      "plotNumber": "5569",
+      "resolvedAt": "2026-11-10T12:48:03.944Z"
+    },
+    "REVIEW-11": {
+      "type": "plot",
+      "plotNumber": "3637",
+      "resolvedAt": "2026-11-10T12:48:30.344Z"
+    },
+    "REVIEW-3": {
+      "type": "plot",
+      "plotNumber": "3634",
+      "resolvedAt": "2026-11-10T13:13:44.847Z"
+    },
+    "REVIEW-1": {
+      "type": "plot",
+      "plotNumber": "118",
+      "resolvedAt": "2026-11-10T13:13:54.489Z"
+    },
+    "REVIEW-2": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:14:00.442Z"
+    },
+    "REVIEW-9": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:14:02.029Z"
+    },
+    "REVIEW-10": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:14:07.777Z"
+    },
+    "REVIEW-5": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:14:14.957Z"
+    },
+    "REVIEW-6": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:14:16.436Z"
+    },
+    "REVIEW-14": {
+      "type": "plot",
+      "plotNumber": "3627",
+      "resolvedAt": "2026-11-10T13:14:30.704Z"
+    },
+    "REVIEW-12": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:15:01.494Z"
+    },
+    "ZK-6390-M1-7-8": {
+      "type": "plot",
+      "plotNumber": "6390",
+      "resolvedAt": "2026-11-10T13:37:12.925Z"
+    }
+  },
+  "edits": {}
+}

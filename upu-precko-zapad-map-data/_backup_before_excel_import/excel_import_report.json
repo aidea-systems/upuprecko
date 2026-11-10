@@ -1,0 +1,2565 @@
+{
+ "decisions": [
+  {
+   "map_shape": "3633",
+   "region": "M1-1",
+   "area": 177.7,
+   "plots": [
+    "3633/2"
+   ],
+   "how": "pass1 own plots, area 178 vs 178"
+  },
+  {
+   "map_shape": "3633",
+   "region": "M1-2",
+   "area": 1017.5,
+   "plots": [
+    "3633/1"
+   ],
+   "how": "pass1 own plots, area 1054 vs 1017"
+  },
+  {
+   "map_shape": "3633",
+   "region": "road",
+   "area": 240.3,
+   "plots": [
+    "3633/3"
+   ],
+   "how": "pass1 own plots, area 240 vs 240"
+  },
+  {
+   "map_shape": "3634",
+   "region": "M1-2",
+   "area": 187.3,
+   "plots": [
+    "3634"
+   ],
+   "how": "pass1 own plots, area 187 vs 187"
+  },
+  {
+   "map_shape": "3632",
+   "region": "M1-1",
+   "area": 179.2,
+   "plots": [
+    "3632"
+   ],
+   "how": "pass1 own plots, area 179 vs 179"
+  },
+  {
+   "map_shape": "3632",
+   "region": "M1-2",
+   "area": 1007.7,
+   "plots": [
+    "3632"
+   ],
+   "how": "pass1 own plots, area 1007 vs 1008"
+  },
+  {
+   "map_shape": "3632",
+   "region": "road",
+   "area": 235.7,
+   "plots": [
+    "3632"
+   ],
+   "how": "pass1 own plots, area 235 vs 236"
+  },
+  {
+   "map_shape": "3631",
+   "region": "M1-1",
+   "area": 281.1,
+   "plots": [
+    "3631/2"
+   ],
+   "how": "pass1 own plots, area 281 vs 281"
+  },
+  {
+   "map_shape": "3631",
+   "region": "M1-2",
+   "area": 1618.6,
+   "plots": [
+    "3631/1"
+   ],
+   "how": "pass1 own plots, area 1618 vs 1619"
+  },
+  {
+   "map_shape": "3631",
+   "region": "road",
+   "area": 362.2,
+   "plots": [
+    "3631/3"
+   ],
+   "how": "pass1 own plots, area 362 vs 362"
+  },
+  {
+   "map_shape": "3630",
+   "region": "M1-1",
+   "area": 300.3,
+   "plots": [
+    "3630"
+   ],
+   "how": "pass1 own plots, area 300 vs 300"
+  },
+  {
+   "map_shape": "3630",
+   "region": "M1-2",
+   "area": 1532.8,
+   "plots": [
+    "3630"
+   ],
+   "how": "pass1 own plots, area 1534 vs 1533"
+  },
+  {
+   "map_shape": "3630",
+   "region": "road",
+   "area": 371.8,
+   "plots": [
+    "3630"
+   ],
+   "how": "pass1 own plots, area 371 vs 372"
+  },
+  {
+   "map_shape": "3629",
+   "region": "M1-1",
+   "area": 275.1,
+   "plots": [
+    "3629/3"
+   ],
+   "how": "pass1 own plots, area 276 vs 275"
+  },
+  {
+   "map_shape": "3629",
+   "region": "M1-2",
+   "area": 1318.5,
+   "plots": [
+    "3629/1"
+   ],
+   "how": "pass1 own plots, area 1323 vs 1319"
+  },
+  {
+   "map_shape": "3629",
+   "region": "road",
+   "area": 378.6,
+   "plots": [
+    "3629/4"
+   ],
+   "how": "pass1 own plots, area 368 vs 379"
+  },
+  {
+   "map_shape": "5569",
+   "region": "M1-2",
+   "area": 129.6,
+   "plots": [
+    "3937/9"
+   ],
+   "how": "pass2 area match 130 vs 130"
+  },
+  {
+   "map_shape": "5569",
+   "region": "M1-3",
+   "area": 283.7,
+   "plots": [
+    "3937/9"
+   ],
+   "how": "pass2 area match 284 vs 284"
+  },
+  {
+   "map_shape": "5569",
+   "region": "Z1-1",
+   "area": 70.0,
+   "plots": [
+    "3937/9"
+   ],
+   "how": "Z1 estimate total−other sheets ≈ 70"
+  },
+  {
+   "map_shape": "5569",
+   "region": "M2-1",
+   "area": 9.8,
+   "plots": [
+    "5569/4"
+   ],
+   "how": "pass1 own plots, area 9 vs 10"
+  },
+  {
+   "map_shape": "3635/1",
+   "region": "M1-2",
+   "area": 529.0,
+   "plots": [
+    "3635/1"
+   ],
+   "how": "pass1 own plots, area 529 vs 529"
+  },
+  {
+   "map_shape": "3635/1",
+   "region": "M1-3",
+   "area": 1139.3,
+   "plots": [
+    "3635/1"
+   ],
+   "how": "pass1 own plots, area 1140 vs 1139"
+  },
+  {
+   "map_shape": "3635/1",
+   "region": "Z1-1",
+   "area": 1286.8,
+   "plots": [
+    "3635/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3640",
+   "region": "M1-2",
+   "area": 611.6,
+   "plots": [
+    "3640/3"
+   ],
+   "how": "pass1 own plots, area 633 vs 612"
+  },
+  {
+   "map_shape": "3640",
+   "region": "Z1-1",
+   "area": 579.6,
+   "plots": [
+    "3640/3"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3640",
+   "region": "M1-5",
+   "area": 263.1,
+   "plots": [
+    "3640/1"
+   ],
+   "how": "pass1 own plots, area 263 vs 263"
+  },
+  {
+   "map_shape": "3640",
+   "region": "Z1-4",
+   "area": 545.3,
+   "plots": [
+    "3640/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3640",
+   "region": "road",
+   "area": 569.4,
+   "plots": [
+    "3640/2"
+   ],
+   "how": "pass1 own plots, area 569 vs 569"
+  },
+  {
+   "map_shape": "3638",
+   "region": "M1-3",
+   "area": 1779.6,
+   "plots": [
+    "3638/3"
+   ],
+   "how": "pass1 own plots, area 1783 vs 1780"
+  },
+  {
+   "map_shape": "3638",
+   "region": "D4",
+   "area": 1179.2,
+   "plots": [
+    "3638/1"
+   ],
+   "how": "pass1 own plots, area 1178 vs 1179"
+  },
+  {
+   "map_shape": "3638",
+   "region": "Z1-4",
+   "area": 829.8,
+   "plots": [
+    "3638/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3638",
+   "region": "road",
+   "area": 1.2,
+   "plots": [
+    "3638/1"
+   ],
+   "how": "road sliver joined to neighbouring piece"
+  },
+  {
+   "map_shape": "3638",
+   "region": "road",
+   "area": 802.8,
+   "plots": [
+    "3638/2"
+   ],
+   "how": "pass1 own plots, area 803 vs 803"
+  },
+  {
+   "map_shape": "3639",
+   "region": "M1-3",
+   "area": 691.1,
+   "plots": [
+    "3639/1"
+   ],
+   "how": "pass1 own plots, area 711 vs 691"
+  },
+  {
+   "map_shape": "3639",
+   "region": "Z1-1",
+   "area": 373.5,
+   "plots": [
+    "3639/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3639",
+   "region": "road",
+   "area": 373.4,
+   "plots": [
+    "3639/2"
+   ],
+   "how": "pass1 own plots, area 374 vs 373"
+  },
+  {
+   "map_shape": "3649",
+   "region": "M1-4",
+   "area": 146.3,
+   "plots": [
+    "3649"
+   ],
+   "how": "pass1 own plots, area 147 vs 146"
+  },
+  {
+   "map_shape": "3649",
+   "region": "outside",
+   "area": 197.5,
+   "plots": [
+    "3649"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "3646",
+   "region": "M1-4",
+   "area": 2817.2,
+   "plots": [
+    "3646"
+   ],
+   "how": "pass1 own plots, area 2817 vs 2817"
+  },
+  {
+   "map_shape": "3647",
+   "region": "M1-4",
+   "area": 2875.7,
+   "plots": [
+    "3647"
+   ],
+   "how": "pass1 own plots, area 2872 vs 2876"
+  },
+  {
+   "map_shape": "3557",
+   "region": "M1-1",
+   "area": 1783.3,
+   "plots": [
+    "3557"
+   ],
+   "how": "pass1 own plots, area 1783 vs 1783"
+  },
+  {
+   "map_shape": "3557",
+   "region": "M1-4",
+   "area": 898.4,
+   "plots": [
+    "3557"
+   ],
+   "how": "pass1 own plots, area 898 vs 898"
+  },
+  {
+   "map_shape": "3565",
+   "region": "M1-1",
+   "area": 1680.8,
+   "plots": [
+    "3565"
+   ],
+   "how": "pass1 own plots, area 1681 vs 1681"
+  },
+  {
+   "map_shape": "3565",
+   "region": "M1-4",
+   "area": 475.4,
+   "plots": [
+    "3565"
+   ],
+   "how": "pass1 own plots, area 475 vs 475"
+  },
+  {
+   "map_shape": "3566",
+   "region": "M1-1",
+   "area": 2186.9,
+   "plots": [
+    "3566/1"
+   ],
+   "how": "pass1 own plots, area 2166 vs 2187"
+  },
+  {
+   "map_shape": "3566",
+   "region": "M1-4",
+   "area": 469.2,
+   "plots": [
+    "3566/1"
+   ],
+   "how": "pass1 own plots, area 469 vs 469"
+  },
+  {
+   "map_shape": "3645",
+   "region": "M1-4",
+   "area": 722.4,
+   "plots": [
+    "3645"
+   ],
+   "how": "pass1 own plots, area 722 vs 722"
+  },
+  {
+   "map_shape": "3641",
+   "region": "M1-1",
+   "area": 329.6,
+   "plots": [
+    "3641/2"
+   ],
+   "how": "pass1 own plots, area 330 vs 330"
+  },
+  {
+   "map_shape": "3641",
+   "region": "M1-2",
+   "area": 2181.7,
+   "plots": [
+    "3641/1"
+   ],
+   "how": "pass1 own plots, area 2240 vs 2182"
+  },
+  {
+   "map_shape": "3641",
+   "region": "road",
+   "area": 480.9,
+   "plots": [
+    "3641/3"
+   ],
+   "how": "pass1 own plots, area 481 vs 481"
+  },
+  {
+   "map_shape": "3642",
+   "region": "M1-1",
+   "area": 163.2,
+   "plots": [
+    "3642/2"
+   ],
+   "how": "pass3 only candidate, APPROXIMATE area 183 vs 163"
+  },
+  {
+   "map_shape": "3642",
+   "region": "M1-2",
+   "area": 1023.1,
+   "plots": [
+    "3642/1"
+   ],
+   "how": "pass1 own plots, area 1050 vs 1023"
+  },
+  {
+   "map_shape": "3642",
+   "region": "road",
+   "area": 242.7,
+   "plots": [
+    "3642/3"
+   ],
+   "how": "pass1 own plots, area 241 vs 243"
+  },
+  {
+   "map_shape": "3644",
+   "region": "M1-4",
+   "area": 230.2,
+   "plots": [
+    "3644/1"
+   ],
+   "how": "pass1 own plots, area 230 vs 230"
+  },
+  {
+   "map_shape": "3644",
+   "region": "M1-5",
+   "area": 380.9,
+   "plots": [
+    "3644/1"
+   ],
+   "how": "pass1 own plots, area 381 vs 381"
+  },
+  {
+   "map_shape": "3644",
+   "region": "Z1-3",
+   "area": 64.3,
+   "plots": [
+    "3644/1"
+   ],
+   "how": "Z1 estimate total−other sheets ≈ 64"
+  },
+  {
+   "map_shape": "3644",
+   "region": "road",
+   "area": 1548.6,
+   "plots": [
+    "3644/2",
+    "3644/3"
+   ],
+   "how": "pass1 own plots, area 1550 vs 1549"
+  },
+  {
+   "map_shape": "3643",
+   "region": "M1-1",
+   "area": 61.8,
+   "plots": [
+    "3643/3"
+   ],
+   "how": "pass1 own plots, area 62 vs 62"
+  },
+  {
+   "map_shape": "3643",
+   "region": "M1-4",
+   "area": 92.1,
+   "plots": [
+    "3643/3"
+   ],
+   "how": "pass1 own plots, area 92 vs 92"
+  },
+  {
+   "map_shape": "3643",
+   "region": "M1-2",
+   "area": 404.4,
+   "plots": [
+    "3643/1"
+   ],
+   "how": "pass3 only candidate, APPROXIMATE area 426 vs 404"
+  },
+  {
+   "map_shape": "3643",
+   "region": "road",
+   "area": 856.4,
+   "plots": [
+    "3643/2",
+    "3643/4"
+   ],
+   "how": "pass1 own plots, area 859 vs 856"
+  },
+  {
+   "map_shape": "3637",
+   "region": "M1-3",
+   "area": 274.4,
+   "plots": [
+    "3637/1"
+   ],
+   "how": "pass1 own plots, area 274 vs 274"
+  },
+  {
+   "map_shape": "3637",
+   "region": "M2-2",
+   "area": 8.2,
+   "plots": [
+    "3637/2"
+   ],
+   "how": "pass1 own plots, area 8 vs 8"
+  },
+  {
+   "map_shape": "3637",
+   "region": "road",
+   "area": 196.4,
+   "plots": [
+    "3637/3"
+   ],
+   "how": "pass1 own plots, area 196 vs 196"
+  },
+  {
+   "map_shape": "6356/1",
+   "region": "M2-2",
+   "area": 1622.4,
+   "plots": [
+    "6356/1"
+   ],
+   "how": "pass1 own plots, area 1621 vs 1622"
+  },
+  {
+   "map_shape": "6356/1",
+   "region": "M2-3",
+   "area": 589.7,
+   "plots": [
+    "6356/1"
+   ],
+   "how": "pass1 own plots, area 590 vs 590"
+  },
+  {
+   "map_shape": "6356/1",
+   "region": "Z1-2",
+   "area": 428.7,
+   "plots": [
+    "6356/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6356/1",
+   "region": "road",
+   "area": 174.9,
+   "plots": [
+    "6356/4",
+    "6356/9"
+   ],
+   "how": "pass2 area match 174 vs 175 (close alternative, err 11)"
+  },
+  {
+   "map_shape": "3558",
+   "region": "M1-1",
+   "area": 748.8,
+   "plots": [
+    "3558"
+   ],
+   "how": "pass1 own plots, area 749 vs 749"
+  },
+  {
+   "map_shape": "3558",
+   "region": "outside",
+   "area": 895.2,
+   "plots": [
+    "3558"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "3556",
+   "region": "M1-1",
+   "area": 763.7,
+   "plots": [
+    "3556/2"
+   ],
+   "how": "pass1 own plots, area 764 vs 764"
+  },
+  {
+   "map_shape": "3622",
+   "region": "M1-3",
+   "area": 210.2,
+   "plots": [
+    "3622/1"
+   ],
+   "how": "pass1 own plots, area 210 vs 210"
+  },
+  {
+   "map_shape": "3623",
+   "region": "M1-3",
+   "area": 337.8,
+   "plots": [
+    "3623/4"
+   ],
+   "how": "pass1 own plots, area 338 vs 338"
+  },
+  {
+   "map_shape": "6356/3",
+   "region": "M1-6",
+   "area": 203.9,
+   "plots": [
+    "6356/3"
+   ],
+   "how": "pass1 own plots, area 205 vs 204"
+  },
+  {
+   "map_shape": "6356/3",
+   "region": "M2-2",
+   "area": 12.4,
+   "plots": [
+    "6356/3"
+   ],
+   "how": "pass1 own plots, area 12 vs 12"
+  },
+  {
+   "map_shape": "6356/3",
+   "region": "Z1-2",
+   "area": 1529.7,
+   "plots": [
+    "6356/3"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6356/3",
+   "region": "road",
+   "area": 422.3,
+   "plots": [
+    "6356/3"
+   ],
+   "how": "pass1 own plots, area 421 vs 422"
+  },
+  {
+   "map_shape": "6356/3",
+   "region": "outside",
+   "area": 10513.0,
+   "plots": [
+    "6356/3"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6356/3",
+   "region": "outside",
+   "area": 24.4,
+   "plots": [
+    "6356/3"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6356/3",
+   "region": "M1-7",
+   "area": 2525.6,
+   "plots": [
+    "6341/1",
+    "5562/23"
+   ],
+   "how": "pass2 area match 2477 vs 2526"
+  },
+  {
+   "map_shape": "6356/3",
+   "region": "M2-1",
+   "area": 40.6,
+   "plots": [
+    "5562/27"
+   ],
+   "how": "pass2 area match 33 vs 41"
+  },
+  {
+   "map_shape": "6356/3",
+   "region": "M2-3",
+   "area": 5289.2,
+   "plots": [
+    "5562/18",
+    "6341/2",
+    "6356/3",
+    "5562/19",
+    "5562/12",
+    "5562/14"
+   ],
+   "how": "pass2 area match 5171 vs 5289"
+  },
+  {
+   "map_shape": "3624",
+   "region": "M1-3",
+   "area": 262.5,
+   "plots": [
+    "3624/4"
+   ],
+   "how": "pass1 own plots, area 263 vs 262"
+  },
+  {
+   "map_shape": "3624",
+   "region": "Z1-1",
+   "area": 65.5,
+   "plots": [
+    "3624/4"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3625",
+   "region": "M1-2",
+   "area": 0.8,
+   "plots": [
+    "3625/1"
+   ],
+   "how": "pass1 own plots, area 1 vs 1"
+  },
+  {
+   "map_shape": "3625",
+   "region": "M1-3",
+   "area": 21.8,
+   "plots": [
+    "3625/1"
+   ],
+   "how": "pass1 own plots, area 22 vs 22"
+  },
+  {
+   "map_shape": "3625",
+   "region": "Z1-1",
+   "area": 161.8,
+   "plots": [
+    "3625/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3621",
+   "region": "M1-3",
+   "area": 1.7,
+   "plots": [
+    "3621/6"
+   ],
+   "how": "pass1 own plots, area 2 vs 2"
+  },
+  {
+   "map_shape": "3626",
+   "region": "M1-2",
+   "area": 300.9,
+   "plots": [
+    "3626/5"
+   ],
+   "how": "pass1 own plots, area 301 vs 301"
+  },
+  {
+   "map_shape": "3626",
+   "region": "Z1-1",
+   "area": 141.8,
+   "plots": [
+    "3626/5"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3564",
+   "region": "M1-1",
+   "area": 432.7,
+   "plots": [
+    "3564"
+   ],
+   "how": "pass1 own plots, area 433 vs 433"
+  },
+  {
+   "map_shape": "3564",
+   "region": "outside",
+   "area": 68.4,
+   "plots": [
+    "3564"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "3627",
+   "region": "M1-2",
+   "area": 1.6,
+   "plots": [
+    "3627/3"
+   ],
+   "how": "pass1 own plots, area 2 vs 2"
+  },
+  {
+   "map_shape": "3628",
+   "region": "M1-1",
+   "area": 15.7,
+   "plots": [
+    "3628/3"
+   ],
+   "how": "pass1 own plots, area 16 vs 16"
+  },
+  {
+   "map_shape": "3628",
+   "region": "M1-2",
+   "area": 175.1,
+   "plots": [
+    "3628/1"
+   ],
+   "how": "pass1 own plots, area 179 vs 175"
+  },
+  {
+   "map_shape": "3560",
+   "region": "M1-1",
+   "area": 71.8,
+   "plots": [
+    "3560"
+   ],
+   "how": "pass1 own plots, area 72 vs 72"
+  },
+  {
+   "map_shape": "3560",
+   "region": "outside",
+   "area": 485.0,
+   "plots": [
+    "3560"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "3559",
+   "region": "M1-1",
+   "area": 518.7,
+   "plots": [
+    "3559"
+   ],
+   "how": "pass1 own plots, area 518 vs 519"
+  },
+  {
+   "map_shape": "3559",
+   "region": "outside",
+   "area": 503.1,
+   "plots": [
+    "3559"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "5570",
+   "region": "M1-3",
+   "area": 190.9,
+   "plots": [
+    "5570/5"
+   ],
+   "how": "pass1 own plots, area 191 vs 191"
+  },
+  {
+   "map_shape": "5570",
+   "region": "M2-1",
+   "area": 2873.2,
+   "plots": [
+    "5570/2",
+    "5570/1"
+   ],
+   "how": "pass1 own plots, area 2858 vs 2873"
+  },
+  {
+   "map_shape": "5570",
+   "region": "road",
+   "area": 971.5,
+   "plots": [
+    "5570/6"
+   ],
+   "how": "pass3 only candidate, APPROXIMATE area 847 vs 972"
+  },
+  {
+   "map_shape": "3636/1",
+   "region": "M1-3",
+   "area": 4750.8,
+   "plots": [
+    "3636/1"
+   ],
+   "how": "pass1 own plots, area 4745 vs 4751"
+  },
+  {
+   "map_shape": "3636/1",
+   "region": "road",
+   "area": 807.0,
+   "plots": [
+    "3636/2",
+    "3636/3"
+   ],
+   "how": "pass1 own plots, area 797 vs 807"
+  },
+  {
+   "map_shape": "3635/2",
+   "region": "M1-3",
+   "area": 834.0,
+   "plots": [
+    "3635/2"
+   ],
+   "how": "pass1 own plots, area 834 vs 834"
+  },
+  {
+   "map_shape": "6353",
+   "region": "M1-3",
+   "area": 425.6,
+   "plots": [
+    "6353/3"
+   ],
+   "how": "pass1 own plots, area 429 vs 426"
+  },
+  {
+   "map_shape": "6353",
+   "region": "M2-1",
+   "area": 852.5,
+   "plots": [
+    "6353/1",
+    "5671/1"
+   ],
+   "how": "pass2 area match 864 vs 852"
+  },
+  {
+   "map_shape": "6353",
+   "region": "M2-2",
+   "area": 801.1,
+   "plots": [
+    "6353/1"
+   ],
+   "how": "pass1 own plots, area 799 vs 801"
+  },
+  {
+   "map_shape": "6353",
+   "region": "Z1-2",
+   "area": 1681.6,
+   "plots": [
+    "6353/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6353",
+   "region": "road",
+   "area": 1094.6,
+   "plots": [
+    "6353/4"
+   ],
+   "how": "pass1 own plots, area 1094 vs 1095"
+  },
+  {
+   "map_shape": "3664",
+   "region": "M1-4",
+   "area": 1223.7,
+   "plots": [
+    "3664"
+   ],
+   "how": "pass1 own plots, area 1224 vs 1224"
+  },
+  {
+   "map_shape": "3664",
+   "region": "Z1-3",
+   "area": 683.6,
+   "plots": [
+    "3664"
+   ],
+   "how": "NOT LISTED on Z1-3 sheet; total−other sheets = 682 ≈ 684"
+  },
+  {
+   "map_shape": "3665",
+   "region": "M1-5",
+   "area": 22.5,
+   "plots": [
+    "3665"
+   ],
+   "how": "pass1 own plots, area 22 vs 23"
+  },
+  {
+   "map_shape": "3665",
+   "region": "Z1-3",
+   "area": 595.5,
+   "plots": [
+    "3665"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3670",
+   "region": "M1-5",
+   "area": 1569.6,
+   "plots": [
+    "3670"
+   ],
+   "how": "pass1 own plots, area 1570 vs 1570"
+  },
+  {
+   "map_shape": "3670",
+   "region": "Z1-3",
+   "area": 225.5,
+   "plots": [
+    "3670"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3671",
+   "region": "M1-5",
+   "area": 3017.9,
+   "plots": [
+    "3671"
+   ],
+   "how": "pass1 own plots, area 3018 vs 3018"
+  },
+  {
+   "map_shape": "6354",
+   "region": "M1-3",
+   "area": 6.6,
+   "plots": [
+    "6354/3"
+   ],
+   "how": "pass1 own plots, area 7 vs 7"
+  },
+  {
+   "map_shape": "6354",
+   "region": "M2-2",
+   "area": 3693.2,
+   "plots": [
+    "6354/1"
+   ],
+   "how": "pass1 own plots, area 3695 vs 3693"
+  },
+  {
+   "map_shape": "6354",
+   "region": "M2-3",
+   "area": 260.7,
+   "plots": [
+    "6354/1"
+   ],
+   "how": "pass1 own plots, area 261 vs 261"
+  },
+  {
+   "map_shape": "6354",
+   "region": "Z1-2",
+   "area": 944.8,
+   "plots": [
+    "6354/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6354",
+   "region": "road",
+   "area": 704.9,
+   "plots": [
+    "6354/2"
+   ],
+   "how": "pass1 own plots, area 705 vs 705"
+  },
+  {
+   "map_shape": "3672",
+   "region": "M1-5",
+   "area": 3680.8,
+   "plots": [
+    "3672"
+   ],
+   "how": "pass1 own plots, area 3687 vs 3681"
+  },
+  {
+   "map_shape": "3672",
+   "region": "Z1-4",
+   "area": 175.0,
+   "plots": [
+    "3672"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6355",
+   "region": "M2-2",
+   "area": 1700.3,
+   "plots": [
+    "6355/1"
+   ],
+   "how": "pass1 own plots, area 1700 vs 1700"
+  },
+  {
+   "map_shape": "6355",
+   "region": "M2-3",
+   "area": 447.4,
+   "plots": [
+    "6355/1"
+   ],
+   "how": "pass1 own plots, area 447 vs 447"
+  },
+  {
+   "map_shape": "6355",
+   "region": "Z1-2",
+   "area": 437.0,
+   "plots": [
+    "6355/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6355",
+   "region": "road",
+   "area": 74.8,
+   "plots": [
+    "6355/2"
+   ],
+   "how": "pass1 own plots, area 75 vs 75"
+  },
+  {
+   "map_shape": "3678/2",
+   "region": "M1-6",
+   "area": 609.0,
+   "plots": [
+    "3678/2"
+   ],
+   "how": "pass1 own plots, area 608 vs 609"
+  },
+  {
+   "map_shape": "3678/2",
+   "region": "M2-2",
+   "area": 22.4,
+   "plots": [
+    "3678/2"
+   ],
+   "how": "pass1 own plots, area 22 vs 22"
+  },
+  {
+   "map_shape": "3678/2",
+   "region": "D4",
+   "area": 254.7,
+   "plots": [
+    "3678/2"
+   ],
+   "how": "pass1 own plots, area 247 vs 255"
+  },
+  {
+   "map_shape": "3678/2",
+   "region": "road",
+   "area": 585.7,
+   "plots": [
+    "3678/2"
+   ],
+   "how": "pass1 own plots, area 585 vs 586"
+  },
+  {
+   "map_shape": "3678/3",
+   "region": "D4",
+   "area": 1259.3,
+   "plots": [
+    "3678/3"
+   ],
+   "how": "pass1 own plots, area 1260 vs 1259"
+  },
+  {
+   "map_shape": "3678/3",
+   "region": "road",
+   "area": 450.6,
+   "plots": [
+    "3678/3"
+   ],
+   "how": "pass1 own plots, area 461 vs 451"
+  },
+  {
+   "map_shape": "3674/1",
+   "region": "Z1-4",
+   "area": 358.6,
+   "plots": [
+    "3674/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3675",
+   "region": "D4",
+   "area": 314.8,
+   "plots": [
+    "3675"
+   ],
+   "how": "pass1 own plots, area 313 vs 315"
+  },
+  {
+   "map_shape": "3675",
+   "region": "Z1-4",
+   "area": 1533.8,
+   "plots": [
+    "3675"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "3675",
+   "region": "road",
+   "area": 0.6,
+   "plots": [
+    "3675"
+   ],
+   "how": "road sliver joined to neighbouring piece"
+  },
+  {
+   "map_shape": "3675",
+   "region": "outside",
+   "area": 400.8,
+   "plots": [
+    "3675"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6356/2",
+   "region": "M1-6",
+   "area": 41.2,
+   "plots": [
+    "6356/5"
+   ],
+   "how": "pass2 area match 42 vs 41"
+  },
+  {
+   "map_shape": "6356/2",
+   "region": "M2-2",
+   "area": 385.4,
+   "plots": [
+    "6356/2"
+   ],
+   "how": "pass1 own plots, area 388 vs 385"
+  },
+  {
+   "map_shape": "6356/2",
+   "region": "M2-3",
+   "area": 530.2,
+   "plots": [
+    "6356/2"
+   ],
+   "how": "pass1 own plots, area 531 vs 530"
+  },
+  {
+   "map_shape": "6356/2",
+   "region": "Z1-2",
+   "area": 300.2,
+   "plots": [
+    "6356/2"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6356/2",
+   "region": "road",
+   "area": 664.8,
+   "plots": [
+    "6356/6"
+   ],
+   "how": "pass2 area match 669 vs 665 (close alternative, err 14)"
+  },
+  {
+   "map_shape": "3676/2",
+   "region": "D4",
+   "area": 1226.4,
+   "plots": [
+    "3676/1"
+   ],
+   "how": "pass1 own plots, area 1235 vs 1226"
+  },
+  {
+   "map_shape": "3676/2",
+   "region": "road",
+   "area": 0.6,
+   "plots": [
+    "3676/1"
+   ],
+   "how": "road sliver joined to neighbouring piece"
+  },
+  {
+   "map_shape": "3678/1",
+   "region": "M1-6",
+   "area": 1587.4,
+   "plots": [
+    "3678/1"
+   ],
+   "how": "pass1 own plots, area 1588 vs 1587"
+  },
+  {
+   "map_shape": "3678/1",
+   "region": "D4",
+   "area": 2606.0,
+   "plots": [
+    "3678/1"
+   ],
+   "how": "pass1 own plots, area 2609 vs 2606"
+  },
+  {
+   "map_shape": "3678/1",
+   "region": "outside",
+   "area": 2232.8,
+   "plots": [
+    "3678/1"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6359",
+   "region": "M1-6",
+   "area": 3339.9,
+   "plots": [
+    "6359/1"
+   ],
+   "how": "pass1 own plots, area 3338 vs 3340"
+  },
+  {
+   "map_shape": "6359",
+   "region": "Z1-5",
+   "area": 116.8,
+   "plots": [
+    "6359/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6359",
+   "region": "road",
+   "area": 79.5,
+   "plots": [
+    "6359/2"
+   ],
+   "how": "pass1 own plots, area 79 vs 79"
+  },
+  {
+   "map_shape": "3677",
+   "region": "D4",
+   "area": 660.0,
+   "plots": [
+    "3677"
+   ],
+   "how": "pass1 own plots, area 655 vs 660"
+  },
+  {
+   "map_shape": "3677",
+   "region": "outside",
+   "area": 2762.1,
+   "plots": [
+    "3677"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6398",
+   "region": "M1-6",
+   "area": 446.1,
+   "plots": [
+    "6398"
+   ],
+   "how": "pass1 own plots, area 446 vs 446"
+  },
+  {
+   "map_shape": "6360",
+   "region": "M1-6",
+   "area": 188.8,
+   "plots": [
+    "6360"
+   ],
+   "how": "pass1 own plots, area 189 vs 189"
+  },
+  {
+   "map_shape": "6360",
+   "region": "D4",
+   "area": 0.5,
+   "plots": [
+    "6360"
+   ],
+   "how": "pass1 own plots, area 1 vs 1"
+  },
+  {
+   "map_shape": "6360",
+   "region": "outside",
+   "area": 432.6,
+   "plots": [
+    "6360"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6415",
+   "region": "M1-6",
+   "area": 109.7,
+   "plots": [
+    "6397/1"
+   ],
+   "how": "pass2 area match 110 vs 110"
+  },
+  {
+   "map_shape": "6415",
+   "region": "M1-7",
+   "area": 313.9,
+   "plots": [
+    "6397/1"
+   ],
+   "how": "pass2 area match 312 vs 314"
+  },
+  {
+   "map_shape": "6415",
+   "region": "Z1-5",
+   "area": 44.0,
+   "plots": [
+    "6397/1"
+   ],
+   "how": "Z1 estimate total−other sheets ≈ 44"
+  },
+  {
+   "map_shape": "6403",
+   "region": "M1-7",
+   "area": 441.0,
+   "plots": [
+    "6403"
+   ],
+   "how": "pass1 own plots, area 441 vs 441"
+  },
+  {
+   "map_shape": "6404",
+   "region": "M1-7",
+   "area": 345.9,
+   "plots": [
+    "6404"
+   ],
+   "how": "pass1 own plots, area 346 vs 346"
+  },
+  {
+   "map_shape": "6405",
+   "region": "M1-7",
+   "area": 402.1,
+   "plots": [
+    "6405"
+   ],
+   "how": "pass1 own plots, area 402 vs 402"
+  },
+  {
+   "map_shape": "6406",
+   "region": "M1-7",
+   "area": 399.1,
+   "plots": [
+    "6406"
+   ],
+   "how": "pass1 own plots, area 399 vs 399"
+  },
+  {
+   "map_shape": "6407",
+   "region": "M1-7",
+   "area": 424.1,
+   "plots": [
+    "6407"
+   ],
+   "how": "pass1 own plots, area 424 vs 424"
+  },
+  {
+   "map_shape": "6408",
+   "region": "M1-7",
+   "area": 375.2,
+   "plots": [
+    "6408"
+   ],
+   "how": "pass1 own plots, area 375 vs 375"
+  },
+  {
+   "map_shape": "6409",
+   "region": "M1-7",
+   "area": 388.5,
+   "plots": [
+    "6409"
+   ],
+   "how": "pass3 only candidate, APPROXIMATE area 369 vs 388"
+  },
+  {
+   "map_shape": "6410",
+   "region": "M1-7",
+   "area": 215.2,
+   "plots": [
+    "6410"
+   ],
+   "how": "pass1 own plots, area 215 vs 215"
+  },
+  {
+   "map_shape": "6411",
+   "region": "M1-7",
+   "area": 232.3,
+   "plots": [
+    "6411"
+   ],
+   "how": "pass1 own plots, area 227 vs 232"
+  },
+  {
+   "map_shape": "6411",
+   "region": "road",
+   "area": 14.6,
+   "plots": [
+    "6411"
+   ],
+   "how": "pass1 own plots, area 20 vs 15"
+  },
+  {
+   "map_shape": "6412",
+   "region": "M1-7",
+   "area": 127.8,
+   "plots": [
+    "6412/1"
+   ],
+   "how": "pass1 own plots, area 119 vs 128"
+  },
+  {
+   "map_shape": "6412",
+   "region": "road",
+   "area": 90.7,
+   "plots": [
+    "6412/2"
+   ],
+   "how": "pass1 own plots, area 100 vs 91"
+  },
+  {
+   "map_shape": "6413",
+   "region": "M1-7",
+   "area": 39.9,
+   "plots": [
+    "6413/1"
+   ],
+   "how": "pass1 own plots, area 31 vs 40"
+  },
+  {
+   "map_shape": "6413",
+   "region": "road",
+   "area": 130.8,
+   "plots": [
+    "6413/2"
+   ],
+   "how": "pass1 own plots, area 142 vs 131"
+  },
+  {
+   "map_shape": "6414",
+   "region": "road",
+   "area": 130.4,
+   "plots": [
+    "6414"
+   ],
+   "how": "pass1 own plots, area 131 vs 130"
+  },
+  {
+   "map_shape": "6394",
+   "region": "M1-7",
+   "area": 288.3,
+   "plots": [
+    "6394/1"
+   ],
+   "how": "pass1 own plots, area 281 vs 288"
+  },
+  {
+   "map_shape": "6394",
+   "region": "road",
+   "area": 134.9,
+   "plots": [
+    "6394/2"
+   ],
+   "how": "pass1 own plots, area 146 vs 135"
+  },
+  {
+   "map_shape": "6389",
+   "region": "M1-7",
+   "area": 154.5,
+   "plots": [
+    "6389/1"
+   ],
+   "how": "pass1 own plots, area 140 vs 154"
+  },
+  {
+   "map_shape": "6389",
+   "region": "road",
+   "area": 81.9,
+   "plots": [
+    "6389/2"
+   ],
+   "how": "pass3 only candidate, APPROXIMATE area 97 vs 82"
+  },
+  {
+   "map_shape": "6388",
+   "region": "M1-7",
+   "area": 439.9,
+   "plots": [
+    "6388/2"
+   ],
+   "how": "pass1 own plots, area 442 vs 440"
+  },
+  {
+   "map_shape": "6387",
+   "region": "M1-7",
+   "area": 430.7,
+   "plots": [
+    "6387/2"
+   ],
+   "how": "pass1 own plots, area 432 vs 431"
+  },
+  {
+   "map_shape": "6386",
+   "region": "M1-7",
+   "area": 445.5,
+   "plots": [
+    "6386/2"
+   ],
+   "how": "pass1 own plots, area 448 vs 446"
+  },
+  {
+   "map_shape": "6384",
+   "region": "M1-7",
+   "area": 320.3,
+   "plots": [
+    "6384/2"
+   ],
+   "how": "pass1 own plots, area 322 vs 320"
+  },
+  {
+   "map_shape": "6383",
+   "region": "M1-7",
+   "area": 399.6,
+   "plots": [
+    "6383/2"
+   ],
+   "how": "pass1 own plots, area 402 vs 400"
+  },
+  {
+   "map_shape": "6380",
+   "region": "M1-7",
+   "area": 270.2,
+   "plots": [
+    "6380/2"
+   ],
+   "how": "pass1 own plots, area 272 vs 270"
+  },
+  {
+   "map_shape": "6379",
+   "region": "M1-7",
+   "area": 244.0,
+   "plots": [
+    "6379/2",
+    "6379/1"
+   ],
+   "how": "pass1 own plots, area 245 vs 244"
+  },
+  {
+   "map_shape": "6379",
+   "region": "outside",
+   "area": 2296.9,
+   "plots": [
+    "6379/1"
+   ],
+   "how": "outside UPU: area matches the part of this plot outside the zones"
+  },
+  {
+   "map_shape": "6377",
+   "region": "M1-7",
+   "area": 203.1,
+   "plots": [
+    "6377/2"
+   ],
+   "how": "pass1 own plots, area 204 vs 203"
+  },
+  {
+   "map_shape": "6376",
+   "region": "M1-7",
+   "area": 181.8,
+   "plots": [
+    "6376/2"
+   ],
+   "how": "pass1 own plots, area 183 vs 182"
+  },
+  {
+   "map_shape": "6374",
+   "region": "M1-7",
+   "area": 165.3,
+   "plots": [
+    "6374/2"
+   ],
+   "how": "pass1 own plots, area 166 vs 165"
+  },
+  {
+   "map_shape": "6373",
+   "region": "M1-7",
+   "area": 195.6,
+   "plots": [
+    "6373/2"
+   ],
+   "how": "pass1 own plots, area 196 vs 196"
+  },
+  {
+   "map_shape": "6372",
+   "region": "M1-7",
+   "area": 280.6,
+   "plots": [
+    "6372"
+   ],
+   "how": "pass1 own plots, area 281 vs 281"
+  },
+  {
+   "map_shape": "6372",
+   "region": "Z1-5",
+   "area": 1.7,
+   "plots": [
+    "6372"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6372",
+   "region": "outside",
+   "area": 4816.1,
+   "plots": [
+    "6372"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6371",
+   "region": "M1-7",
+   "area": 32.7,
+   "plots": [
+    "6371/2"
+   ],
+   "how": "pass1 own plots, area 33 vs 33"
+  },
+  {
+   "map_shape": "6371",
+   "region": "Z1-5",
+   "area": 109.1,
+   "plots": [
+    "6371/2"
+   ],
+   "how": "Z1 estimate total−other sheets ≈ 109"
+  },
+  {
+   "map_shape": "6371",
+   "region": "outside",
+   "area": 2628.5,
+   "plots": [
+    "6371/1"
+   ],
+   "how": "outside UPU: area matches the part of this plot outside the zones"
+  },
+  {
+   "map_shape": "6370/1",
+   "region": "M1-6",
+   "area": 6.9,
+   "plots": [
+    "6370/1"
+   ],
+   "how": "pass1 own plots, area 7 vs 7"
+  },
+  {
+   "map_shape": "6370/1",
+   "region": "Z1-5",
+   "area": 134.9,
+   "plots": [
+    "6370/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6370/1",
+   "region": "outside",
+   "area": 1755.7,
+   "plots": [
+    "6370/1"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6369",
+   "region": "M1-6",
+   "area": 114.0,
+   "plots": [
+    "6369"
+   ],
+   "how": "pass1 own plots, area 114 vs 114"
+  },
+  {
+   "map_shape": "6369",
+   "region": "Z1-5",
+   "area": 12.2,
+   "plots": [
+    "6369"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6369",
+   "region": "outside",
+   "area": 2590.4,
+   "plots": [
+    "6369"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6368",
+   "region": "M1-6",
+   "area": 87.7,
+   "plots": [
+    "6368"
+   ],
+   "how": "pass1 own plots, area 88 vs 88"
+  },
+  {
+   "map_shape": "6368",
+   "region": "outside",
+   "area": 1475.8,
+   "plots": [
+    "6368"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6367",
+   "region": "M1-6",
+   "area": 73.1,
+   "plots": [
+    "6367/1",
+    "6367/2"
+   ],
+   "how": "pass1 own plots, area 73 vs 73"
+  },
+  {
+   "map_shape": "6367",
+   "region": "outside",
+   "area": 1403.7,
+   "plots": [
+    "6367/1"
+   ],
+   "how": "outside UPU: area matches the part of this plot outside the zones"
+  },
+  {
+   "map_shape": "6366",
+   "region": "M1-6",
+   "area": 65.0,
+   "plots": [
+    "6366"
+   ],
+   "how": "pass1 own plots, area 65 vs 65"
+  },
+  {
+   "map_shape": "6366",
+   "region": "outside",
+   "area": 1491.0,
+   "plots": [
+    "6366"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6365",
+   "region": "M1-6",
+   "area": 71.5,
+   "plots": [
+    "6365"
+   ],
+   "how": "pass1 own plots, area 72 vs 72"
+  },
+  {
+   "map_shape": "6365",
+   "region": "outside",
+   "area": 3494.5,
+   "plots": [
+    "6365"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6399",
+   "region": "M1-6",
+   "area": 224.4,
+   "plots": [
+    "6399"
+   ],
+   "how": "pass1 own plots, area 224 vs 224"
+  },
+  {
+   "map_shape": "6400",
+   "region": "M1-6",
+   "area": 229.6,
+   "plots": [
+    "6400"
+   ],
+   "how": "pass1 own plots, area 230 vs 230"
+  },
+  {
+   "map_shape": "6401",
+   "region": "M1-6",
+   "area": 198.5,
+   "plots": [
+    "6401"
+   ],
+   "how": "pass1 own plots, area 198 vs 199"
+  },
+  {
+   "map_shape": "6401",
+   "region": "Z1-5",
+   "area": 63.6,
+   "plots": [
+    "6401"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6402",
+   "region": "M1-6",
+   "area": 40.3,
+   "plots": [
+    "6402"
+   ],
+   "how": "pass1 own plots, area 40 vs 40"
+  },
+  {
+   "map_shape": "6402",
+   "region": "M1-7",
+   "area": 1065.6,
+   "plots": [
+    "6402"
+   ],
+   "how": "pass1 own plots, area 1065 vs 1066"
+  },
+  {
+   "map_shape": "6402",
+   "region": "Z1-5",
+   "area": 526.8,
+   "plots": [
+    "6402"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6927/2",
+   "region": "M1-7",
+   "area": 4.8,
+   "plots": [
+    "6927/2"
+   ],
+   "how": "pass1 own plots, area 3 vs 5"
+  },
+  {
+   "map_shape": "6927/2",
+   "region": "outside",
+   "area": 1080.9,
+   "plots": [
+    "6927/2"
+   ],
+   "how": "outside UPU: area matches the part of this plot outside the zones"
+  },
+  {
+   "map_shape": "6927/2",
+   "region": "road",
+   "area": 74.1,
+   "plots": [
+    "6927/4"
+   ],
+   "how": "pass1 own plots, area 79 vs 74"
+  },
+  {
+   "map_shape": "6417",
+   "region": "road",
+   "area": 91.0,
+   "plots": [
+    "6417"
+   ],
+   "how": "pass1 own plots, area 100 vs 91"
+  },
+  {
+   "map_shape": "6417",
+   "region": "outside",
+   "area": 823.2,
+   "plots": [
+    "6417"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6396",
+   "region": "M1-7",
+   "area": 383.5,
+   "plots": [
+    "6396/1"
+   ],
+   "how": "pass3 only candidate, APPROXIMATE area 363 vs 383"
+  },
+  {
+   "map_shape": "6396",
+   "region": "outside",
+   "area": 680.7,
+   "plots": [
+    "6396/1"
+   ],
+   "how": "outside UPU: area matches the part of this plot outside the zones"
+  },
+  {
+   "map_shape": "6396",
+   "region": "road",
+   "area": 381.1,
+   "plots": [
+    "6396/2"
+   ],
+   "how": "pass3 only candidate, APPROXIMATE area 414 vs 381"
+  },
+  {
+   "map_shape": "6390",
+   "region": "outside",
+   "area": 796.4,
+   "plots": [
+    "6390"
+   ],
+   "how": "outside UPU: same plot number, whole shape is this plot"
+  },
+  {
+   "map_shape": "6357",
+   "region": "M1-7",
+   "area": 2359.1,
+   "plots": [
+    "6357/1"
+   ],
+   "how": "pass1 own plots, area 2382 vs 2359"
+  },
+  {
+   "map_shape": "6357",
+   "region": "M2-3",
+   "area": 529.9,
+   "plots": [
+    "6357/2"
+   ],
+   "how": "pass1 own plots, area 532 vs 530"
+  },
+  {
+   "map_shape": "6357",
+   "region": "Z1-2",
+   "area": 15.4,
+   "plots": [
+    "6357/2"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6357",
+   "region": "road",
+   "area": 1039.8,
+   "plots": [
+    "6357/3"
+   ],
+   "how": "pass1 own plots, area 1045 vs 1040"
+  },
+  {
+   "map_shape": "6358",
+   "region": "M1-6",
+   "area": 204.8,
+   "plots": [
+    "6358/1"
+   ],
+   "how": "pass1 own plots, area 205 vs 205"
+  },
+  {
+   "map_shape": "6358",
+   "region": "M1-7",
+   "area": 666.8,
+   "plots": [
+    "6358/1"
+   ],
+   "how": "pass1 own plots, area 667 vs 667"
+  },
+  {
+   "map_shape": "6358",
+   "region": "Z1-5",
+   "area": 1043.0,
+   "plots": [
+    "6358/1"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6358",
+   "region": "Z1-2",
+   "area": 3.3,
+   "plots": [
+    "6358/2"
+   ],
+   "how": "Z1 sheet lists exactly one plot of this shape (area not given in ZK)"
+  },
+  {
+   "map_shape": "6358",
+   "region": "road",
+   "area": 532.0,
+   "plots": [
+    "6358/3"
+   ],
+   "how": "pass1 own plots, area 530 vs 532"
+  },
+  {
+   "map_shape": "6339/3",
+   "region": "M1-7",
+   "area": 110.4,
+   "plots": [
+    "6339/3"
+   ],
+   "how": "pass3 only candidate, APPROXIMATE area 93 vs 110"
+  },
+  {
+   "map_shape": "6339/3",
+   "region": "road",
+   "area": 350.1,
+   "plots": [
+    "6339/4"
+   ],
+   "how": "pass3 only candidate, APPROXIMATE area 368 vs 350"
+  },
+  {
+   "map_shape": "6338/3",
+   "region": "road",
+   "area": 134.0,
+   "plots": [
+    "6338/3"
+   ],
+   "how": "pass1 own plots, area 135 vs 134"
+  },
+  {
+   "map_shape": "6337/2",
+   "region": "road",
+   "area": 10.0,
+   "plots": [
+    "6337/2"
+   ],
+   "how": "pass1 own plots, area 11 vs 10"
+  }
+ ],
+ "review": [
+  {
+   "id": "ZK-5569-road-0",
+   "map_shape": "5569",
+   "region": "road",
+   "area": 113.0,
+   "candidates": [
+    "5562/14",
+    "5562/17",
+    "5562/20",
+    "5562/21",
+    "5562/24",
+    "5671/1",
+    "6341/3",
+    "6397/2"
+   ]
+  },
+  {
+   "id": "ZK-6356/3-IS-1",
+   "map_shape": "6356/3",
+   "region": "IS",
+   "area": 2459.7,
+   "candidates": []
+  },
+  {
+   "id": "ZK-6356/3-road-2",
+   "map_shape": "6356/3",
+   "region": "road",
+   "area": 5989.3,
+   "candidates": [
+    "5562/14",
+    "5562/17",
+    "5562/20",
+    "5562/21",
+    "5562/24",
+    "5671/1",
+    "6341/3",
+    "6397/2"
+   ]
+  },
+  {
+   "id": "ZK-5570-IS-3",
+   "map_shape": "5570",
+   "region": "IS",
+   "area": 959.9,
+   "candidates": []
+  },
+  {
+   "id": "ZK-5570-road-4",
+   "map_shape": "5570",
+   "region": "road",
+   "area": 17.4,
+   "candidates": [
+    "5562/14",
+    "5562/17",
+    "5562/20",
+    "5562/21",
+    "5562/24",
+    "5671/1",
+    "6341/3",
+    "6397/2"
+   ]
+  },
+  {
+   "id": "ZK-6353-IS-5",
+   "map_shape": "6353",
+   "region": "IS",
+   "area": 993.6,
+   "candidates": []
+  },
+  {
+   "id": "ZK-6353-road-6",
+   "map_shape": "6353",
+   "region": "road",
+   "area": 17.7,
+   "candidates": [
+    "5562/14",
+    "5562/17",
+    "5562/20",
+    "5562/21",
+    "5562/24",
+    "5671/1",
+    "6341/3",
+    "6397/2"
+   ]
+  },
+  {
+   "id": "ZK-6415-road-7",
+   "map_shape": "6415",
+   "region": "road",
+   "area": 29.4,
+   "candidates": [
+    "5562/14",
+    "5562/17",
+    "5562/20",
+    "5562/21",
+    "5562/24",
+    "5671/1",
+    "6341/3",
+    "6397/2",
+    "6415"
+   ]
+  },
+  {
+   "id": "ZK-6390-M1-7-8",
+   "map_shape": "6390",
+   "region": "M1-7",
+   "area": 408.4,
+   "candidates": [
+    "6390"
+   ]
+  }
+ ],
+ "outside_remainder": [
+  {
+   "map_shape": "3629",
+   "area": 85.2,
+   "number": "3629 (2009)"
+  },
+  {
+   "map_shape": "5569",
+   "area": 727.4,
+   "number": "5569 (2009)"
+  },
+  {
+   "map_shape": "5569",
+   "area": 8960.3,
+   "number": "5569 (2009)"
+  },
+  {
+   "map_shape": "3566",
+   "area": 73.3,
+   "number": "3566 (2009)"
+  },
+  {
+   "map_shape": "3556",
+   "area": 1526.1,
+   "number": "3556 (2009)"
+  },
+  {
+   "map_shape": "3622",
+   "area": 5242.6,
+   "number": "3622 (2009)"
+  },
+  {
+   "map_shape": "3623",
+   "area": 2890.4,
+   "number": "3623 (2009)"
+  },
+  {
+   "map_shape": "3624",
+   "area": 2236.0,
+   "number": "3624 (2009)"
+  },
+  {
+   "map_shape": "3625",
+   "area": 1134.6,
+   "number": "3625 (2009)"
+  },
+  {
+   "map_shape": "3621",
+   "area": 3037.1,
+   "number": "3621 (2009)"
+  },
+  {
+   "map_shape": "3626",
+   "area": 2183.2,
+   "number": "3626 (2009)"
+  },
+  {
+   "map_shape": "3627",
+   "area": 2234.3,
+   "number": "3627 (2009)"
+  },
+  {
+   "map_shape": "3628",
+   "area": 1020.1,
+   "number": "3628 (2009)"
+  },
+  {
+   "map_shape": "5570",
+   "area": 560.4,
+   "number": "5570 (2009)"
+  },
+  {
+   "map_shape": "6394",
+   "area": 800.3,
+   "number": "6394 (2009)"
+  },
+  {
+   "map_shape": "6388",
+   "area": 2161.5,
+   "number": "6388 (2009)"
+  },
+  {
+   "map_shape": "6387",
+   "area": 2126.8,
+   "number": "6387 (2009)"
+  },
+  {
+   "map_shape": "6386",
+   "area": 2344.7,
+   "number": "6386 (2009)"
+  },
+  {
+   "map_shape": "6384",
+   "area": 598.4,
+   "number": "6384 (2009)"
+  },
+  {
+   "map_shape": "6383",
+   "area": 1003.2,
+   "number": "6383 (2009)"
+  },
+  {
+   "map_shape": "6380",
+   "area": 1873.4,
+   "number": "6380 (2009)"
+  },
+  {
+   "map_shape": "6377",
+   "area": 952.7,
+   "number": "6377 (2009)"
+  },
+  {
+   "map_shape": "6376",
+   "area": 2237.5,
+   "number": "6376 (2009)"
+  },
+  {
+   "map_shape": "6374",
+   "area": 1013.1,
+   "number": "6374 (2009)"
+  },
+  {
+   "map_shape": "6373",
+   "area": 2901.8,
+   "number": "6373 (2009)"
+  }
+ ],
+ "unplaced_workbook": [
+  {
+   "kc": "3561",
+   "sheets": [
+    [
+     "M1-1",
+     4
+    ]
+   ],
+   "owners": [
+    "LOJEN STJEPAN, ŠKORIĆ MIRJANA, RANIĆ VIŠNJA",
+    "PAVLIĆ IVANA"
+   ]
+  },
+  {
+   "kc": "6390",
+   "partly_unplaced": {
+    "M1-7": 543.0
+   }
+  },
+  {
+   "kc": "5671/1",
+   "partly_unplaced": {
+    "road": 201.0
+   }
+  },
+  {
+   "kc": "5562/14",
+   "partly_unplaced": {
+    "road": 335.0
+   }
+  },
+  {
+   "kc": "6341/3",
+   "sheets": [
+    [
+     "M2-3",
+     null
+    ],
+    [
+     "Ulica 1b",
+     1052
+    ]
+   ],
+   "owners": [
+    "GRAD ZAGREB"
+   ]
+  },
+  {
+   "kc": "3644",
+   "sheets": [
+    [
+     "Z1-3",
+     null
+    ]
+   ],
+   "owners": [
+    "ČESTICA NIJE PRONAĐENA U ZK"
+   ]
+  },
+  {
+   "kc": "5562/17",
+   "sheets": [
+    [
+     "Ulica 1b",
+     101
+    ]
+   ],
+   "owners": [
+    "GRAD ZAGREB"
+   ]
+  },
+  {
+   "kc": "6397/2",
+   "sheets": [
+    [
+     "Ulica 4",
+     32
+    ]
+   ],
+   "owners": [
+    "GRAD ZAGREB"
+   ]
+  },
+  {
+   "kc": "6415",
+   "sheets": [
+    [
+     "Ulica 4",
+     1
+    ]
+   ],
+   "owners": [
+    "OPATOVINA PROJEKT d.o.o."
+   ]
+  },
+  {
+   "kc": "5562/20",
+   "sheets": [
+    [
+     "Ulica 4",
+     2853
+    ]
+   ],
+   "owners": [
+    "GRAD ZAGREB"
+   ]
+  },
+  {
+   "kc": "5562/21",
+   "sheets": [
+    [
+     "Ulica 4",
+     227
+    ]
+   ],
+   "owners": [
+    "FLAMMULA NEKRETNINE D.O.O."
+   ]
+  },
+  {
+   "kc": "5562/24",
+   "sheets": [
+    [
+     "Ulica 4",
+     2
+    ]
+   ],
+   "owners": [
+    "GRAD ZAGREB"
+   ]
+  }
+ ],
+ "kept_not_in_workbook": [
+  "118",
+  "95",
+  "8191"
+ ]
+}

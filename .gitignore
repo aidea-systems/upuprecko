@@ -1,0 +1,5 @@
+# installed / generated
+node_modules/
+app/dist/
+app/public/data/
+*.tmp

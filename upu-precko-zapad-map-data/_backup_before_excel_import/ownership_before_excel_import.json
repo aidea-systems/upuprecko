@@ -1,0 +1,951 @@
+{
+  "version": 1,
+  "savedAt": "2026-11-10T13:15:21.154Z",
+  "plots": {
+    "95": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3556": {
+      "status": "no_data",
+      "owners": [
+        {
+          "name": "Test",
+          "share": ""
+        }
+      ],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3557": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3558": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3559": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3560": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3564": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3565": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3566": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3621": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3622": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3623": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3624": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3625": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3626": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3628": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3629": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3630": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3631": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3632": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3638": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3639": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3640": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3641": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3642": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3643": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3644": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3645": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3646": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3647": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3649": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3664": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3665": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3670": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3671": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3672": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3675": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3677": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "5570": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6354": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T13:15:21.154Z"
+    },
+    "6355": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6357": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6358": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6359": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6360": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6365": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6366": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6367": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6368": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6369": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6371": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6372": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6373": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6374": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6376": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6377": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6379": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6380": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6383": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6384": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6386": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6387": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6388": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6389": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6390": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6394": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6396": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6398": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6399": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6400": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6401": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6402": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6403": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6404": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6405": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6406": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6407": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6408": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6409": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6410": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6411": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6412": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6413": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6414": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6415": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6417": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "8191": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3635/1": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3635/2": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3636/1": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3674/1": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3676/2": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3678/1": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3678/2": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3678/3": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6338/3": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6339/3": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6356/1": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6356/2": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6370/1": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "6927/2": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T11:42:04.567Z"
+    },
+    "3633/9": {
+      "status": "no_data",
+      "owners": [],
+      "ourShare": "",
+      "contact": "",
+      "notes": "",
+      "updatedAt": "2026-11-10T13:04:56.804Z"
+    }
+  },
+  "reviews": {
+    "REVIEW-21": {
+      "type": "plot",
+      "plotNumber": "6365",
+      "resolvedAt": "2026-11-10T11:33:10.131Z"
+    },
+    "REVIEW-20": {
+      "type": "plot",
+      "plotNumber": "6371",
+      "resolvedAt": "2026-11-10T11:33:34.899Z"
+    },
+    "REVIEW-19": {
+      "type": "plot",
+      "plotNumber": "6372",
+      "resolvedAt": "2026-11-10T11:33:37.703Z"
+    },
+    "REVIEW-24": {
+      "type": "plot",
+      "plotNumber": "6390",
+      "resolvedAt": "2026-11-10T11:34:19.837Z"
+    },
+    "REVIEW-17": {
+      "type": "plot",
+      "plotNumber": "6412",
+      "resolvedAt": "2026-11-10T11:34:35.395Z"
+    },
+    "REVIEW-15": {
+      "type": "plot",
+      "plotNumber": "3636/1",
+      "resolvedAt": "2026-11-10T11:35:51.640Z"
+    },
+    "REVIEW-8": {
+      "type": "plot",
+      "plotNumber": "3646",
+      "resolvedAt": "2026-11-10T11:36:28.678Z"
+    },
+    "REVIEW-7": {
+      "type": "plot",
+      "plotNumber": "3649",
+      "resolvedAt": "2026-11-10T11:36:59.247Z"
+    },
+    "REVIEW-16": {
+      "type": "plot",
+      "plotNumber": "6353",
+      "resolvedAt": "2026-11-10T12:46:08.172Z"
+    },
+    "REVIEW-13": {
+      "type": "plot",
+      "plotNumber": "6356/3",
+      "resolvedAt": "2026-11-10T12:46:39.130Z"
+    },
+    "REVIEW-22": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T12:46:51.385Z"
+    },
+    "REVIEW-23": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T12:46:54.760Z"
+    },
+    "REVIEW-25": {
+      "type": "plot",
+      "plotNumber": "6337/2",
+      "resolvedAt": "2026-11-10T12:47:29.786Z"
+    },
+    "REVIEW-18": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T12:47:41.784Z"
+    },
+    "REVIEW-4": {
+      "type": "plot",
+      "plotNumber": "5569",
+      "resolvedAt": "2026-11-10T12:48:03.944Z"
+    },
+    "REVIEW-11": {
+      "type": "plot",
+      "plotNumber": "3637",
+      "resolvedAt": "2026-11-10T12:48:30.344Z"
+    },
+    "REVIEW-3": {
+      "type": "plot",
+      "plotNumber": "3634",
+      "resolvedAt": "2026-11-10T13:13:44.847Z"
+    },
+    "REVIEW-1": {
+      "type": "plot",
+      "plotNumber": "118",
+      "resolvedAt": "2026-11-10T13:13:54.489Z"
+    },
+    "REVIEW-2": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:14:00.442Z"
+    },
+    "REVIEW-9": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:14:02.029Z"
+    },
+    "REVIEW-10": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:14:07.777Z"
+    },
+    "REVIEW-5": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:14:14.957Z"
+    },
+    "REVIEW-6": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:14:16.436Z"
+    },
+    "REVIEW-14": {
+      "type": "plot",
+      "plotNumber": "3627",
+      "resolvedAt": "2026-11-10T13:14:30.704Z"
+    },
+    "REVIEW-12": {
+      "type": "not_plot",
+      "resolvedAt": "2026-11-10T13:15:01.494Z"
+    }
+  },
+  "edits": {
+    "3633": {
+      "editedAt": "2026-11-10T13:04:56.803Z",
+      "plotNumber": "3633/9"
+    }
+  }
+}

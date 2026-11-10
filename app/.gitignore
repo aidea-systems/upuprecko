@@ -1,0 +1,5 @@
+node_modules
+dist
+public/data
+data/ownership.backup.json
+data/*.tmp

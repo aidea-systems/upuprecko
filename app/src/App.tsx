@@ -87,7 +87,7 @@ export default function App() {
 
   const [map, setMap] = useState<maplibregl.Map | null>(null);
   const [popup, setPopup] = useState<Popup>(null);
-  const [layers, setLayers] = useState<LayerVisibility>({ plots: true, zones: true, roads: true, boundary: true, review: true });
+  const [layers, setLayers] = useState<LayerVisibility>({ plots: true, zones: true, roads: true, boundary: true, review: true, focus: true });
   const [editingId, setEditingId] = useState<string | null>(null);
   const [basemap, setBasemap] = useState<Basemap>('satellite');
   const [viewMode, setViewMode] = useState<ViewMode>('plots');
@@ -259,14 +259,26 @@ export default function App() {
     let area = 0;
     let areaInUpu = 0;
     const reviewIds: string[] = [];
-    for (const id of plotIndex.get(pn) ?? []) {
+    // the cadastre figures apply only while the plot is exactly its official parcel
+    const ids = plotIndex.get(pn) ?? [];
+    const only = ids.length === 1 ? featureById.get(ids[0])!.properties : null;
+    const official = only && only.plot_number === pn && !doc?.edits[only.id] ? only : null;
+    for (const id of ids) {
       const p = featureById.get(id)!.properties;
       area += p.area_m2;
       areaInUpu += p.area_in_upu_m2;
       if (p.kind === 'review') reviewIds.push(id);
       for (const z of p.zones) zones.set(z.zone, (zones.get(z.zone) ?? 0) + z.overlap_m2);
     }
-    return { plotNumber: pn, area, areaInUpu, reviewIds, zones: [...zones].map(([zone, overlap]) => ({ zone, overlap })) };
+    return {
+      plotNumber: pn,
+      area,
+      areaInUpu,
+      reviewIds,
+      zones: [...zones].map(([zone, overlap]) => ({ zone, overlap })),
+      registeredArea: official?.registered_area_m2 ?? null,
+      municipality: official?.municipality ?? null,
+    };
   };
 
   // ---------- shape edits: plot number and boundary ----------
@@ -472,6 +484,7 @@ export default function App() {
         onViewMode={setViewMode}
         statusCounts={statusCounts}
         reviewOpen={reviewOpen}
+        hasReview={features.some((f) => f.properties.kind === 'review')}
         persistence={own.persistence}
         saveError={own.error}
         onExportJson={() => exportJson(doc)}

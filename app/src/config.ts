@@ -3,8 +3,8 @@ import type { Status } from './types';
 /** All tunable settings in one place. */
 export const config = {
   /**
-   * Constant shift applied to all geometry when it is loaded, in metres
-   * (x = east, y = north). The alignment check showed no offset, so 0 / 0.
+   * Constant shift applied to all geometry when it is loaded, in metres (x = east, y = north).
+   * The plots are the official cadastral parcels and the plan layers are already in that frame, so 0 / 0.
    */
   geometryShiftMeters: { x: 0, y: 0 },
 
@@ -33,6 +33,9 @@ export const config = {
     no_data: '#94a3b8',
   } as Record<Status, string>,
 
+  /** Zone outline and zone name plate. */
+  zoneLineColor: '#0f172a',
+
   /** "Needs review" shapes: orange hatch. */
   reviewColor: '#fb923c',
 
@@ -50,6 +53,8 @@ export const config = {
   } as Record<string, string>,
 
   plotFillOpacity: 0.45,
+  /** How strongly the land outside the UPU boundary is darkened (0 = not at all). Parcels stay whole and clickable. */
+  outsideDimOpacity: 0.5,
   zoneFillOpacity: 0.55,
   plotLabelMinZoom: 17,
   maxZoom: 21,

@@ -7,7 +7,7 @@ import type { LoadResult, OwnershipRepository, Persistence } from './repository'
 /**
  * JSON file in the repo (data/ownership.json, written through the dev server's
  * /api/ownership endpoint) plus a copy in localStorage. Without the endpoint
- * (static hosting) it falls back to localStorage, seeded from ownership.seed.json.
+ * (static hosting) it uses localStorage or the published ownership.seed.json, whichever is newer.
  */
 export class LocalJsonRepository implements OwnershipRepository {
   constructor(
@@ -75,13 +75,17 @@ export class LocalJsonRepository implements OwnershipRepository {
       this.writeLocal(file);
       return { doc: file, persistence: 'file' };
     }
-    if (local) return { doc: local, persistence: 'browser' };
+    // Static hosting: the published data (seed) against this browser's own copy - the newer one wins,
+    // so a browser that once saved a change here still gets the data published after that.
+    let seed: OwnershipDoc | null = null;
     try {
       const r = await fetch(this.seedUrl, { cache: 'no-store' });
-      if (r.ok) return { doc: normalizeDoc(await r.json()), persistence: 'browser' };
+      if (r.ok) seed = normalizeDoc(await r.json());
     } catch {
       /* no seed */
     }
+    if (local && !newer(seed, local)) return { doc: local, persistence: 'browser' };
+    if (seed) return { doc: seed, persistence: 'browser', notice: local ? t.data.newerPublished : undefined };
     return { doc: emptyDoc(), persistence: 'browser' };
   }
 

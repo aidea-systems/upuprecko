@@ -3,7 +3,8 @@ import maplibregl, { type ExpressionSpecification, type GeoJSONSource } from 'ma
 import 'maplibre-gl/dist/maplibre-gl.css';
 import type { FeatureCollection } from 'geojson';
 import { config } from '../config';
-import type { BBox } from '../lib/geo';
+import { interiorPoint, type BBox } from '../lib/geo';
+import type { PlotGeometry } from '../types';
 
 export type ViewMode = 'plots' | 'zones' | 'landuse';
 export type Basemap = 'satellite' | 'dark';
@@ -13,6 +14,8 @@ export interface LayerVisibility {
   roads: boolean;
   boundary: boolean;
   review: boolean;
+  /** dim everything outside the UPU boundary */
+  focus: boolean;
 }
 
 export interface RoadData {
@@ -43,9 +46,10 @@ interface Props {
 const LAYER_GROUPS: Record<keyof LayerVisibility, string[]> = {
   plots: ['plots-fill', 'plots-line', 'plots-selected', 'plot-labels'],
   review: ['review-hatch', 'review-line'],
-  zones: ['zones-fill', 'zones-line', 'zones-selected', 'zone-labels'],
+  zones: ['zones-fill', 'zones-casing', 'zones-line', 'zones-selected', 'zone-labels'],
   roads: ['roads-fill', 'road-detail', 'road-edge', 'road-carriageway', 'road-centre', 'road-labels'],
   boundary: ['boundary-line'],
+  focus: ['outside-mask'],
 };
 
 /** Base filters of the plot layers; the hidden-ids filter is added on top. */
@@ -76,6 +80,53 @@ function hatchImage(color: string): ImageData {
   }
   return g.getImageData(0, 0, s, s);
 }
+
+/** White rounded label plate; stretched around the zone name ("M2-1"). */
+function badgeImage(): ImageData {
+  const w = 48, h = 32, r = 10;
+  const c = document.createElement('canvas');
+  c.width = w;
+  c.height = h;
+  const g = c.getContext('2d')!;
+  g.beginPath();
+  g.moveTo(r + 2, 2);
+  g.arcTo(w - 2, 2, w - 2, h - 2, r);
+  g.arcTo(w - 2, h - 2, 2, h - 2, r);
+  g.arcTo(2, h - 2, 2, 2, r);
+  g.arcTo(2, 2, w - 2, 2, r);
+  g.closePath();
+  g.fillStyle = 'rgba(255,255,255,0.96)';
+  g.fill();
+  g.lineWidth = 3;
+  g.strokeStyle = config.zoneLineColor;
+  g.stroke();
+  return g.getImageData(0, 0, w, h);
+}
+
+/** One label point per zone, inside the zone, so the name sits in the same place at every zoom. */
+function zoneLabelPoints(zones: FeatureCollection): FeatureCollection {
+  return {
+    type: 'FeatureCollection',
+    features: zones.features.map((f) => ({
+      type: 'Feature',
+      properties: { zone: f.properties?.zone, _label: f.properties?._label },
+      geometry: { type: 'Point', coordinates: interiorPoint(f.geometry as PlotGeometry) },
+    })),
+  };
+}
+
+/** The whole world with the UPU area cut out - drawn dark to dim what lies outside the plan. */
+function outsideMask(boundary: FeatureCollection): FeatureCollection {
+  const holes = boundary.features.flatMap((f) => {
+    const g = f.geometry as PlotGeometry;
+    return g.type === 'Polygon' ? [g.coordinates[0]] : g.coordinates.map((poly) => poly[0]);
+  });
+  const world = [[-180, -85], [180, -85], [180, 85], [-180, 85], [-180, -85]];
+  return { type: 'FeatureCollection', features: [{ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [world, ...holes] } }] };
+}
+
+/** Vector detail kept up to this zoom, so official borders stay exact when zoomed right in. */
+const DETAIL = { maxzoom: 22, tolerance: 0.1 };
 
 const statusColor: ExpressionSpecification = [
   'match', ['get', '_status'],
@@ -122,9 +173,14 @@ export function MapView(p: Props) {
       map.addImage('hatch', hatchImage(config.reviewColor), { pixelRatio: 2 });
       for (const [id, b] of Object.entries(config.basemaps))
         map.addSource(id, { type: 'raster', tiles: b.tiles, tileSize: 256, maxzoom: b.maxzoom, attribution: b.attribution });
-      map.addSource('zones', { type: 'geojson', data: s.zones });
-      map.addSource('plots', { type: 'geojson', data: s.plots });
-      map.addSource('boundary', { type: 'geojson', data: s.boundary });
+      map.addImage('zone-badge', badgeImage(), {
+        pixelRatio: 2, stretchX: [[14, 34]], stretchY: [[12, 20]], content: [10, 6, 38, 26],
+      });
+      map.addSource('zones', { type: 'geojson', data: s.zones, ...DETAIL });
+      map.addSource('zone-label-points', { type: 'geojson', data: zoneLabelPoints(s.zones) });
+      map.addSource('plots', { type: 'geojson', data: s.plots, ...DETAIL });
+      map.addSource('boundary', { type: 'geojson', data: s.boundary, ...DETAIL });
+      map.addSource('outside-mask', { type: 'geojson', data: outsideMask(s.boundary), ...DETAIL });
       map.addSource('road-areas', { type: 'geojson', data: s.roads.areas });
       map.addSource('road-lines', { type: 'geojson', data: s.roads.lines });
       map.addSource('road-labels', { type: 'geojson', data: s.roads.labels });
@@ -143,6 +199,10 @@ export function MapView(p: Props) {
         paint: { 'fill-pattern': 'hatch' },
       });
       map.addLayer({
+        id: 'outside-mask', type: 'fill', source: 'outside-mask',
+        paint: { 'fill-color': '#0b1020', 'fill-opacity': config.outsideDimOpacity },
+      });
+      map.addLayer({
         id: 'plots-line', type: 'line', source: 'plots',
         paint: { 'line-color': '#ffffff', 'line-width': ['interpolate', ['linear'], ['zoom'], 15, 0.5, 19, 1.4], 'line-opacity': 0.85 },
       });
@@ -151,9 +211,16 @@ export function MapView(p: Props) {
         filter: ['==', ['get', '_res'], 'unresolved'],
         paint: { 'line-color': config.reviewColor, 'line-width': 1.8 },
       });
+      // zone outline: dark line on a white casing, so it reads on the photo, on the dark map and on plot colours
+      map.addLayer({
+        id: 'zones-casing', type: 'line', source: 'zones',
+        layout: { 'line-join': 'round' },
+        paint: { 'line-color': '#ffffff', 'line-width': zw(5, 9), 'line-opacity': 0.95 },
+      });
       map.addLayer({
         id: 'zones-line', type: 'line', source: 'zones',
-        paint: { 'line-color': '#000000', 'line-width': ['interpolate', ['linear'], ['zoom'], 15, 1.2, 19, 3] },
+        layout: { 'line-join': 'round' },
+        paint: { 'line-color': config.zoneLineColor, 'line-width': zw(2.6, 5) },
       });
       map.addLayer({
         id: 'road-detail', type: 'line', source: 'road-lines', minzoom: 16, filter: ['==', ['get', 'kind'], 'road_detail'],
@@ -192,12 +259,15 @@ export function MapView(p: Props) {
         paint: { 'text-color': '#ffffff', 'text-halo-color': 'rgba(0,0,0,0.85)', 'text-halo-width': 1.4 },
       });
       map.addLayer({
-        id: 'zone-labels', type: 'symbol', source: 'zones',
+        id: 'zone-labels', type: 'symbol', source: 'zone-label-points',
         layout: {
           'text-field': ['get', '_label'], 'text-font': config.font,
-          'text-size': ['interpolate', ['linear'], ['zoom'], 15, 11, 19, 16], 'text-allow-overlap': true,
+          'text-size': ['interpolate', ['linear'], ['zoom'], 14, 12, 17, 15, 20, 20],
+          'text-line-height': 1.15, 'text-allow-overlap': true, 'text-ignore-placement': true,
+          'icon-image': 'zone-badge', 'icon-text-fit': 'both', 'icon-text-fit-padding': [3, 7, 3, 7],
+          'icon-allow-overlap': true, 'icon-ignore-placement': true,
         },
-        paint: { 'text-color': '#ffffff', 'text-halo-color': 'rgba(0,0,0,0.9)', 'text-halo-width': 1.6 },
+        paint: { 'text-color': config.zoneLineColor },
       });
       map.addLayer({
         id: 'road-labels', type: 'symbol', source: 'road-labels',
@@ -249,7 +319,10 @@ export function MapView(p: Props) {
   }, [p.plots]);
   useEffect(() => {
     const map = mapRef.current;
-    if (map && loaded.current) (map.getSource('zones') as GeoJSONSource).setData(p.zones);
+    if (map && loaded.current) {
+      (map.getSource('zones') as GeoJSONSource).setData(p.zones);
+      (map.getSource('zone-label-points') as GeoJSONSource).setData(zoneLabelPoints(p.zones));
+    }
   }, [p.zones]);
   useEffect(() => {
     const map = mapRef.current;
@@ -275,7 +348,6 @@ function applyAll(map: maplibregl.Map, p: Props) {
   map.setPaintProperty('plots-line', 'line-opacity', plotsMode ? 0.85 : 0.35);
   map.setPaintProperty('zones-fill', 'fill-color', p.viewMode === 'zones' ? bandColor : landuseColor);
   map.setPaintProperty('zones-fill', 'fill-opacity', plotsMode ? 0.01 : config.zoneFillOpacity);
-  map.setPaintProperty('zones-line', 'line-color', p.basemap === 'dark' && plotsMode ? '#cbd5e1' : '#000000');
   const notHidden = ['!', ['in', ['get', 'id'], ['literal', p.hiddenFeatureIds]]];
   for (const [id, base] of Object.entries(PLOT_LAYER_FILTERS))
     map.setFilter(id, (base ? ['all', base, notHidden] : notHidden) as maplibregl.FilterSpecification);

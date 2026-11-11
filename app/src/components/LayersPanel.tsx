@@ -17,6 +17,8 @@ interface Props {
   onViewMode: (v: ViewMode) => void;
   statusCounts: Record<string, number>;
   reviewOpen: number;
+  /** false when the map has no "needs review" shapes at all (then the toggle and legend entry are hidden) */
+  hasReview: boolean;
   persistence: Persistence | null;
   saveError: string | null;
   onExportJson: () => void;
@@ -61,7 +63,8 @@ export function LayersPanel(p: Props) {
             ['zones', t.layers.zones],
             ['roads', t.layers.roads],
             ['boundary', t.layers.boundary],
-            ['review', `${t.layers.review} (${p.reviewOpen})`],
+            ['focus', t.layers.focus],
+            ...(p.hasReview ? [['review', `${t.layers.review} (${p.reviewOpen})`]] : []),
           ] as [keyof LayerVisibility, string][]
         ).map(([k, label]) => (
           <label className="toggle" key={k}>
@@ -124,10 +127,18 @@ export function LayersPanel(p: Props) {
               <b>{c}</b>&nbsp;{t.landuse[c]}
             </div>
           ))}
-        <div className="legend-row">
-          <i className="hatch" />
-          {t.layers.review}
-        </div>
+        {p.layers.zones && (
+          <div className="legend-row">
+            <i className="line zone" style={{ background: config.zoneLineColor }} />
+            {t.layers.zoneBorder}
+          </div>
+        )}
+        {p.hasReview && (
+          <div className="legend-row">
+            <i className="hatch" />
+            {t.layers.review}
+          </div>
+        )}
         {p.layers.roads && (
           <>
             <div className="legend-row">

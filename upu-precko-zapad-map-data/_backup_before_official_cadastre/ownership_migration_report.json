@@ -1,0 +1,253 @@
+{
+ "made_at": "2026-11-11T09:18:22.151Z",
+ "records": 189,
+ "status_counts": {
+  "owned": 97,
+  "not_owned": 82,
+  "no_data": 10
+ },
+ "changes": {
+  "3561": "new record from the workbook: not_owned, LOJEN STJEPAN, ŠKORIĆ MIRJANA, RANIĆ VIŠNJA 1/2; PAVLIĆ IVANA 1/2",
+  "3654": "no data (not in the workbook)",
+  "3663": "no data (not in the workbook)",
+  "3666": "no data (not in the workbook)",
+  "3676/1": "no data (workbook row 3676/1 belongs to 3676/2)",
+  "3676/2": "owners taken from workbook plot 3676/1",
+  "3936/1": "no data (not in the workbook)",
+  "5562/12": "removed the remark about the old hand-traced shape",
+  "5562/14": "removed the remark about the old hand-traced shape",
+  "5562/16": "no data (not in the workbook)",
+  "5562/17": "removed the remark about the old hand-traced shape",
+  "5562/18": "removed the remark about the old hand-traced shape",
+  "5562/19": "removed the remark about the old hand-traced shape",
+  "5562/20": "removed the remark about the old hand-traced shape",
+  "5562/21": "new record from the workbook: owned, FLAMMULA NEKRETNINE D.O.O. 1",
+  "5562/23": "removed the remark about the old hand-traced shape",
+  "5562/24": "new record from the workbook: not_owned, GRAD ZAGREB 1",
+  "5569/3": "no data (not in the workbook)",
+  "5570/3": "no data (not in the workbook)",
+  "5671/2": "no data (not in the workbook)",
+  "6341/1": "removed the remark about the old hand-traced shape",
+  "6341/2": "removed the remark about the old hand-traced shape",
+  "6341/3": "removed the remark about the old hand-traced shape",
+  "6354/1": "removed the remark about the old hand-traced shape",
+  "6355/1": "removed the remark about the old hand-traced shape",
+  "6356/1": "removed the remark about the old hand-traced shape",
+  "6356/2": "removed the remark about the old hand-traced shape",
+  "6356/3": "removed the remark about the old hand-traced shape",
+  "6357/2": "removed the remark about the old hand-traced shape",
+  "6357/3": "removed the remark about the old hand-traced shape",
+  "6366/1": "owners taken from workbook plot 6366",
+  "6366/2": "owners taken from workbook plot 6366",
+  "6394/3": "owners taken from workbook plot 6394/1",
+  "6397/2": "new record from the workbook: not_owned, GRAD ZAGREB 1",
+  "6415": "new record from the workbook: owned, OPATOVINA PROJEKT d.o.o. 1",
+  "6416": "no data (not in the workbook)",
+  "6367/1": "note added: official area in M1-6 is 0 m² (workbook 69 m²)",
+  "6367/2": "note added: official area in M1-6 is 73 m² (workbook 4 m²)",
+  "6379/1": "note added: official area in M1-7 is 0 m² (workbook 222 m²)",
+  "6379/2": "note added: official area in M1-7 is 244 m² (workbook 23 m²)",
+  "6394/1": "note added: official area in M1-7 is 0 m² (workbook 281 m²)"
+ },
+ "removed_records_without_official_parcel": [
+  "118",
+  "3556 (2009)",
+  "3566 (2009)",
+  "3621 (2009)",
+  "3622 (2009)",
+  "3623 (2009)",
+  "3624 (2009)",
+  "3625 (2009)",
+  "3626 (2009)",
+  "3627 (2009)",
+  "3628 (2009)",
+  "3629 (2009)",
+  "5569 (2009)",
+  "5570 (2009)",
+  "6373 (2009)",
+  "6374 (2009)",
+  "6376 (2009)",
+  "6377 (2009)",
+  "6380 (2009)",
+  "6383 (2009)",
+  "6384 (2009)",
+  "6386 (2009)",
+  "6387 (2009)",
+  "6388 (2009)",
+  "6394 (2009)",
+  "8191",
+  "95"
+ ],
+ "removed_review_assignments": {
+  "REVIEW-21": {
+   "type": "plot",
+   "plotNumber": "6365",
+   "resolvedAt": "2026-11-10T11:33:10.131Z"
+  },
+  "REVIEW-20": {
+   "type": "plot",
+   "plotNumber": "6371",
+   "resolvedAt": "2026-11-10T11:33:34.899Z"
+  },
+  "REVIEW-19": {
+   "type": "plot",
+   "plotNumber": "6372",
+   "resolvedAt": "2026-11-10T11:33:37.703Z"
+  },
+  "REVIEW-24": {
+   "type": "plot",
+   "plotNumber": "6390",
+   "resolvedAt": "2026-11-10T11:34:19.837Z"
+  },
+  "REVIEW-17": {
+   "type": "plot",
+   "plotNumber": "6412",
+   "resolvedAt": "2026-11-10T11:34:35.395Z"
+  },
+  "REVIEW-15": {
+   "type": "plot",
+   "plotNumber": "3636/1",
+   "resolvedAt": "2026-11-10T11:35:51.640Z"
+  },
+  "REVIEW-8": {
+   "type": "plot",
+   "plotNumber": "3646",
+   "resolvedAt": "2026-11-10T11:36:28.678Z"
+  },
+  "REVIEW-7": {
+   "type": "plot",
+   "plotNumber": "3649",
+   "resolvedAt": "2026-11-10T11:36:59.247Z"
+  },
+  "REVIEW-16": {
+   "type": "plot",
+   "plotNumber": "6353",
+   "resolvedAt": "2026-11-10T12:46:08.172Z"
+  },
+  "REVIEW-13": {
+   "type": "plot",
+   "plotNumber": "6356/3",
+   "resolvedAt": "2026-11-10T12:46:39.130Z"
+  },
+  "REVIEW-22": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T12:46:51.385Z"
+  },
+  "REVIEW-23": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T12:46:54.760Z"
+  },
+  "REVIEW-25": {
+   "type": "plot",
+   "plotNumber": "6337/2",
+   "resolvedAt": "2026-11-10T12:47:29.786Z"
+  },
+  "REVIEW-18": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T12:47:41.784Z"
+  },
+  "REVIEW-4": {
+   "type": "plot",
+   "plotNumber": "5569",
+   "resolvedAt": "2026-11-10T12:48:03.944Z"
+  },
+  "REVIEW-11": {
+   "type": "plot",
+   "plotNumber": "3637",
+   "resolvedAt": "2026-11-10T12:48:30.344Z"
+  },
+  "REVIEW-3": {
+   "type": "plot",
+   "plotNumber": "3634",
+   "resolvedAt": "2026-11-10T13:13:44.847Z"
+  },
+  "REVIEW-1": {
+   "type": "plot",
+   "plotNumber": "118",
+   "resolvedAt": "2026-11-10T13:13:54.489Z"
+  },
+  "REVIEW-2": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T13:14:00.442Z"
+  },
+  "REVIEW-9": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T13:14:02.029Z"
+  },
+  "REVIEW-10": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T13:14:07.777Z"
+  },
+  "REVIEW-5": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T13:14:14.957Z"
+  },
+  "REVIEW-6": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T13:14:16.436Z"
+  },
+  "REVIEW-14": {
+   "type": "plot",
+   "plotNumber": "3627",
+   "resolvedAt": "2026-11-10T13:14:30.704Z"
+  },
+  "REVIEW-12": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T13:15:01.494Z"
+  },
+  "ZK-6390-M1-7-8": {
+   "type": "plot",
+   "plotNumber": "6390",
+   "resolvedAt": "2026-11-10T13:37:12.925Z"
+  },
+  "ZK-6415-road-7": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T14:33:33.507Z"
+  },
+  "ZK-6356/3-road-2": {
+   "type": "plot",
+   "plotNumber": "5562/20",
+   "resolvedAt": "2026-11-10T14:42:42.226Z"
+  },
+  "ZK-6356/3-road-2#c3": {
+   "type": "plot",
+   "plotNumber": "6357/3",
+   "resolvedAt": "2026-11-10T15:13:01.862Z"
+  },
+  "ZK-6356/3-road-2#d2": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T15:16:35.848Z"
+  },
+  "ZK-6356/3-road-2#c2": {
+   "type": "not_plot",
+   "resolvedAt": "2026-11-10T15:16:47.585Z"
+  },
+  "ZK-6356/3-IS-1": {
+   "type": "plot",
+   "plotNumber": "5671/1",
+   "resolvedAt": "2026-11-10T15:20:24.120Z"
+  },
+  "ZK-5570-IS-3": {
+   "type": "plot",
+   "plotNumber": "5671/1",
+   "resolvedAt": "2026-11-10T15:20:27.111Z"
+  },
+  "ZK-6353-IS-5": {
+   "type": "plot",
+   "plotNumber": "5671/1",
+   "resolvedAt": "2026-11-10T15:20:29.903Z"
+  },
+  "ZK-5569-road-0": {
+   "type": "plot",
+   "plotNumber": "5569/4",
+   "resolvedAt": "2026-11-10T15:24:10.432Z"
+  }
+ },
+ "removed_border_edits": [
+  "5562/18@M2-3",
+  "6341/2@M2-3#2",
+  "6341/3@M2-3",
+  "6356/3#2",
+  "ZK-6356/3-road-2"
+ ]
+}

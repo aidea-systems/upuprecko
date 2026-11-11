@@ -9,7 +9,7 @@ export interface ZoneOverlap {
   overlap_m2: number;
 }
 
-/** Properties of a feature in plots.geojson (areas come from the projected source data). */
+/** Properties of a feature in plots.geojson: one official cadastral parcel (areas in EPSG:3765). */
 export interface PlotProps {
   id: string;
   plot_number: string | null;
@@ -19,6 +19,14 @@ export interface PlotProps {
   area_in_upu_m2: number;
   zones: ZoneOverlap[];
   reason?: string;
+  /** Area registered in the cadastre (whole m²); area_m2 is the area enclosed by the published borders. */
+  registered_area_m2?: number;
+  /** National cadastral reference, e.g. "339318-6353/1" (municipality code - plot number). */
+  cadastral_ref?: string;
+  /** Cadastral municipality (k.o.). */
+  municipality?: string;
+  /** Date since which the cadastre shows the parcel in this form. */
+  valid_from?: string;
 }
 
 export interface ZoneProps {
@@ -57,7 +65,7 @@ export type Resolution =
 
 /**
  * A user change to one map shape (keyed by feature id). The source GeoJSON is never modified;
- * these overrides are applied on load. Areas are recalculated in EPSG:3907 when the boundary changes.
+ * these overrides are applied on load. Areas are recalculated in EPSG:3765 when the boundary changes.
  */
 export interface FeatureEdit {
   plotNumber?: string;

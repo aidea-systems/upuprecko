@@ -13,6 +13,10 @@ export interface PlotSummary {
   areaInUpu: number;
   /** review feature ids that were assigned to this plot number */
   reviewIds: string[];
+  /** area registered in the cadastre; null when the shape is no longer exactly the official parcel */
+  registeredArea: number | null;
+  /** cadastral municipality (k.o.) */
+  municipality: string | null;
 }
 
 export interface ShapeInfo {
@@ -90,6 +94,7 @@ export function PlotPopup(props: Props) {
           <dt>{t.plot.plotNumber}</dt>
           <dd className="strong">
             {plot.plotNumber}
+            {plot.municipality && <div className="muted small">{t.plot.municipality(plot.municipality)}</div>}
             {shape.numberEdited && shape.originalNumber && (
               <div className="muted small">
                 {t.plot.numberOriginal(shape.originalNumber)} ·{' '}
@@ -102,7 +107,7 @@ export function PlotPopup(props: Props) {
           <dt>{t.plot.zone}</dt>
           <dd>
             {plot.zones.length === 0
-              ? t.plot.noZone
+              ? plot.areaInUpu < 0.5 ? t.plot.outsideUpu : t.plot.noZone
               : plot.zones.map((z) => (
                   <button key={z.zone} className="link block" onClick={() => props.onZoneClick(z.zone)}>
                     {z.zone} <span className="muted">({fmtArea(z.overlap)})</span>
@@ -111,9 +116,21 @@ export function PlotPopup(props: Props) {
           </dd>
           <dt>{t.plot.area}</dt>
           <dd>
-            {fmtArea(plot.area)}
-            {Math.abs(plot.area - plot.areaInUpu) > 0.05 && (
-              <span className="muted"> · {t.plot.inUpu} {fmtArea(plot.areaInUpu)}</span>
+            {plot.registeredArea !== null ? (
+              <>
+                {fmtArea(plot.registeredArea)} <span className="muted">{t.plot.registered}</span>
+                <div className="muted small">
+                  {t.plot.fromBorders} {fmtArea(plot.area)}
+                  {Math.abs(plot.area - plot.areaInUpu) > 0.05 && ` · ${t.plot.inUpu} ${fmtArea(plot.areaInUpu)}`}
+                </div>
+              </>
+            ) : (
+              <>
+                {fmtArea(plot.area)}
+                {Math.abs(plot.area - plot.areaInUpu) > 0.05 && (
+                  <span className="muted"> · {t.plot.inUpu} {fmtArea(plot.areaInUpu)}</span>
+                )}
+              </>
             )}
             {shape.boundaryEditedAt && (
               <div className="note info">

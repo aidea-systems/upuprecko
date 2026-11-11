@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { BoundaryFC, PlotsFC, ZonesFC } from '../types';
-import { buildAreaContext, measure, ringSelfIntersects } from './area';
+import { buildAreaContext, measure, projectGeometry, ringSelfIntersects } from './area';
 
 // the prepared source data, next to the app folder
 const dir = join(__dirname, '..', '..', '..', 'upu-precko-zapad-map-data');
@@ -16,9 +16,8 @@ const ctx = buildAreaContext(
 );
 
 describe('area recalculation for edited boundaries', () => {
-  // Coordinates are stored with 7 decimals (~1 cm). On long thin strips that rounding alone
-  // changes the area by up to ~1 m² (same with pyproj), so allow 1 m².
-  const tol = (_a: number) => 1.0;
+  // Coordinates are stored with 9 decimals (0.1 mm); stored areas are rounded to 0.1 m².
+  const tol = (_a: number) => 0.2;
 
   it('reproduces area_m2 and area_in_upu_m2 of every original shape', () => {
     for (const f of plots.features) {
@@ -44,3 +43,41 @@ describe('area recalculation for edited boundaries', () => {
     expect(ringSelfIntersects([[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]])).toBe(false);
   });
 });
+
+describe('plots are the official cadastral parcels', () => {
+  interface Official {
+    features: { properties: { label: string; registered_area_m2: number }; geometry: { type: string; coordinates: number[][][] } }[];
+  }
+  const official = read<Official>('official/cadastre_parcels_EPSG3765.geojson');
+  const byLabel = new Map(official.features.map((f) => [f.properties.label, f]));
+
+  it('has one shape per parcel, under its official number', () => {
+    const ids = plots.features.map((f) => f.properties.id);
+    expect(new Set(ids).size).toBe(ids.length);
+    for (const f of plots.features) {
+      expect(f.properties.kind).toBe('plot');
+      expect(f.properties.plot_number).toBe(f.properties.id);
+      expect(byLabel.has(f.properties.id), f.properties.id).toBe(true);
+    }
+  });
+
+  it('every corner is the published coordinate (EPSG:3765) to within 1 mm', () => {
+    let worst = 0;
+    for (const f of plots.features) {
+      const src = byLabel.get(f.properties.id)!;
+      expect(f.geometry.type).toBe('Polygon');
+      const mine = projectGeometry(f.geometry)[0];
+      expect(mine.length, f.properties.id).toBe(src.geometry.coordinates.length);
+      mine.forEach((ring, r) => {
+        expect(ring.length, f.properties.id).toBe(src.geometry.coordinates[r].length);
+        ring.forEach(([x, y], i) => {
+          const [ox, oy] = src.geometry.coordinates[r][i];
+          worst = Math.max(worst, Math.abs(x - ox), Math.abs(y - oy));
+        });
+      });
+      expect(f.properties.registered_area_m2).toBe(src.properties.registered_area_m2);
+    }
+    expect(worst).toBeLessThan(0.001);
+  });
+});
+

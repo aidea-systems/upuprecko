@@ -4,15 +4,12 @@ import type { Polygon, Position } from 'geojson';
 import type { PlotGeometry, ZoneOverlap } from '../types';
 
 /**
- * Areas are measured in the source data's projection, EPSG:3907 (MGI 1901 / Balkans zone 5),
- * with the same datum transformation pyproj used when the data was reprojected:
- * "MGI 1901 to WGS 84 (16)" (Croatia, 7 parameters; rotations converted from the coordinate-frame
- * to the position-vector convention proj4 expects). Verified identical to pyproj to the millimetre.
+ * Areas are measured in the official Croatian projection, HTRS96/TM (EPSG:3765) - the system the cadastre
+ * publishes its parcel coordinates in. HTRS96 is ETRS89, which equals WGS84 here, so no datum shift is
+ * involved: projecting the stored longitude/latitude gives back the published coordinates.
  */
-const EPSG3907 =
-  '+proj=tmerc +lat_0=0 +lon_0=15 +k=0.9999 +x_0=5500000 +y_0=0 +ellps=bessel ' +
-  '+towgs84=476.08,125.947,417.81,4.610862,2.388137,-11.942335,9.896638 +units=m +no_defs';
-const toProj = proj4('EPSG:4326', EPSG3907);
+const EPSG3765 = '+proj=tmerc +lat_0=0 +lon_0=16.5 +k=0.9999 +x_0=500000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs';
+const toProj = proj4('EPSG:4326', EPSG3765);
 
 const projRing = (r: Position[]) => r.map((p) => toProj.forward([p[0], p[1]]) as [number, number]);
 const projPoly = (rings: Position[][]): PCPoly => rings.map(projRing);

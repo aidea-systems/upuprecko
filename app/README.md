@@ -93,19 +93,6 @@ assignments and border edits that no longer apply, and a report of what changed)
 The dev server refuses a save from a browser tab whose data is older than the file (HTTP 409); the
 app then asks you to reload, so an old tab can never overwrite newer data.
 
-## Password on the deployed site
-
-`middleware.js` (Vercel Routing Middleware) asks for a password before anything is served on Vercel –
-the page and every data file. A correct password sets a 30-day `HttpOnly` session cookie. Only a salted
-PBKDF2 hash of the password is stored in the file, never the password. `npm run dev` does not use it.
-
-To change the password, generate new constants and paste them into `middleware.js`
-(this also signs everyone out):
-
-```
-node -e "const pw=process.argv[1].normalize('NFC'),e=new TextEncoder(),h=b=>[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join(''),s=crypto.getRandomValues(new Uint8Array(16));(async()=>{const k=await crypto.subtle.importKey('raw',e.encode(pw),'PBKDF2',false,['deriveBits']);const p=await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',salt:s,iterations:30000},k,256);const hk=await crypto.subtle.importKey('raw',e.encode(pw),{name:'HMAC',hash:'SHA-256'},false,['sign']);const t=await crypto.subtle.digest('SHA-256',await crypto.subtle.sign('HMAC',hk,e.encode('upu-session-v1')));console.log({SALT:h(s),PW_HASH:h(p),SESSION_HASH:h(t)})})()" "NEW PASSWORD"
-```
-
 ## Testing without touching real data
 
 `UPU_OWNERSHIP_FILE=/path/to/copy.json npx vite --port 5174` runs a second server that reads and

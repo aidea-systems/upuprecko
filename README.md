@@ -6,7 +6,9 @@ Interactive map of plot ownership in the UPU (urban development plan) Prečko-za
 - `upu-precko-zapad-map-data/` – map data as WGS84 GeoJSON: plots (the official cadastral parcels, exactly as
   published by DGU), zones / roads / UPU boundary (from the UPU plan PDF), the untouched cadastre download in
   `official/`, the scripts that build the data in `tools/`, and backups of earlier data versions.
-- `061026_ZK DD Prečko.xlsx` – land-registry (ZK) extract the ownership data was imported from.
+- `061026_ZK DD Prečko.xlsx` – land-registry (ZK) extract the ownership data was imported from (6 Oct 2026).
+- `Kazeta_*_azurirano.xlsx`, `Ulica_*_azurirano.xlsx` – state per OSS on 16 Nov 2026 for D4, M1-2, M1-4, M1-6,
+  M2-1, M2-3, Ulica 1B and Ulica 3; the ownership data of those plots was updated from them.
 
 ## Run
 

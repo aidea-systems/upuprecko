@@ -86,6 +86,20 @@ the cadastre use different numbers for the same land, the record says so in its 
 - `6394/3` – its 281 m² in M1-7 are counted under 6394/1 in the workbook;
 - parcels that are not in the workbook show "No data".
 
+**Ownership update of 16 Nov 2026 (OSS).** The eight `*_azurirano.xlsx` workbooks in the repository root
+(Kazeta D4, M1-2, M1-4, M1-6, M2-1, M2-3, Ulica 1B, Ulica 3) hold the state per oss.uredjenazemlja.hr on
+16 Nov 2026. The records of their 79 plots were updated from them on 17 Nov 2026 (owners, shares, our share,
+status, pending registrations, encumbrances); each record's Notes name the source and, where the owners
+changed, the owners before. The other kazete/streets still show the 6 Oct 2026 workbook. Details:
+
+- several register parts of one owner are added up (the parts are listed in the Notes);
+- `3676/1` now has its own owner; `3676/2` (the land the workbooks count in D4 under "3676/1") was not
+  re-checked and still shows the 6 Oct 2026 owner;
+- `6366/1` and `6367/1` have no row in the workbooks – their owners come from the remarks on 6366/2 and
+  6367/2 (for 6366/1 the shares are not stated, so they are empty);
+- the file from before, the script and a report of every change are in
+  `upu-precko-zapad-map-data/_backup_before_oss_update/` (`update_ownership_oss.py` can be run again).
+
 Everything from before the switch to the official cadastre (old shapes, old ownership file, the review
 assignments and border edits that no longer apply, and a report of what changed) is in
 `upu-precko-zapad-map-data/_backup_before_official_cadastre/`.

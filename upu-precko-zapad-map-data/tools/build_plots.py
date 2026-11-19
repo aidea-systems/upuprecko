@@ -97,6 +97,11 @@ def main():
         conv(f['geometry']['coordinates'], lambda c: flat_a.append(c))
         conv(back, lambda c: flat_b.append(c))
         max_dev = max(max_dev, max(max(abs(a[0] - b[0]), abs(a[1] - b[1])) for a, b in zip(flat_a, flat_b)))
+        # The number in the DGU feature id ("CP.41106113") is the parcel id the OSS services use
+        # (oss.uredjenazemlja.hr/oss/public/cad/parcel-info?parcelId=41106113) - checked on 19 Nov 2026.
+        gml = re.fullmatch(r'CP\.(\d+)', p['gml_id'])
+        if not gml:
+            sys.exit(f'Unexpected feature id {p["gml_id"]!r} for plot {p["label"]} - the OSS parcel id cannot be read from it.')
         zs = []
         for name, z in zones:
             part = g.intersection(z)
@@ -120,6 +125,7 @@ def main():
                 'cadastral_ref': p['ref'],
                 'municipality': MUNICIPALITIES.get(p['municipality_code'], p['municipality_code']),
                 'valid_from': p['valid_from'][:10],
+                'oss_parcel_id': int(gml.group(1)),
             },
             'geometry': {'type': f['geometry']['type'], 'coordinates': wgs},
         })

@@ -27,6 +27,11 @@ export interface PlotProps {
   municipality?: string;
   /** Date since which the cadastre shows the parcel in this form. */
   valid_from?: string;
+  /**
+   * Parcel id used by the OSS services (oss.uredjenazemlja.hr); the number in the DGU feature id "CP.<id>".
+   * Missing on shapes that are not an official parcel.
+   */
+  oss_parcel_id?: number;
 }
 
 export interface ZoneProps {

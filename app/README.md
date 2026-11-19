@@ -19,10 +19,17 @@ The site is static except for two server functions used by the **Update** button
   switches, basemap, what the lines mean) and **Export / import**. A one-line note appears only when this
   browser holds edits that are not published.
 - **Zone summary** (right): percent owned per zone, by area or by count.
-- **Plot / zone details** open where you click. Empty fields are left out and long notes show their first
-  line until opened.
+- **Plot / zone details** open in a panel fixed at the right of the screen, wherever the plot is on the map
+  (over the zone summary while they are open; × or Esc closes them). If the plot you click lies where the
+  panel opens, the map moves it clear. Empty fields are left out and long notes show their first line until
+  opened.
+- **Colours of the plots**: green Owned, blue Negotiating, red Not owned, grey No data – and **yellow for
+  plots of the City of Zagreb**. "City of Zagreb" is not a status you set: a plot is shown that way when its
+  status is Not owned and every owner is the City (the owner's name contains one of `cityOwners` in
+  `src/config.ts`, i.e. "GRAD ZAGREB"). The legend, the zone details and the lists count these plots apart;
+  the stored status stays Not owned, and the percent-owned figures and the Excel export are unchanged.
 - **On a phone** (or a window narrower than 900 px) the map fills the screen. Two buttons at the bottom open
-  the menu and the zone list as sheets from the bottom; plot and zone details open the same way, one sheet at
+  the menu and the zone list as sheets from the bottom; plot and zone details open the same way (instead of the panel at the right), one sheet at
   a time. The limit is `COMPACT_QUERY` in `src/lib/useCompact.ts`; the layout rules are at the end of
   `src/styles.css`.
 

@@ -4,6 +4,13 @@ export type { Polygon };
 export type Status = 'owned' | 'negotiating' | 'not_owned' | 'no_data';
 export const STATUSES: Status[] = ['owned', 'negotiating', 'not_owned', 'no_data'];
 
+/**
+ * What a plot is shown as. The same as its status, except that a plot that is not ours and belongs
+ * wholly to the City of Zagreb is shown as "city" - worked out from the owners, never stored.
+ */
+export type DisplayStatus = Status | 'city';
+export const DISPLAY_STATUSES: DisplayStatus[] = ['owned', 'negotiating', 'not_owned', 'city', 'no_data'];
+
 export interface ZoneOverlap {
   zone: string;
   overlap_m2: number;

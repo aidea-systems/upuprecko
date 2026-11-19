@@ -1,5 +1,5 @@
 import type { ZoneProps } from '../types';
-import { STATUSES } from '../types';
+import { DISPLAY_STATUSES } from '../types';
 import { config, zoneBand } from '../config';
 import { strings as t } from '../i18n/strings';
 import { fmtArea, fmtPct } from '../lib/format';
@@ -29,7 +29,7 @@ function PlotList({ items, onPlotClick }: { items: ZonePlotEntry[]; onPlotClick:
         <li key={p.plotNumber}>
           <button className="plot-item" onClick={() => onPlotClick(p.plotNumber)}>
             <span className="pn">{p.plotNumber}</span>
-            <StatusChip status={p.status} />
+            <StatusChip status={p.display} />
             <span className="muted">{fmtArea(p.overlap)}</span>
             <span className="share">{p.share.value > 0 ? fmtPct(p.share.value) : ''}</span>
           </button>
@@ -73,9 +73,9 @@ export function ZonePopup({ zone, stats, onPlotClick, onReviewClick }: Props) {
         </dd>
         <dt>{t.zone.perStatus}</dt>
         <dd className="status-counts">
-          {STATUSES.map((s) => (
+          {DISPLAY_STATUSES.filter((s) => s !== 'city' || stats.displayCounts.city > 0).map((s) => (
             <span key={s} title={t.status[s]}>
-              <i style={{ background: config.statusColors[s] }} /> {t.status[s]}: <b>{stats.statusCounts[s]}</b>
+              <i style={{ background: config.statusColors[s] }} /> {t.status[s]}: <b>{stats.displayCounts[s]}</b>
             </span>
           ))}
         </dd>

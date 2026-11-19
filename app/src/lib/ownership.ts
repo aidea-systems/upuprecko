@@ -1,4 +1,4 @@
-import type { FeatureEdit, Owner, OwnershipDoc, PlotGeometry, PlotProps, PlotRecord, RegistryInfo, Resolution, Status } from '../types';
+import type { DisplayStatus, FeatureEdit, Owner, OwnershipDoc, PlotGeometry, PlotProps, PlotRecord, RegistryInfo, Resolution, Status } from '../types';
 import { STATUSES } from '../types';
 import { addFrac, formatFrac, isOne, parseFraction, toNumber, type Frac } from './fraction';
 import { strings as t } from '../i18n/strings';
@@ -44,6 +44,22 @@ export const ownerKey = (name: string) => name.normalize('NFC').toLocaleUpperCas
 export function isOurOwner(name: string, ours: string[] = config.ourOwners): boolean {
   const k = ownerKey(name);
   return !!k && ours.some((p) => k.startsWith(ownerKey(p)));
+}
+
+/** Is this owner the City of Zagreb? The name contains one of config.cityOwners. */
+export function isCityOwner(name: string, city: string[] = config.cityOwners): boolean {
+  const k = ownerKey(name);
+  return !!k && city.some((c) => k.includes(ownerKey(c)));
+}
+
+/**
+ * What a plot is shown as on the map, in the legend and in lists: its status, or "city" when it is
+ * not ours and every owner is the City of Zagreb. Other statuses (also a Negotiating set by hand) stay.
+ */
+export function displayStatus(rec: PlotRecord | undefined): DisplayStatus {
+  if (!rec) return 'no_data';
+  const owners = rec.owners.filter((o) => o.name.trim());
+  return rec.status === 'not_owned' && owners.length > 0 && owners.every((o) => isCityOwner(o.name)) ? 'city' : rec.status;
 }
 
 /**

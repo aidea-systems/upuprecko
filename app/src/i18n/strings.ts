@@ -56,6 +56,7 @@ export const strings = {
     owned: 'Owned',
     negotiating: 'Negotiating',
     not_owned: 'Not owned',
+    city: 'City of Zagreb',
     no_data: 'No data',
   },
 

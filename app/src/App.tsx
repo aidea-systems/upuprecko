@@ -5,7 +5,7 @@ import type { BoundaryFC, FeatureEdit, PlotGeometry, PlotProps, PlotRecord, Plot
 import { config, zoneBand } from './config';
 import { strings as t } from './i18n/strings';
 import { bboxOf, cornerNeighbours, interiorPoint, shiftCollection, type BBox } from './lib/geo';
-import { applyEdits, checkRename, getRecord, normalizeDoc } from './lib/ownership';
+import { applyEdits, checkRename, displayStatus, getRecord, normalizeDoc } from './lib/ownership';
 import { computeZoneStats, resolveFeature } from './lib/zoneStats';
 import { buildImport } from './lib/importRows';
 import { exportExcel, exportGeojson, exportJson, readImportFile } from './lib/fileIO';
@@ -14,7 +14,7 @@ import { areaOf, buildAreaContext, measure } from './lib/area';
 import { LocalJsonRepository } from './storage/localJsonRepository';
 import { useOwnership } from './storage/useOwnership';
 import { MapView, type Basemap, type LayerVisibility, type RoadData, type ViewMode } from './components/MapView';
-import { MapPopup } from './components/MapPopup';
+import { DetailsPanel } from './components/DetailsPanel';
 import { PlotPopup, type PlotSummary } from './components/PlotPopup';
 import { BoundaryEditor } from './components/BoundaryEditor';
 import { ReviewPopup } from './components/ReviewPopup';
@@ -36,6 +36,8 @@ interface MapData {
 }
 
 const EMPTY_FC: FeatureCollection = { type: 'FeatureCollection', features: [] };
+/** width of the details panel at the right of the screen, with its margin (see .details-panel in styles.css) */
+const DETAILS_WIDTH = 396;
 
 type Popup =
   | { type: 'feature'; featureId: string; lngLat: [number, number] }
@@ -127,12 +129,15 @@ export default function App() {
     },
     [compact],
   );
-  /** Room to leave free around what the map zooms to: the panels beside it, or the sheet below it on a phone. */
+  /**
+   * Room to leave free around what the map zooms to: the panels beside it and, when details are shown
+   * (`sheet`), the details panel at the right - or the sheet below the map on a phone.
+   */
   const padding = useCallback(
     (top: number, bottom: number, sheet = true) =>
       compact
         ? { top: Math.min(top, 90), bottom: sheet ? Math.round(window.innerHeight * 0.55) : bottom, left: 24, right: 24 }
-        : { top, bottom, left: leftOpen ? 360 : 60, right: rightOpen ? 360 : 60 },
+        : { top, bottom, left: leftOpen ? 360 : 60, right: sheet ? DETAILS_WIDTH + 40 : rightOpen ? 360 : 60 },
     [compact, leftOpen, rightOpen],
   );
 
@@ -191,7 +196,7 @@ export default function App() {
       features: features.map((f): Feature => {
         const r = resolveFeature(f.properties, doc.reviews);
         const props = { id: f.properties.id, kind: f.properties.kind } as Record<string, unknown>;
-        if (r.kind === 'plot') Object.assign(props, { _status: getRecord(doc, r.plotNumber).status, _label: r.plotNumber, _res: r.fromReview ? 'plot' : 'none' });
+        if (r.kind === 'plot') Object.assign(props, { _status: displayStatus(getRecord(doc, r.plotNumber)), _label: r.plotNumber, _res: r.fromReview ? 'plot' : 'none' });
         else if (r.kind === 'unresolved') Object.assign(props, { _status: 'no_data', _label: t.review.title, _res: 'unresolved' });
         else Object.assign(props, { _status: 'no_data', _label: '', _res: 'not_plot' });
         return { type: 'Feature', geometry: f.geometry, properties: props };
@@ -266,7 +271,7 @@ export default function App() {
       items.push({
         key: `p:${pn}`,
         label: pn,
-        sub: [t.search.plot, t.status[rec.status], owners.join(', ')].filter(Boolean).join(' · '),
+        sub: [t.search.plot, t.status[displayStatus(rec)], owners.join(', ')].filter(Boolean).join(' · '),
         haystack: `${pn} ${owners.join(' ')}`,
         target: { type: 'plot', plotNumber: pn },
       });
@@ -371,7 +376,7 @@ export default function App() {
     const ids = [id, ...cornerNeighbours(id, features.map((f) => ({ id: f.properties.id, geometry: f.geometry })))];
     if (map) {
       const b = bboxOf(ids.map((x) => featureById.get(x)!.geometry));
-      map.fitBounds(b, { padding: compact ? { top: 230, bottom: 50, left: 24, right: 24 } : padding(230, 50), maxZoom: 19.5, duration: 700 });
+      map.fitBounds(b, { padding: padding(230, 50, false), maxZoom: 19.5, duration: 700 });
     }
     setEditingId(id);
   };
@@ -448,8 +453,8 @@ export default function App() {
   );
 
   const statusCounts = useMemo(() => {
-    const c: Record<string, number> = { owned: 0, negotiating: 0, not_owned: 0, no_data: 0 };
-    if (doc) for (const pn of plotIndex.keys()) c[getRecord(doc, pn).status]++;
+    const c: Record<string, number> = { owned: 0, negotiating: 0, not_owned: 0, city: 0, no_data: 0 };
+    if (doc) for (const pn of plotIndex.keys()) c[displayStatus(getRecord(doc, pn))]++;
     return c;
   }, [doc, plotIndex]);
   const reviewOpen = useMemo(
@@ -467,9 +472,15 @@ export default function App() {
     } else if (side === 'left') setLeftOpen(open);
     else setRightOpen(open);
   };
-  /** On a phone the details cover the lower half: move the tapped spot into the part that stays visible. */
+  /**
+   * The details cover part of the map - the lower half on a phone, the right side otherwise.
+   * If the clicked spot would end up under them, the map moves it into the part that stays visible.
+   */
   const bringAboveSheet = (ll: maplibregl.LngLat) => {
-    if (compact && map) map.easeTo({ center: [ll.lng, ll.lat], offset: [0, -Math.round(window.innerHeight * 0.22)], duration: 350 });
+    if (!map) return;
+    if (compact) return void map.easeTo({ center: [ll.lng, ll.lat], offset: [0, -Math.round(window.innerHeight * 0.22)], duration: 350 });
+    const over = map.project(ll).x - (window.innerWidth - DETAILS_WIDTH - 80);
+    if (over > 0) map.panBy([over, 0], { duration: 350 });
   };
 
   // ---------- refresh ownership from the land registry ----------
@@ -517,7 +528,7 @@ export default function App() {
   if (!data || !doc || !initialBounds) return <div className="splash">{t.app.loading}</div>;
 
   return (
-    <div className="app">
+    <div className={`app${!compact && rightOpen ? ' zones-open' : ''}${!compact && popup && popupContent ? ' details-open' : ''}`}>
       <MapView
         plots={plotsFC}
         zones={zonesFC}
@@ -612,9 +623,9 @@ export default function App() {
       )}
 
       {map && popup && popupContent && (
-        <MapPopup map={map} lngLat={popup.lngLat} sheet={compact} onClose={() => setPopup(null)}>
+        <DetailsPanel sheet={compact} onClose={() => setPopup(null)}>
           {popupContent}
-        </MapPopup>
+        </DetailsPanel>
       )}
 
       {map && editingId && featureById.get(editingId) && (

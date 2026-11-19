@@ -135,6 +135,7 @@ const statusColor: ExpressionSpecification = [
   'owned', config.statusColors.owned,
   'negotiating', config.statusColors.negotiating,
   'not_owned', config.statusColors.not_owned,
+  'city', config.statusColors.city,
   config.statusColors.no_data,
 ];
 const bandColor: ExpressionSpecification = [

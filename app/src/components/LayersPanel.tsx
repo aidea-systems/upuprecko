@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { STATUSES } from '../types';
+import { DISPLAY_STATUSES } from '../types';
 import { config } from '../config';
 import { strings as t } from '../i18n/strings';
 import { fmtPct, lastUpdatedLabel } from '../lib/format';
@@ -97,7 +97,7 @@ export function LayersPanel(p: Props) {
           ))}
         </div>
         {p.viewMode === 'plots' &&
-          STATUSES.map((s) => (
+          DISPLAY_STATUSES.map((s) => (
             <div className="legend-row" key={s}>
               <i style={{ background: config.statusColors[s] }} />
               {t.status[s]} <span className="muted">{p.statusCounts[s] ?? 0}</span>

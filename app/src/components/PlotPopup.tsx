@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import type { Owner, PlotRecord, Status } from '../types';
+import type { DisplayStatus, Owner, PlotRecord, Status } from '../types';
 import { STATUSES } from '../types';
 import { config } from '../config';
 import { strings as t } from '../i18n/strings';
-import { checkOwnerShares, effectiveShare, mergeOwners, ourShareFromOwners, type RenameCheck } from '../lib/ownership';
+import { checkOwnerShares, displayStatus, effectiveShare, mergeOwners, ourShareFromOwners, type RenameCheck } from '../lib/ownership';
 import { fmtArea, fmtDate, fmtPct } from '../lib/format';
 
 export interface PlotSummary {
@@ -42,7 +42,7 @@ interface Props {
   onUndoReview?: () => void;
 }
 
-export function StatusChip({ status }: { status: Status }) {
+export function StatusChip({ status }: { status: DisplayStatus }) {
   return (
     <span className="chip" style={{ background: config.statusColors[status] + '33', borderColor: config.statusColors[status] }}>
       <i style={{ background: config.statusColors[status] }} />
@@ -143,7 +143,7 @@ export function PlotPopup(props: Props) {
           </dd>
           <dt>{t.plot.status}</dt>
           <dd>
-            <StatusChip status={record.status} />
+            <StatusChip status={displayStatus(record)} />
           </dd>
           <dt>{t.plot.owners}</dt>
           <dd>

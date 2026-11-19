@@ -1,5 +1,5 @@
-import type { OwnershipDoc, PlotProps, Status } from '../types';
-import { effectiveShare, getRecord, type EffectiveShare } from './ownership';
+import type { DisplayStatus, OwnershipDoc, PlotProps, Status } from '../types';
+import { displayStatus, effectiveShare, getRecord, type EffectiveShare } from './ownership';
 
 export type FeatureResolution =
   | { kind: 'plot'; plotNumber: string; fromReview: boolean }
@@ -21,6 +21,8 @@ export interface ZonePlotEntry {
   overlap: number;
   featureIds: string[];
   status: Status;
+  /** what the plot is shown as: the status, or "city" for a plot of the City of Zagreb */
+  display: DisplayStatus;
   share: EffectiveShare;
 }
 
@@ -38,6 +40,8 @@ export interface ZoneStats {
   ownedCount: number;
   pctCount: number | null;
   statusCounts: Record<Status, number>;
+  /** the same plots counted by what they are shown as (city-owned plots apart from Not owned) */
+  displayCounts: Record<DisplayStatus, number>;
   excludedReview: { area: number; featureIds: string[] };
   notPlotArea: number;
   plots: ZonePlotEntry[];
@@ -54,6 +58,7 @@ const emptyStats = (zone: string): ZoneStats => ({
   ownedCount: 0,
   pctCount: null,
   statusCounts: { owned: 0, negotiating: 0, not_owned: 0, no_data: 0 },
+  displayCounts: { owned: 0, negotiating: 0, not_owned: 0, city: 0, no_data: 0 },
   excludedReview: { area: 0, featureIds: [] },
   notPlotArea: 0,
   plots: [],
@@ -103,13 +108,15 @@ export function computeZoneStats(
     for (const [plotNumber, e] of m) {
       const rec = getRecord(doc, plotNumber);
       const share = effectiveShare(doc.plots[plotNumber]);
-      const entry: ZonePlotEntry = { plotNumber, overlap: e.overlap, featureIds: e.featureIds, status: rec.status, share };
+      const display = displayStatus(rec);
+      const entry: ZonePlotEntry = { plotNumber, overlap: e.overlap, featureIds: e.featureIds, status: rec.status, display, share };
       s.plots.push(entry);
       s.countedArea += e.overlap;
       s.ownedArea += e.overlap * share.value;
       s.plotCount += 1;
       s.ownedCount += share.value;
       s.statusCounts[rec.status] += 1;
+      s.displayCounts[display] += 1;
     }
     s.plots.sort((a, b) => a.plotNumber.localeCompare(b.plotNumber, undefined, { numeric: true }));
     s.notOwned = s.plots.filter((p) => p.share.value < 1);

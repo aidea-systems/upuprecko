@@ -1,4 +1,4 @@
-import type { Status } from './types';
+import type { DisplayStatus } from './types';
 
 /** All tunable settings in one place. */
 export const config = {
@@ -46,13 +46,21 @@ export const config = {
   /** localStorage key for the refresh token (the secret /api/oss-parcel asks for). */
   refreshTokenKey: 'upu-precko-zapad.refreshToken',
 
-  /** Plot fill colours by ownership status. */
+  /**
+   * Owners that are the City of Zagreb: the name contains one of these (case and spaces ignored), e.g.
+   * "GRAD ZAGREB" or "JAVNO DOBRO U OPĆOJ UPORABI U NEOTUĐIVOM VLASNIŠTVU GRAD ZAGREB, OIB: …".
+   * A plot that is not ours and has no other owner is shown as city-owned.
+   */
+  cityOwners: ['GRAD ZAGREB'],
+
+  /** Plot fill colours: by ownership status, plus "city" for plots owned by the City of Zagreb. */
   statusColors: {
     owned: '#22c55e',
-    negotiating: '#facc15',
+    negotiating: '#60a5fa',
     not_owned: '#ef4444',
+    city: '#facc15',
     no_data: '#94a3b8',
-  } as Record<Status, string>,
+  } as Record<DisplayStatus, string>,
 
   /** Zone outline and zone name plate. */
   zoneLineColor: '#0f172a',

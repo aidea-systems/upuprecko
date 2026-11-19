@@ -154,23 +154,17 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .bar > div { height: 100%; border-radius: 4px; transition: width 0.3s; min-width: 0; }
 
 /* ---------- popups ---------- */
-.dark-popup .maplibregl-popup-content {
+/* plot / zone details: a panel fixed at the right of the screen (a sheet from the bottom on a phone) */
+.details-panel {
+  position: absolute; top: 62px; right: 16px; width: 380px; max-height: calc(100% - 78px); overflow-y: auto; z-index: 7;
   background: var(--panel-solid); color: var(--text); border: 1px solid var(--border);
-  border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px 16px 12px;
-  max-height: 72vh; overflow-y: auto; width: 360px;
+  border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px 16px 14px;
 }
-.dark-popup.maplibregl-popup-anchor-top .maplibregl-popup-tip,
-.dark-popup.maplibregl-popup-anchor-top-left .maplibregl-popup-tip,
-.dark-popup.maplibregl-popup-anchor-top-right .maplibregl-popup-tip { border-bottom-color: var(--border); }
-.dark-popup.maplibregl-popup-anchor-bottom .maplibregl-popup-tip,
-.dark-popup.maplibregl-popup-anchor-bottom-left .maplibregl-popup-tip,
-.dark-popup.maplibregl-popup-anchor-bottom-right .maplibregl-popup-tip { border-top-color: var(--border); }
-.dark-popup.maplibregl-popup-anchor-left .maplibregl-popup-tip { border-right-color: var(--border); }
-.dark-popup.maplibregl-popup-anchor-right .maplibregl-popup-tip { border-left-color: var(--border); }
-.dark-popup .maplibregl-popup-close-button { color: var(--muted); font-size: 20px; right: 6px; top: 4px; }
-.dark-popup .maplibregl-popup-close-button:hover { background: transparent; color: var(--text); }
+/* with the zone summary open the details take its place; with it closed they sit under its button */
+.app.zones-open .details-panel { top: 16px; max-height: calc(100% - 32px); }
+.sheet-close { position: absolute; top: 8px; right: 8px; }
 
-.popup-head { display: flex; align-items: center; gap: 10px; margin: 0 22px 10px 0; }
+.popup-head { display: flex; align-items: center; gap: 10px; margin: 0 34px 10px 0; }
 .popup h3 { margin: 0; font-size: 15px; flex: 1; }
 .popup h4 { margin: 14px 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent-2); }
 .review-title { color: #fdba74; }
@@ -273,7 +267,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .maplibregl-ctrl-scale { background: rgba(22, 19, 46, 0.8); color: var(--text); border-color: var(--muted); }
 .maplibregl-ctrl-attrib { background: rgba(22, 19, 46, 0.75) !important; color: var(--muted); }
 .maplibregl-ctrl-attrib a { color: var(--muted); }
-.maplibregl-ctrl-bottom-right { right: 350px; transition: right 0.2s; }
+/* the zoom buttons stay clear of whatever is open at the right */
+.maplibregl-ctrl-bottom-right { right: 0; transition: right 0.2s; }
+.app.zones-open .maplibregl-ctrl-bottom-right { right: 350px; }
+.app.details-open .maplibregl-ctrl-bottom-right { right: 410px; }
 
 /* ---------- phones and narrow windows ----------
    The map fills the screen. The menu, the zone list and the plot / zone details open as sheets from the
@@ -298,7 +295,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
     max-height: 60dvh; overflow-y: auto; border-top: 1px solid var(--border); box-shadow: var(--shadow);
     padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
   }
-  .sheet-close { position: absolute; top: 8px; right: 8px; }
   .popup-sheet .popup-head { margin-right: 44px; }
 
   .panel-tab {

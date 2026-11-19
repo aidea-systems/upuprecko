@@ -25,6 +25,27 @@ export const config = {
     'LANDMARK GROUP',
   ],
 
+  /**
+   * OIBs of our companies. "Refresh ownership" counts a land-registry owner as ours when its OIB is here
+   * OR its name matches `ourOwners`; a name that matches with an OIB that is not here is reported, so it can be added.
+   */
+  ourOwnerOibs: [
+    '75108231896', // Opatovina projekt d.o.o.
+    '86374543635', // Projekt Maksimus d.o.o.
+    '46094261044', // Landmark Group d.o.o.
+  ],
+
+  /**
+   * Plots whose record was set by hand and differs from the sources on purpose. "Refresh ownership" shows
+   * what the land registry says, but leaves them unticked.
+   */
+  protectedPlots: ['6390', '3676/2', '6366/1', '6367/1', '6394/3'],
+
+  /** "Refresh ownership": pause between two plots, in milliseconds. */
+  refreshPauseMs: 1500,
+  /** localStorage key for the refresh token (the secret /api/oss-parcel asks for). */
+  refreshTokenKey: 'upu-precko-zapad.refreshToken',
+
   /** Plot fill colours by ownership status. */
   statusColors: {
     owned: '#22c55e',

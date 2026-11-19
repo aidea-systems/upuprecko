@@ -54,6 +54,22 @@ export interface Owner {
   share: string;
 }
 
+/** What the land registry said about a plot the last time "Refresh ownership" checked it. */
+export interface RegistryInfo {
+  /** OSS parcel id the check was made with. */
+  parcelId: number;
+  /** ZK uložak number. */
+  lrUnitNumber: string;
+  mainBookId: number;
+  /** Land-registry main book (glavna knjiga). */
+  mainBookName: string;
+  /** Last entry made in the unit ("Z-55014/2026"); null when the registry gave none. */
+  lastDiaryNumber: string | null;
+  /** File numbers of registrations pending at the time of the check (plombe). */
+  activePlumbs: string[];
+  checkedAt: string;
+}
+
 export interface PlotRecord {
   status: Status;
   owners: Owner[];
@@ -62,6 +78,8 @@ export interface PlotRecord {
   contact: string;
   notes: string;
   updatedAt: string | null;
+  /** Set by "Refresh ownership" when the plot was checked against the land registry; absent before that. */
+  registry?: RegistryInfo;
 }
 
 export type Resolution =

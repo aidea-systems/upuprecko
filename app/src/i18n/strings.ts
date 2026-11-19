@@ -214,6 +214,31 @@ export const strings = {
     readError: 'Could not read the file',
   },
 
+  refresh: {
+    // differences between the stored record and the land registry
+    ownerAdded: (name: string, share: string) => `New owner: ${name} (${share})`,
+    ownerRemoved: (name: string, share: string) => `No longer an owner: ${name} (was ${share})`,
+    shareChanged: (name: string, from: string, to: string) => `${name}: share ${from} → ${to}`,
+    ourShareChanged: (from: string, to: string) => `Our share: ${from} → ${to}`,
+    statusChanged: (from: string, to: string) => `Status: ${from} → ${to}`,
+    noShare: 'not entered',
+    // reasons why no change is proposed
+    flagPlotNumber: (got: string, want: string) => `The registry returns plot ${got} for this parcel; the map has ${want} (split or renumbered?).`,
+    flagMunicipality: (got: string, want: string) => `The registry returns cadastral municipality ${got}; the map has ${want}.`,
+    flagNoUnit: 'The cadastre links this parcel to no land-registry unit (ZK uložak).',
+    flagCondominiums: 'Condominium ownership (etažno vlasništvo) – shares cannot be read automatically.',
+    flagNoShares: 'The land-registry unit lists no ownership shares.',
+    flagSubShares: (d: string) => `"${d}" has sub-shares or a pre-registration (predbilježba).`,
+    flagShareUnreadable: (d: string) => `"${d}" has no readable share.`,
+    flagNoOwner: (d: string) => `"${d}" names no owner.`,
+    flagMixed: (d: string) => `"${d}" is held jointly by one of our companies and somebody else.`,
+    flagSum: (sum: string) => `The shares add up to ${sum}, not 1.`,
+    // notes shown with a plot
+    notePlumbs: (list: string) => `Pending registration (plomba): ${list}`,
+    noteNotHarmonized: 'Cadastre and land registry are not harmonised for this parcel.',
+    noteAnnotations: (n: number) => `${n} remark(s) (zabilježba) on the shares – they do not change the owners.`,
+  },
+
   excel: {
     plotsSheet: 'Plots',
     zonesSheet: 'Zones',

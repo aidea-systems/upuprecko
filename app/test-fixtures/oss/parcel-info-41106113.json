@@ -1,0 +1,72 @@
+{
+  "parcelId": 41106113,
+  "parcelNumber": "6356/1",
+  "cadMunicipalityId": 205082,
+  "cadMunicipalityRegNum": "339318",
+  "cadMunicipalityName": "DONJE VRAPČE",
+  "institutionId": 700,
+  "address": "SAVSKA OPATOVINA",
+  "area": "2629",
+  "buildingRemark": 0,
+  "detailSheetNumber": "37",
+  "hasBuildingRight": false,
+  "parcelParts": [
+    {
+      "parcelPartId": 14266789,
+      "name": "ZGRADA",
+      "type": "Zgrada",
+      "area": "12",
+      "possessionSheetId": 15728592,
+      "possessionSheetNumber": "1000",
+      "buildingRight": 0,
+      "building": true
+    },
+    {
+      "parcelPartId": 77437327,
+      "name": "ORANICA",
+      "area": "2617",
+      "possessionSheetId": 15728592,
+      "possessionSheetNumber": "1000",
+      "building": false
+    }
+  ],
+  "possessionSheets": [
+    {
+      "possessionSheetId": 15728592,
+      "possessionSheetNumber": "1000",
+      "cadMunicipalityId": 205082,
+      "possessors": [
+        {
+          "name": "FLAMMULA NEKRETNINE D.O.O. ",
+          "ownership": "587/2803",
+          "address": "Primorska ulica 5, 10360 Sesvete, Hrvatska"
+        },
+        {
+          "name": "OPATOVINA PROJEKT d.o.o. u stečaju",
+          "ownership": "426/2803",
+          "address": "Ulica grada Vukovara 269G, 10000 Zagreb, Hrvatska"
+        },
+        {
+          "name": "SIGILLUM NEKRETNINE d.o.o.",
+          "ownership": "1790/2803",
+          "address": "Ulica grada Vukovara 269G, 10000 Zagreb, Hrvatska"
+        }
+      ]
+    }
+  ],
+  "lrUnit": {
+    "lrUnitId": 13858397,
+    "lrUnitNumber": "1000",
+    "mainBookId": 250235,
+    "status": "0",
+    "verificated": false,
+    "condominiums": false
+  },
+  "isAdditionalDataSet": false,
+  "legalRegime": false,
+  "graphic": true,
+  "alphaNumeric": true,
+  "status": 0,
+  "resourceCode": 2,
+  "isHarmonized": true
+}

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitest/config';
-import type { Connect, Plugin } from 'vite';
+import { loadEnv, type Connect, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+import { createNodeHandler } from './server/ossParcel.js';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -72,7 +73,22 @@ function ownershipFileApi(): Plugin {
   };
 }
 
-export default defineConfig({
-  plugins: [react(), ownershipFileApi()],
-  test: { environment: 'node' },
+/**
+ * /api/oss-parcel under `vite` / `vite preview`: the same handler the Vercel function uses
+ * (server/ossParcel.ts). REFRESH_TOKEN comes from the environment or from .env.local.
+ */
+function ossParcelApi(getToken: () => string | undefined): Plugin {
+  const handler = createNodeHandler(getToken);
+  const mount = (server: { middlewares: Connect.Server }) => {
+    server.middlewares.use('/api/oss-parcel', (req, res) => void handler(req, res));
+  };
+  return { name: 'oss-parcel-api', configureServer: mount, configurePreviewServer: mount };
+}
+
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, root, 'REFRESH_');
+  return {
+    plugins: [react(), ownershipFileApi(), ossParcelApi(() => process.env.REFRESH_TOKEN || env.REFRESH_TOKEN || undefined)],
+    test: { environment: 'node' },
+  };
 });

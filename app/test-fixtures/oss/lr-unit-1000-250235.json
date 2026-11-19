@@ -1,0 +1,260 @@
+[
+  {
+    "lrUnitId": 13858397,
+    "lrUnitNumber": "1000",
+    "mainBookId": 250235,
+    "mainBookName": "DONJE VRAPČE",
+    "cadastreMunicipalityId": 205082,
+    "institutionId": 285,
+    "institutionName": "Zemljišnoknjižni odjel Zagreb",
+    "status": "0",
+    "statusName": "Aktivan",
+    "verificated": true,
+    "condominiums": false,
+    "lrUnitTypeId": 1,
+    "lrUnitTypeName": "VLASNIČKI",
+    "lastDiaryNumber": "Z-55014/2026",
+    "activePlumbs": [],
+    "ownershipSheetB": {
+      "lrUnitShares": [
+        {
+          "description": "1. Suvlasnički dio: 1790/2803",
+          "lrOwners": [
+            {
+              "lrOwnerId": 66708843,
+              "name": "Opatovina projekt d.o.o.",
+              "address": "Ulica grada Vukovara 269G, 10000 Zagreb, Hrvatska",
+              "taxNumber": "75108231896",
+              "lrEntry": {
+                "description": "Zaprimljeno 27.04.2026.g. pod brojem Z-21771/2026<br><br>UKNJIŽBA, PRAVO VLASNIŠTVA, UGOVOR O KUPOPRODAJI 26.03.2026",
+                "orderNumber": "1.4"
+              }
+            }
+          ],
+          "lrUnitShareId": 50040385,
+          "subSharesAndEntries": [],
+          "status": 0,
+          "orderNumber": "1"
+        },
+        {
+          "description": "2. Suvlasnički dio: 587/2803",
+          "lrOwners": [
+            {
+              "lrOwnerId": 68469934,
+              "name": "PROJEKT MAKSIMUS d.o.o.",
+              "address": "Ulica grada Vukovara 269G, 10000 Zagreb, Hrvatska",
+              "taxNumber": "86374543635",
+              "lrEntry": {
+                "description": "Zaprimljeno 19.10.2026.g. pod brojem Z-50302/2026<br><br>UKNJIŽBA, PRAVO VLASNIŠTVA, RJEŠENJE TRGOVAČKOG SUDA U ZAGREBU POSL. BR. OVR-10/2026-27 27.07.2026, POTVRDA PRAVOMOĆNOSTI/OVRŠNOSTI 30.07.2026, ZAKLJUČAK TRGOVAČKOG SUDA U ZAGREBU POSL. BR. OVR-10/2026-35 16.10.2026",
+                "orderNumber": "2.2"
+              }
+            }
+          ],
+          "lrUnitShareId": 50040386,
+          "subSharesAndEntries": [],
+          "status": 0,
+          "orderNumber": "2"
+        },
+        {
+          "description": "3. Suvlasnički dio: 426/2803",
+          "lrOwners": [
+            {
+              "lrOwnerId": 65835165,
+              "name": "OPATOVINA PROJEKT d.o.o.",
+              "address": "Ulica grada Vukovara 269G, 10000 Zagreb, Hrvatska",
+              "taxNumber": "75108231896"
+            }
+          ],
+          "lrUnitShareId": 50040387,
+          "subSharesAndEntries": [],
+          "status": 0,
+          "orderNumber": "3"
+        }
+      ],
+      "lrEntries": []
+    },
+    "possessionSheetA1": {
+      "cadParcels": [
+        {
+          "parcelId": 41106113,
+          "parcelNumber": "6356/1",
+          "cadMunicipalityId": 205082,
+          "cadMunicipalityRegNum": "339318",
+          "cadMunicipalityName": "DONJE VRAPČE",
+          "institutionId": 700,
+          "address": "SAVSKA OPATOVINA",
+          "area": "2629",
+          "buildingRemark": 0,
+          "detailSheetNumber": "37",
+          "hasBuildingRight": false,
+          "parcelParts": [
+            {
+              "parcelPartId": 14266789,
+              "name": "ZGRADA",
+              "type": "Zgrada",
+              "area": "12",
+              "buildingRight": 0,
+              "building": true
+            },
+            {
+              "parcelPartId": 77437327,
+              "name": "ORANICA",
+              "area": "2617",
+              "possessionSheetId": 15728592,
+              "possessionSheetNumber": "1000",
+              "building": false
+            }
+          ],
+          "possessionSheets": [
+            {
+              "possessionSheetId": 15728592,
+              "possessionSheetNumber": "1000",
+              "cadMunicipalityId": 205082,
+              "cadMunicipalityRegNum": "339318",
+              "cadMunicipalityName": "DONJE VRAPČE",
+              "possessors": []
+            }
+          ],
+          "isAdditionalDataSet": false,
+          "legalRegime": false,
+          "graphic": true,
+          "alphaNumeric": true,
+          "status": 0,
+          "resourceCode": 2,
+          "isHarmonized": false
+        }
+      ]
+    },
+    "possessionSheetA2": {
+      "lrEntries": [
+        {
+          "description": "<span class='lr-entry-black' >Temeljem Zapisnika br. Z-150/2023/1000 upisuje se: Temeljem Izmjena i dopuna Zakona o gradnji (Narodne novine broj 20/17.) zabilježuje se da za evidentiranje građevine:<br><br>ZGRADA površine 12 m2 sagr. na čkbr. 6356/1 u katastru nije priložena uporabna dozvola.</span>",
+          "lrEntryId": 100801916,
+          "orderNumber": "1.1"
+        }
+      ]
+    },
+    "encumbranceSheetC": {
+      "lrEntryGroups": [
+        {
+          "description": "1. ",
+          "lrEntries": [
+            {
+              "description": "<span class='lr-entry-black' >Temeljem zapisnika broj Z-150/2023/1000 prenosi se slijedeći upis: Zaprimljeno 29.01.2008. broj Z-5763/08<br><br>Temeljem Sporazuma radi osiguranja novačane tražbine  zasnivanjem založnog prava na nekretnini od 28.12.2007. uknjižuje se založno pravo u iznosu od 142.570.096,50 kuna s pripadajućim kamatama , naknadama i drugim troškovima , za korist:</span>",
+              "lrOwners": [
+                {
+                  "lrOwnerId": 65051903,
+                  "name": "ALPE-ADRIA POSLOVODSTVO D.O.O.",
+                  "address": "ZAGREB, SLAVONSKA AVENIJA 48"
+                }
+              ],
+              "lrEntryId": 100801918,
+              "amount": "142.570.096,50 KN",
+              "orderNumber": "1.1"
+            },
+            {
+              "description": "<span class='lr-entry-black' >Temeljem zapisnika broj Z-150/2023/1000 prenosi se slijedeći upis: Zaprimljeno 29.01.2008. broj Z-5763/08<br><br>Zabilježuje se  da je glavna hipoteka u zk. ul. br. 6675 k.o. Vrapče Novo.</span>",
+              "lrEntryId": 100801919,
+              "orderNumber": "1.2"
+            }
+          ]
+        },
+        {
+          "description": "1. Na suvlasnički dio: 1 (1790/2803)",
+          "shareOrderNumber": "1",
+          "lrEntries": [
+            {
+              "description": "<span class='lr-entry-black' >Temeljem zapisnika broj Z-150/2023/1000 prenosi se slijedeći upis: Zaprimljeno 19.04.2013.g. pod brojem Z-19619/2013<br><br>Prvenstveni red upisa: Z-33632/2012<br><br>UKNJIŽBA, ZALOŽNO PRAVO, temeljem rješenja ŽS Varaždin Stalne službe u Koprivnici posl.br. Gž-5325/14 od 16.12.16. i na temelju dodatka sporazumu radi osiguranja novčane tražbine zasnivanjem založnog prava na nekretninama od 28. lipnja 2012. g. sklopljenog između predlagatelja kao kreditora i protustranke Opatovina projekt d.o.o. kao korisnika kredita i založnog dužnika i protustranaka Curis nekretnine d.o.o., Sigillum nekretnine d.o.o., Finiens nekretnine d.o.o., Fames nekretnine d.o.o., Flammula nekretnine d.ooo., Aequus nekretnine d.o.o., Matara nekretnine d.o.o. i Moneris nekretnine d.o.o. kao založnih dužnika, radi osiguranja tražbine predlagatelja prema protustranci Opatovina projekt d.o.o. u iznosu od 4.500.000,00 EUR-a (slovima: četiri milijuna i petsto tisuća eura i nula centi) u kunskoj protuvrijednosti prema srednjem tečaju Hrvatske narodne banke na dan dospijeća s redovnim kamatama po stopi od 5 % (slovima: pet posto) godišnje i zateznim kamatama po stopi od 10 % (slovima: deset posto) godišnje, za korist:</span>",
+              "lrEntryId": 100801933,
+              "amount": "4.500.000,00 EUR",
+              "orderNumber": "1.1"
+            },
+            {
+              "description": "<span class='lr-entry-black' >Zaprimljeno 02.07.2025.g. pod brojem Z-35960/2025<br><br>UKNJIŽBA, USTUPANJE ZALOŽNOG PRAVA, SPORAZUM O PRIJENOSU ZALOŽNIH PRAVA 10.06.2025, prijenosom hipotekarne tražbine koja je osigurana tim založnim pravom upisanim pod posl. Z-19619/2013 (prvenstveni red upisa pod Z-33632/12) prenešeno pod Z- 150/2023 u iznosu od 4.500.000,00 EUR (četirimilijunaipetstotisućaeura) i spp sa imena nosioca tog prava Zveza bank, registrirana zadruga z omejenim jamstvom, OIB:24250429800, za korist novog založnog vjerovnika</span>",
+              "lrOwners": [
+                {
+                  "lrOwnerId": 64977689,
+                  "name": "LANDMARK GROUP d.o.o.",
+                  "address": "Ulica grada Vukovara 269G, 10000 Zagreb, Hrvatska",
+                  "taxNumber": "46094261044"
+                }
+              ],
+              "lrEntryId": 100801928,
+              "orderNumber": "1.2"
+            },
+            {
+              "description": "<span class='lr-entry-black' >Zaprimljeno 14.09.2026.g. pod brojem Z-44312/2026<br><br>UKNJIŽBA, PODZALOŽNO PRAVO, SPORAZUM O OSIGURANJU NOVČANE TRAŽBINE ZASNIVANJEM PODZALOŽNOG PRAVA NA NEKRETNINAMA 11.09.2026, SPORAZUM O OSIGURANJU NOVČANE TRAŽBINE ZASNIVANJEM PODZALOŽNOG PRAVA NA NEKRETNINAMA 11.09.2026, IZVADAK IZ SUDSKOG REGISTRA 10.09.2026, IZVADAK IZ SUDSKOG REGISTRA S OVJERENIM PRIJEVODOM SA SLOVENSKOG JEZIKA 11.09.2026, uknjižuje se podzaložno pravo radi osiguranja novčane tražbine u iznosu od 28.000.000,00 Eur uvećano za sve kamate i troškove, te prema uvjetima iz ugovora za korist:</span>",
+              "lrOwners": [
+                {
+                  "lrOwnerId": 68147219,
+                  "name": "AAC Partnerji, upravljanje naložb, d.o.o.",
+                  "address": "Verovškova ulica 55A, 1000 Ljubljana, Slovenija",
+                  "taxNumber": "11435108682"
+                }
+              ],
+              "lrEntryId": 105776549,
+              "orderNumber": "1.7"
+            }
+          ]
+        },
+        {
+          "description": "1. Na suvlasnički dio: 2 (587/2803)",
+          "shareOrderNumber": "2",
+          "lrEntries": [
+            {
+              "description": "<span class='lr-entry-black' >Zaprimljeno 14.09.2026.g. pod brojem Z-44312/2026<br><br>UKNJIŽBA, PODZALOŽNO PRAVO, SPORAZUM O OSIGURANJU NOVČANE TRAŽBINE ZASNIVANJEM PODZALOŽNOG PRAVA NA NEKRETNINAMA 11.09.2026, SPORAZUM O OSIGURANJU NOVČANE TRAŽBINE ZASNIVANJEM PODZALOŽNOG PRAVA NA NEKRETNINAMA 11.09.2026, IZVADAK IZ SUDSKOG REGISTRA 10.09.2026, IZVADAK IZ SUDSKOG REGISTRA S OVJERENIM PRIJEVODOM SA SLOVENSKOG JEZIKA 11.09.2026, uknjižuje se podzaložno pravo radi osiguranja novčane tražbine u iznosu od 28.000.000,00 Eur uvećano za sve kamate i troškove, te prema uvjetima iz ugovora za korist:</span>",
+              "lrOwners": [
+                {
+                  "lrOwnerId": 68147220,
+                  "name": "AAC Partnerji, upravljanje naložb, d.o.o.",
+                  "address": "Verovškova ulica 55A, 1000 Ljubljana, Slovenija",
+                  "taxNumber": "11435108682"
+                }
+              ],
+              "lrEntryId": 105776550,
+              "orderNumber": "1.7"
+            }
+          ]
+        },
+        {
+          "description": "1. Na suvlasnički dio: 3 (426/2803)",
+          "shareOrderNumber": "3",
+          "lrEntries": [
+            {
+              "description": "<span class='lr-entry-black' >Temeljem zapisnika broj Z-150/2023/1000 prenosi se slijedeći upis: Zaprimljeno 19.04.2013.g. pod brojem Z-19619/2013<br><br>Prvenstveni red upisa: Z-33632/2012<br><br>UKNJIŽBA, ZALOŽNO PRAVO, temeljem rješenja ŽS Varaždin Stalne službe u Koprivnici posl.br. Gž-5325/14 od 16.12.16. i na temelju dodatka sporazumu radi osiguranja novčane tražbine zasnivanjem založnog prava na nekretninama od 28. lipnja 2012. g. sklopljenog između predlagatelja kao kreditora i protustranke Opatovina projekt d.o.o. kao korisnika kredita i založnog dužnika i protustranaka Curis nekretnine d.o.o., Sigillum nekretnine d.o.o., Finiens nekretnine d.o.o., Fames nekretnine d.o.o., Flammula nekretnine d.ooo., Aequus nekretnine d.o.o., Matara nekretnine d.o.o. i Moneris nekretnine d.o.o. kao založnih dužnika, radi osiguranja tražbine predlagatelja prema protustranci Opatovina projekt d.o.o. u iznosu od 4.500.000,00 EUR-a (slovima: četiri milijuna i petsto tisuća eura i nula centi) u kunskoj protuvrijednosti prema srednjem tečaju Hrvatske narodne banke na dan dospijeća s redovnim kamatama po stopi od 5 % (slovima: pet posto) godišnje i zateznim kamatama po stopi od 10 % (slovima: deset posto) godišnje, za korist:</span>",
+              "lrEntryId": 100801935,
+              "amount": "4.500.000,00 EUR",
+              "orderNumber": "1.1"
+            },
+            {
+              "description": "<span class='lr-entry-black' >Zaprimljeno 02.07.2025.g. pod brojem Z-35960/2025<br><br>UKNJIŽBA, USTUPANJE ZALOŽNOG PRAVA, SPORAZUM O PRIJENOSU ZALOŽNIH PRAVA 10.06.2025, prijenosom hipotekarne tražbine koja je osigurana tim založnim pravom upisanim pod posl. Z-19619/2013 (prvenstveni red upisa pod Z-33632/12) prenešeno pod Z- 150/2023 u iznosu od 4.500.000,00 EUR (četirimilijunaipetstotisućaeura) i spp sa imena nosioca tog prava Zveza bank, registrirana zadruga z omejenim jamstvom, OIB:24250429800, za korist novog založnog vjerovnika</span>",
+              "lrOwners": [
+                {
+                  "lrOwnerId": 64977691,
+                  "name": "LANDMARK GROUP d.o.o.",
+                  "address": "Ulica grada Vukovara 269G, 10000 Zagreb, Hrvatska",
+                  "taxNumber": "46094261044"
+                }
+              ],
+              "lrEntryId": 100801930,
+              "orderNumber": "1.2"
+            },
+            {
+              "description": "<span class='lr-entry-black' >Zaprimljeno 14.09.2026.g. pod brojem Z-44312/2026<br><br>UKNJIŽBA, PODZALOŽNO PRAVO, SPORAZUM O OSIGURANJU NOVČANE TRAŽBINE ZASNIVANJEM PODZALOŽNOG PRAVA NA NEKRETNINAMA 11.09.2026, SPORAZUM O OSIGURANJU NOVČANE TRAŽBINE ZASNIVANJEM PODZALOŽNOG PRAVA NA NEKRETNINAMA 11.09.2026, IZVADAK IZ SUDSKOG REGISTRA 10.09.2026, IZVADAK IZ SUDSKOG REGISTRA S OVJERENIM PRIJEVODOM SA SLOVENSKOG JEZIKA 11.09.2026, uknjižuje se podzaložno pravo radi osiguranja novčane tražbine u iznosu od 28.000.000,00 Eur uvećano za sve kamate i troškove, te prema uvjetima iz ugovora za korist:</span>",
+              "lrOwners": [
+                {
+                  "lrOwnerId": 68147221,
+                  "name": "AAC Partnerji, upravljanje naložb, d.o.o.",
+                  "address": "Verovškova ulica 55A, 1000 Ljubljana, Slovenija",
+                  "taxNumber": "11435108682"
+                }
+              ],
+              "lrEntryId": 105776551,
+              "orderNumber": "1.7"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

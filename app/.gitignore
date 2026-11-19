@@ -3,3 +3,5 @@ dist
 public/data
 data/ownership.backup.json
 data/*.tmp
+.env
+.env.*

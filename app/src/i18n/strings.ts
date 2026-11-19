@@ -114,6 +114,12 @@ export const strings = {
     originalArea: (a: string) => `original area ${a}`,
     resetBoundary: 'Reset to original boundary',
     resetNumber: 'Reset to original number',
+    registry: 'Land registry',
+    lrUnit: (n: string) => `ZK uložak ${n}`,
+    lastEntry: (z: string) => `last entry ${z}`,
+    checkedOn: (d: string) => `checked on ${d}`,
+    plumbs: (list: string) => `Pending registration: ${list}`,
+    plumbsHint: 'A registration was pending (plomba) when the land registry was checked – the owners may be about to change.',
   },
 
   editor: {

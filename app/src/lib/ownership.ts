@@ -1,4 +1,4 @@
-import type { FeatureEdit, Owner, OwnershipDoc, PlotGeometry, PlotProps, PlotRecord, Resolution, Status } from '../types';
+import type { FeatureEdit, Owner, OwnershipDoc, PlotGeometry, PlotProps, PlotRecord, RegistryInfo, Resolution, Status } from '../types';
 import { STATUSES } from '../types';
 import { addFrac, formatFrac, isOne, parseFraction, toNumber, type Frac } from './fraction';
 import { strings as t } from '../i18n/strings';
@@ -125,6 +125,20 @@ function isObj(v: unknown): v is Record<string, unknown> {
   return typeof v === 'object' && v !== null && !Array.isArray(v);
 }
 
+/** The registry note of a record ("Refresh ownership"); undefined when absent or not readable. */
+function readRegistry(v: unknown): RegistryInfo | undefined {
+  if (!isObj(v) || !Number.isInteger(v.parcelId) || typeof v.lrUnitNumber !== 'string' || !v.lrUnitNumber || typeof v.checkedAt !== 'string') return undefined;
+  return {
+    parcelId: v.parcelId as number,
+    lrUnitNumber: v.lrUnitNumber,
+    mainBookId: Number.isInteger(v.mainBookId) ? (v.mainBookId as number) : 0,
+    mainBookName: String(v.mainBookName ?? ''),
+    lastDiaryNumber: typeof v.lastDiaryNumber === 'string' && v.lastDiaryNumber ? v.lastDiaryNumber : null,
+    activePlumbs: Array.isArray(v.activePlumbs) ? v.activePlumbs.filter((p): p is string => typeof p === 'string' && !!p) : [],
+    checkedAt: v.checkedAt,
+  };
+}
+
 /** Validates/fills an ownership document read from file, storage or an import. */
 export function normalizeDoc(raw: unknown): OwnershipDoc {
   if (!isObj(raw) || raw.version !== 1) throw new Error('not an ownership document (version 1)');
@@ -145,6 +159,9 @@ export function normalizeDoc(raw: unknown): OwnershipDoc {
         notes: String(r.notes ?? ''),
         updatedAt: typeof r.updatedAt === 'string' ? r.updatedAt : null,
       };
+      // optional: documents saved before "Refresh ownership" existed have no registry note and load as before
+      const registry = readRegistry(r.registry);
+      if (registry) doc.plots[pn].registry = registry;
     }
   }
   if (isObj(raw.reviews)) {

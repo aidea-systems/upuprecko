@@ -167,6 +167,23 @@ export function PlotPopup(props: Props) {
             {share.source === 'status' && <div className="muted small">{t.plot.shareFromStatus}</div>}
             {share.source === 'invalid' && <div className="note warn">{t.plot.ourShareInvalid}</div>}
           </dd>
+          {record.registry && (
+            <>
+              <dt>{t.plot.registry}</dt>
+              <dd>
+                {t.plot.lrUnit(record.registry.lrUnitNumber)}
+                {record.registry.mainBookName && <span className="muted"> · {record.registry.mainBookName}</span>}
+                {record.registry.lastDiaryNumber && <div className="muted small">{t.plot.lastEntry(record.registry.lastDiaryNumber)}</div>}
+                <div className="muted small">{t.plot.checkedOn(fmtDate(record.registry.checkedAt))}</div>
+                {record.registry.activePlumbs.length > 0 && (
+                  <span className="chip warn" title={t.plot.plumbsHint}>
+                    <i />
+                    {t.plot.plumbs(record.registry.activePlumbs.join(', '))}
+                  </span>
+                )}
+              </dd>
+            </>
+          )}
           <dt>{t.plot.contact}</dt>
           <dd className="pre">{record.contact || t.plot.empty}</dd>
           <dt>{t.plot.notes}</dt>

@@ -5,6 +5,7 @@ import type { PlotRecord } from '../types';
 import { normalise } from '../../server/ossParcel';
 import type { OssParcelResult, OssShare } from './ossParcel';
 import { formatFrac, parseFraction } from './fraction';
+import { normalizeDoc } from './ownership';
 import { applyDiff, deriveStatus, diffPlot, isOurs, mergeRows, nameKey, ourShareOf, ownerRows, parseShare, unlistedOurOibs } from './registryRefresh';
 
 const fixture = (f: string): unknown => JSON.parse(readFileSync(join(__dirname, '..', '..', 'test-fixtures', 'oss', f), 'utf8'));
@@ -349,5 +350,35 @@ describe('applyDiff', () => {
   it('never stores an OIB', () => {
     const out = applyDiff(stored, diffPlot(stored, fetched([share(1, '1/2', [IVO]), share(2, '1/2', [ANA])]), plot, NOW), NOW);
     expect(JSON.stringify(out)).not.toMatch(/\d{11}/);
+  });
+});
+
+describe('the registry note in the stored document', () => {
+  const registry = { parcelId: 41106113, lrUnitNumber: '1000', mainBookId: 250235, mainBookName: 'DONJE VRAPČE', lastDiaryNumber: 'Z-55014/2026', activePlumbs: ['Z-1/2026'], checkedAt: NOW };
+
+  it('loads a document saved before the feature existed exactly as it is', () => {
+    // the ownership file as it was on 17 Nov 2026, kept in the repository
+    const old = JSON.parse(readFileSync(join(__dirname, '..', '..', '..', 'upu-precko-zapad-map-data', '_backup_before_oss_update', 'ownership.json'), 'utf8'));
+    const doc = normalizeDoc(old);
+    expect(doc).toEqual(old);
+    expect(Object.keys(doc.plots)).toHaveLength(189);
+    expect(Object.values(doc.plots).some((r) => 'registry' in r)).toBe(false);
+    expect(doc.version).toBe(1);
+  });
+
+  it('keeps the registry note through save and load', () => {
+    const doc = normalizeDoc({ version: 1, savedAt: NOW, plots: { '6356/1': rec({ registry }) }, reviews: {}, edits: {} });
+    expect(doc.plots['6356/1'].registry).toEqual(registry);
+    expect(normalizeDoc(JSON.parse(JSON.stringify(doc)))).toEqual(doc);
+  });
+
+  it('drops a registry note that cannot be read, and tidies a partial one', () => {
+    const load = (r: unknown) => normalizeDoc({ version: 1, savedAt: null, plots: { '1': { ...rec(), registry: r } }, reviews: {} }).plots['1'].registry;
+    expect(load('x')).toBeUndefined();
+    expect(load({ parcelId: 'abc', lrUnitNumber: '1', checkedAt: NOW })).toBeUndefined();
+    expect(load({ parcelId: 1, lrUnitNumber: '1' })).toBeUndefined();
+    expect(load({ parcelId: 1, lrUnitNumber: '7', checkedAt: NOW, activePlumbs: ['Z-1/2026', 5, ''], extra: 'ignored' })).toEqual({
+      parcelId: 1, lrUnitNumber: '7', mainBookId: 0, mainBookName: '', lastDiaryNumber: null, activePlumbs: ['Z-1/2026'], checkedAt: NOW,
+    });
   });
 });

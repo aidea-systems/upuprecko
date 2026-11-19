@@ -158,6 +158,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 .chip { display: inline-flex; align-items: center; gap: 5px; padding: 1px 8px; border-radius: 999px; border: 1px solid; font-size: 11.5px; white-space: nowrap; }
 .chip i { width: 7px; height: 7px; border-radius: 50%; }
+.chip.warn { background: rgba(251, 191, 36, 0.14); border-color: var(--warn); color: #fcd34d; white-space: normal; margin-top: 4px; }
+.chip.warn i { background: var(--warn); flex: none; }
+.chip.hand { background: rgba(34, 211, 238, 0.1); border-color: var(--cyan); color: #a5f3fc; }
 
 .note { border-radius: 8px; padding: 6px 9px; margin: 8px 0; font-size: 12px; }
 .note.warn { background: rgba(251, 191, 36, 0.12); color: #fcd34d; border: 1px solid rgba(251, 191, 36, 0.3); }

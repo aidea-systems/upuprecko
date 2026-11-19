@@ -514,46 +514,50 @@ export function RefreshDialog({ r, doc, persistence, saveError, repo, onApply, o
             </ul>
           </div>
 
-          <div className="refresh-group warn">
-            <h4>
-              {t.refresh.flagged} ({rows.flagged.length + r.uncheckable.length})
-            </h4>
-            <ul>
-              {rows.flagged.map(({ plotNumber, diff }) => (
-                <li key={plotNumber}>
-                  <b>{plotNumber}</b> <ByHand plotNumber={plotNumber} />
-                  <ul className="refresh-diff">{diff.kind === 'flagged' && diff.reasons.map((d, i) => <li key={i}>{d}</li>)}</ul>
-                  <Notes items={diff.notes} />
-                </li>
-              ))}
-              {r.uncheckable.map((pn) => (
-                <li key={pn}>
-                  <b>{pn}</b>
-                  <ul className="refresh-diff">
-                    <li>{t.refresh.notOnePlot}</li>
-                  </ul>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {rows.flagged.length + r.uncheckable.length > 0 && (
+            <div className="refresh-group warn">
+              <h4>
+                {t.refresh.flagged} ({rows.flagged.length + r.uncheckable.length})
+              </h4>
+              <ul>
+                {rows.flagged.map(({ plotNumber, diff }) => (
+                  <li key={plotNumber}>
+                    <b>{plotNumber}</b> <ByHand plotNumber={plotNumber} />
+                    <ul className="refresh-diff">{diff.kind === 'flagged' && diff.reasons.map((d, i) => <li key={i}>{d}</li>)}</ul>
+                    <Notes items={diff.notes} />
+                  </li>
+                ))}
+                {r.uncheckable.map((pn) => (
+                  <li key={pn}>
+                    <b>{pn}</b>
+                    <ul className="refresh-diff">
+                      <li>{t.refresh.notOnePlot}</li>
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-          <div className="refresh-group error">
-            <h4>
-              {t.refresh.failed} ({rows.failed.length}){' '}
-              {rows.failed.length > 0 && (
-                <button className="btn small" onClick={r.retryFailed}>
-                  {t.refresh.retryFailed}
-                </button>
-              )}
-            </h4>
-            <ul>
-              {rows.failed.map((f) => (
-                <li key={f.plotNumber}>
-                  <b>{f.plotNumber}</b> <span className="muted">{f.message}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {rows.failed.length > 0 && (
+            <div className="refresh-group error">
+              <h4>
+                {t.refresh.failed} ({rows.failed.length}){' '}
+                {rows.failed.length > 0 && (
+                  <button className="btn small" onClick={r.retryFailed}>
+                    {t.refresh.retryFailed}
+                  </button>
+                )}
+              </h4>
+              <ul>
+                {rows.failed.map((f) => (
+                  <li key={f.plotNumber}>
+                    <b>{f.plotNumber}</b> <span className="muted">{f.message}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="refresh-group">
             <h4>

@@ -192,16 +192,38 @@ export function PlotPopup(props: Props) {
               </dd>
             </>
           )}
-          <dt>{t.plot.contact}</dt>
-          <dd className="pre">{record.contact || t.plot.empty}</dd>
-          <dt>{t.plot.notes}</dt>
-          <dd className="pre">{record.notes || t.plot.empty}</dd>
+          {record.contact && (
+            <>
+              <dt>{t.plot.contact}</dt>
+              <dd className="pre">{record.contact}</dd>
+            </>
+          )}
+          {record.notes && (
+            <>
+              <dt>{t.plot.notes}</dt>
+              <dd className="pre">
+                <Notes text={record.notes} />
+              </dd>
+            </>
+          )}
           <dt>{t.plot.lastUpdated}</dt>
           <dd>{fmtDate(record.updatedAt)}</dd>
         </dl>
       )}
       {plot.reviewIds.length > 0 && !openedFromReview && <div className="muted small">{t.plot.includesReview(plot.reviewIds.join(', '))}</div>}
     </div>
+  );
+}
+
+/** Short notes as they are; long ones folded to their first line, opened with a tap. */
+function Notes({ text }: { text: string }) {
+  const [first, ...rest] = text.split('\n');
+  if (text.length <= 140 && rest.length <= 1) return <>{text}</>;
+  return (
+    <details className="notes-fold">
+      <summary>{first}</summary>
+      {rest.join('\n')}
+    </details>
   );
 }
 

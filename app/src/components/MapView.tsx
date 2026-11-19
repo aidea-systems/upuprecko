@@ -32,6 +32,8 @@ interface Props {
   /** shapes hidden from the normal plot layers (being edited) */
   hiddenFeatureIds: string[];
   initialBounds: BBox;
+  /** phone or narrow window: no panels beside the map, so the first view needs little room at the sides */
+  compact?: boolean;
   layers: LayerVisibility;
   basemap: Basemap;
   viewMode: ViewMode;
@@ -160,7 +162,7 @@ export function MapView(p: Props) {
       container: container.current!,
       style: { version: 8, glyphs: config.glyphs, sources: {}, layers: [] },
       bounds: p.initialBounds,
-      fitBoundsOptions: { padding: { top: 80, bottom: 40, left: 360, right: 360 } },
+      fitBoundsOptions: { padding: p.compact ? { top: 76, bottom: 84, left: 14, right: 14 } : { top: 80, bottom: 40, left: 360, right: 360 } },
       maxZoom: config.maxZoom,
       attributionControl: { compact: true },
     });

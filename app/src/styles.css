@@ -19,6 +19,7 @@
 
 * { box-sizing: border-box; }
 html, body, #root { height: 100%; margin: 0; }
+body { overflow: hidden; overscroll-behavior: none; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -42,7 +43,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   box-shadow: var(--shadow); backdrop-filter: blur(8px);
   display: flex; flex-direction: column; overflow: hidden;
 }
-.left-panel { left: 16px; overflow-y: auto; }
+.left-panel { left: 16px; overflow-y: auto; bottom: auto; max-height: calc(100% - 32px); } /* only as tall as its content */
 .right-panel { right: 16px; padding: 0 14px 14px; }
 .panel header { display: flex; align-items: center; justify-content: space-between; padding: 14px 14px 10px; gap: 8px; }
 .right-panel header { padding: 14px 0 10px; }
@@ -55,6 +56,25 @@ button, input, select, textarea { font: inherit; color: inherit; }
   position: absolute; top: 16px; z-index: 5; padding: 9px 14px; border-radius: 10px; cursor: pointer;
   background: var(--panel); border: 1px solid var(--border); box-shadow: var(--shadow); font-weight: 600;
 }
+.panel-tab .pct { margin-left: 6px; color: var(--accent-2); }
+.when-compact { display: none; }
+
+/* parts of the menu that are folded away until needed */
+.fold { border-top: 1px solid var(--border); }
+.fold summary {
+  display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; cursor: pointer; user-select: none; list-style: none;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-2);
+}
+.fold summary::-webkit-details-marker { display: none; }
+.fold summary::after { content: '›'; font-size: 16px; line-height: 1; color: var(--muted); transition: transform 0.15s; }
+.fold[open] summary::after { transform: rotate(90deg); }
+.fold summary:hover { background: var(--panel-2); }
+.fold-body { padding: 2px 14px 14px; }
+.fold-body h2 { margin-top: 14px; }
+
+/* long notes in the plot details: first line, the rest on a tap */
+.notes-fold summary { cursor: pointer; color: var(--cyan); }
+.notes-fold:not([open]) summary { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .panel-tab.left { left: 16px; }
 .panel-tab.right { right: 16px; }
 
@@ -255,9 +275,66 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .maplibregl-ctrl-attrib a { color: var(--muted); }
 .maplibregl-ctrl-bottom-right { right: 350px; transition: right 0.2s; }
 
+/* ---------- phones and narrow windows ----------
+   The map fills the screen. The menu, the zone list and the plot / zone details open as sheets from the
+   bottom, one at a time; two buttons at the bottom open the menu and the zone list. */
 @media (max-width: 900px) {
-  .panel { width: calc(100vw - 32px); top: 70px; bottom: auto; max-height: 55vh; }
-  .right-panel { top: auto; bottom: 16px; max-height: 40vh; }
-  .panel-tab { top: 70px; }
-  .maplibregl-ctrl-bottom-right { right: 0; }
+  body { font-size: 15px; }
+  .small { font-size: 13px; }
+  input, select, textarea { font-size: 16px !important; } /* phones zoom into smaller fields */
+  .when-wide { display: none; }
+  .when-compact { display: inline; }
+
+  .search { top: 10px; width: calc(100vw - 20px); }
+  .search-icon { top: 9px; }
+
+  .panel, .left-panel, .right-panel, .popup-sheet {
+    position: fixed; top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 72dvh; z-index: 15;
+    border-radius: 16px 16px 0 0; border-width: 1px 0 0; backdrop-filter: none; background: var(--panel-solid);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .right-panel { padding: 0 14px calc(14px + env(safe-area-inset-bottom)); }
+  .popup-sheet {
+    max-height: 60dvh; overflow-y: auto; border-top: 1px solid var(--border); box-shadow: var(--shadow);
+    padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
+  }
+  .sheet-close { position: absolute; top: 8px; right: 8px; }
+  .popup-sheet .popup-head { margin-right: 44px; }
+
+  .panel-tab {
+    top: auto; bottom: calc(12px + env(safe-area-inset-bottom)); width: calc(50% - 15px); padding: 12px 10px;
+    text-align: center; font-size: 15px; background: var(--panel-solid);
+  }
+  .panel-tab.left { left: 10px; }
+  .panel-tab.right { right: 10px; }
+
+  /* things to tap are bigger */
+  .btn { padding: 10px 14px; }
+  .btn.small { padding: 7px 12px; font-size: 14px; }
+  .segmented button { padding: 9px 4px; font-size: 13.5px; }
+  .toggle { padding: 8px 0; }
+  .icon { padding: 6px 10px; font-size: 24px; }
+  .zone-row, .plot-item { padding: 10px 8px; }
+  .fold summary { padding: 14px; font-size: 12px; }
+  .panel h2 { font-size: 12px; }
+  .link { padding: 3px 0; }
+
+  .rows { grid-template-columns: 116px 1fr; }
+  .owner-row { grid-template-columns: 1fr 104px 36px; }
+  .plot-list { max-height: none; } /* the sheet scrolls, not a list inside it */
+  .form { grid-template-columns: 1fr; gap: 4px 0; }
+  .form label { padding-top: 6px; }
+  .plot-item { grid-template-columns: 76px auto 1fr 50px; }
+
+  .modal-backdrop { padding: 10px; }
+  .form-actions { flex-wrap: wrap; }
+  .form-actions .refresh-nothing { flex-basis: 100%; }
+  .form-actions .btn { flex: 1 1 auto; }
+  .modal { max-height: 88dvh; padding: 14px; }
+  .editor-bar { top: 64px; }
+  .refresh-progress, .toast { bottom: calc(72px + env(safe-area-inset-bottom)); }
+  .toast { width: calc(100vw - 20px); }
+
+  .maplibregl-ctrl-bottom-right { right: 0; bottom: calc(60px + env(safe-area-inset-bottom)); }
+  .maplibregl-ctrl-bottom-right .maplibregl-ctrl-group { display: none; } /* zoom with two fingers */
 }

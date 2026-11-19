@@ -19,21 +19,22 @@ interface Props {
 }
 
 export function ZoneSummaryPanel(p: Props) {
+  const pick = (s: { pctArea: number | null; pctCount: number | null }) => (p.calcMode === 'area' ? s.pctArea : s.pctCount);
+  const all = computeOverall(Object.values(p.stats));
   if (!p.open)
     return (
       <button className="panel-tab right" onClick={p.onToggleOpen} title={t.layers.expand}>
-        {t.summary.title} ☰
+        {t.summary.zones} <span className="pct">{fmtPct(pick(all))}</span>
       </button>
     );
-  const pick = (s: { pctArea: number | null; pctCount: number | null }) => (p.calcMode === 'area' ? s.pctArea : s.pctCount);
-  const all = computeOverall(Object.values(p.stats));
 
   return (
     <aside className="panel right-panel">
       <header>
         <h2 className="panel-title">{t.summary.title}</h2>
-        <button className="icon" onClick={p.onToggleOpen} title={t.layers.collapse}>
-          ›
+        <button className="icon panel-close" onClick={p.onToggleOpen} title={t.layers.collapse} aria-label={t.layers.collapse}>
+          <span className="when-wide">›</span>
+          <span className="when-compact">×</span>
         </button>
       </header>
       <div className="segmented">

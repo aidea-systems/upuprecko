@@ -9,6 +9,7 @@ export const strings = {
     title: 'UPU Prečko-zapad',
     subtitle: 'Plot ownership',
     loading: 'Loading map data…',
+    close: 'Close',
     loadError: 'Could not load data',
   },
 
@@ -23,7 +24,9 @@ export const strings = {
   },
 
   layers: {
-    title: 'Active Layers',
+    title: 'Map layers',
+    menu: 'Menu',
+    lines: 'Lines on the map',
     plots: 'Plots',
     zones: 'Zones',
     boundary: 'UPU boundary',
@@ -177,6 +180,7 @@ export const strings = {
 
   summary: {
     title: 'Zone summary',
+    zones: 'Zones',
     byArea: 'By area',
     byCount: 'By count',
     whole: 'Whole UPU',
@@ -190,10 +194,12 @@ export const strings = {
     exportExcel: 'Export Excel',
     exportGeojson: 'Export plots GeoJSON',
     import: 'Import…',
+    exportImport: 'Export / import',
     lastUpdated: (when: string) => `Last updated: ${when}`,
     never: 'never',
     savedFile: 'Saved to data/ownership.json',
     savedBrowser: 'Saved in this browser only – use Export JSON to keep a copy',
+    unpublished: (n: number) => `${n} edit(s) saved in this browser only – Update publishes them`,
     saveFailed: 'Saving failed',
     conflict: 'The data file was changed elsewhere (another tab or an import). Reload the page – your last change was NOT saved.',
     newerInBrowser: 'This browser had newer changes than the file; they were kept and written back.',

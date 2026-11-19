@@ -30,10 +30,19 @@ interface Props {
   refreshBusy: boolean;
   /** OwnershipDoc.registryCheckedAt: when Update last went through every plot */
   registryCheckedAt: string | undefined;
+  /**
+   * Deployed site: how many records / shapes in this browser differ from the published data
+   * (0 = nothing to say). null where that is not known (dev server).
+   */
+  unpublished: number | null;
 }
 
 const LANDUSE_LEGEND = ['M1', 'M2', 'D4', 'Z1', 'IS'];
 
+/**
+ * The menu: what the colours mean and the Update button are always in view;
+ * the map layers and the export / import buttons are folded away until needed.
+ */
 export function LayersPanel(p: Props) {
   const fileInput = useRef<HTMLInputElement>(null);
   const th = config.zoneThresholds;
@@ -42,10 +51,22 @@ export function LayersPanel(p: Props) {
   if (!p.open)
     return (
       <button className="panel-tab left" onClick={p.onToggleOpen} title={t.layers.expand}>
-        ☰ {t.layers.title}
+        ☰ {t.layers.menu}
       </button>
     );
 
+  // one line about where the data is - and nothing at all when the browser holds what is published
+  const saveState = p.saveError
+    ? `${t.data.saveFailed}: ${p.saveError}`
+    : p.persistence === 'file'
+      ? t.data.savedFile
+      : p.persistence !== 'browser'
+        ? ''
+        : p.unpublished === null
+          ? t.data.savedBrowser
+          : p.unpublished > 0
+            ? t.data.unpublished(p.unpublished)
+            : '';
   const toggle = (k: keyof LayerVisibility) => p.onLayers({ ...p.layers, [k]: !p.layers[k] });
 
   return (
@@ -55,44 +76,13 @@ export function LayersPanel(p: Props) {
           <div className="app-title">{t.app.title}</div>
           <div className="muted small">{t.app.subtitle}</div>
         </div>
-        <button className="icon" onClick={p.onToggleOpen} title={t.layers.collapse}>
-          ‹
+        <button className="icon panel-close" onClick={p.onToggleOpen} title={t.layers.collapse} aria-label={t.layers.collapse}>
+          <span className="when-wide">‹</span>
+          <span className="when-compact">×</span>
         </button>
       </header>
 
-      <section>
-        <h2>{t.layers.title}</h2>
-        {(
-          [
-            ['plots', t.layers.plots],
-            ['zones', t.layers.zones],
-            ['roads', t.layers.roads],
-            ['boundary', t.layers.boundary],
-            ['focus', t.layers.focus],
-            ...(p.hasReview ? [['review', `${t.layers.review} (${p.reviewOpen})`]] : []),
-          ] as [keyof LayerVisibility, string][]
-        ).map(([k, label]) => (
-          <label className="toggle" key={k}>
-            <input type="checkbox" checked={p.layers[k]} onChange={() => toggle(k)} />
-            <span className="switch" />
-            {label}
-          </label>
-        ))}
-      </section>
-
-      <section>
-        <h2>{t.layers.basemap}</h2>
-        <div className="segmented">
-          {(['satellite', 'dark'] as Basemap[]).map((b) => (
-            <button key={b} className={p.basemap === b ? 'on' : ''} onClick={() => p.onBasemap(b)}>
-              {t.layers[b]}
-            </button>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <h2>{t.layers.colourBy}</h2>
+      <section aria-label={t.layers.colourBy}>
         <div className="segmented three">
           {(
             [
@@ -106,11 +96,6 @@ export function LayersPanel(p: Props) {
             </button>
           ))}
         </div>
-        <div className="muted small hint">{p.viewMode === 'plots' ? t.layers.hintPlots : t.layers.hintZones}</div>
-      </section>
-
-      <section>
-        <h2>{t.layers.legend}</h2>
         {p.viewMode === 'plots' &&
           STATUSES.map((s) => (
             <div className="legend-row" key={s}>
@@ -132,39 +117,74 @@ export function LayersPanel(p: Props) {
               <b>{c}</b>&nbsp;{t.landuse[c]}
             </div>
           ))}
-        {p.layers.zones && (
-          <div className="legend-row">
-            <i className="line zone" style={{ background: config.zoneLineColor }} />
-            {t.layers.zoneBorder}
-          </div>
-        )}
         {p.hasReview && (
           <div className="legend-row">
             <i className="hatch" />
             {t.layers.review}
           </div>
         )}
-        {p.layers.roads && (
-          <>
-            <div className="legend-row">
-              <i style={{ background: '#1e1b2e' }} />
-              {t.layers.roadArea}
-            </div>
-            <div className="legend-row">
-              <i className="line" style={{ background: '#ff4d4d' }} />
-              {t.layers.roadCarriageway}
-            </div>
-            <div className="legend-row">
-              <i className="line" style={{ background: '#f8fafc' }} />
-              {t.layers.roadEdge}
-            </div>
-          </>
-        )}
       </section>
 
-      <section>
-        <h2>{t.data.title}</h2>
-        <div className="btn-col">
+      <section aria-label={t.data.title}>
+        <div className="update-row">
+          <button className="btn primary" onClick={p.onRefreshOwnership} disabled={p.refreshBusy} title={t.refresh.buttonHint}>
+            {p.refreshBusy ? t.refresh.buttonBusy : t.refresh.button}
+          </button>
+          <span className="muted small last-updated">{lastUpdatedLabel(p.registryCheckedAt)}</span>
+        </div>
+        {saveState && <div className={`save-state ${p.saveError ? 'error' : p.persistence ?? ''}`}>{saveState}</div>}
+      </section>
+
+      <details className="fold">
+        <summary>{t.layers.title}</summary>
+        <div className="fold-body">
+          {(
+            [
+              ['plots', t.layers.plots],
+              ['zones', t.layers.zones],
+              ['roads', t.layers.roads],
+              ['boundary', t.layers.boundary],
+              ['focus', t.layers.focus],
+              ...(p.hasReview ? [['review', `${t.layers.review} (${p.reviewOpen})`]] : []),
+            ] as [keyof LayerVisibility, string][]
+          ).map(([k, label]) => (
+            <label className="toggle" key={k}>
+              <input type="checkbox" checked={p.layers[k]} onChange={() => toggle(k)} />
+              <span className="switch" />
+              {label}
+            </label>
+          ))}
+          <h2>{t.layers.basemap}</h2>
+          <div className="segmented">
+            {(['satellite', 'dark'] as Basemap[]).map((b) => (
+              <button key={b} className={p.basemap === b ? 'on' : ''} onClick={() => p.onBasemap(b)}>
+                {t.layers[b]}
+              </button>
+            ))}
+          </div>
+          <h2>{t.layers.lines}</h2>
+          <div className="legend-row">
+            <i className="line zone" style={{ background: config.zoneLineColor }} />
+            {t.layers.zoneBorder}
+          </div>
+          <div className="legend-row">
+            <i style={{ background: '#1e1b2e' }} />
+            {t.layers.roadArea}
+          </div>
+          <div className="legend-row">
+            <i className="line" style={{ background: '#ff4d4d' }} />
+            {t.layers.roadCarriageway}
+          </div>
+          <div className="legend-row">
+            <i className="line" style={{ background: '#f8fafc' }} />
+            {t.layers.roadEdge}
+          </div>
+        </div>
+      </details>
+
+      <details className="fold">
+        <summary>{t.data.exportImport}</summary>
+        <div className="fold-body btn-col">
           <button className="btn" onClick={p.onExportJson}>
             {t.data.exportJson}
           </button>
@@ -177,12 +197,6 @@ export function LayersPanel(p: Props) {
           <button className="btn" onClick={() => fileInput.current?.click()}>
             {t.data.import}
           </button>
-          <div className="update-row">
-            <button className="btn" onClick={p.onRefreshOwnership} disabled={p.refreshBusy} title={t.refresh.buttonHint}>
-              {p.refreshBusy ? t.refresh.buttonBusy : t.refresh.button}
-            </button>
-            <span className="muted small last-updated">{lastUpdatedLabel(p.registryCheckedAt)}</span>
-          </div>
           <input
             ref={fileInput}
             type="file"
@@ -195,10 +209,7 @@ export function LayersPanel(p: Props) {
             }}
           />
         </div>
-        <div className={`save-state ${p.saveError ? 'error' : p.persistence ?? ''}`}>
-          {p.saveError ? `${t.data.saveFailed}: ${p.saveError}` : p.persistence === 'file' ? t.data.savedFile : p.persistence === 'browser' ? t.data.savedBrowser : ''}
-        </div>
-      </section>
+      </details>
     </aside>
   );
 }

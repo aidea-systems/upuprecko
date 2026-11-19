@@ -12,6 +12,20 @@ npm run build    # static build in dist/
 The site is static except for two server functions used by the **Update** button (see below):
 `api/oss-parcel.ts` reads the land registry, `api/publish.ts` publishes the result.
 
+## The screen
+
+- **Menu** (left): the colour switch (plot status / zone % owned / UPU land use) with its legend, and the
+  **Update** button with the date of the last update. Two folded rows hold the rest: **Map layers** (layer
+  switches, basemap, what the lines mean) and **Export / import**. A one-line note appears only when this
+  browser holds edits that are not published.
+- **Zone summary** (right): percent owned per zone, by area or by count.
+- **Plot / zone details** open where you click. Empty fields are left out and long notes show their first
+  line until opened.
+- **On a phone** (or a window narrower than 900 px) the map fills the screen. Two buttons at the bottom open
+  the menu and the zone list as sheets from the bottom; plot and zone details open the same way, one sheet at
+  a time. The limit is `COMPACT_QUERY` in `src/lib/useCompact.ts`; the layout rules are at the end of
+  `src/styles.css`.
+
 ## Where the ownership data lives
 
 - **`data/ownership.json`** – the file in the repo. While `npm run dev` (or `npm run preview`)
@@ -114,7 +128,7 @@ app then asks you to reload, so an old tab can never overwrite newer data.
 
 ## Update (land registry)
 
-**Data → Update** checks every plot against the land registry and shows what differs from the stored data.
+The **Update** button in the menu checks every plot against the land registry and shows what differs from the stored data.
 Nothing is saved until you confirm. On the deployed site, confirming also publishes the data for everyone.
 
 Next to the button stands **Last updated: 19 Nov 2026, 10:47** (local time) – when Update last went through

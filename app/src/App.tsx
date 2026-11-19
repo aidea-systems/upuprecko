@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type maplibregl from 'maplibre-gl';
 import type { Feature, FeatureCollection } from 'geojson';
 import type { BoundaryFC, FeatureEdit, PlotGeometry, PlotProps, PlotRecord, PlotsFC, Polygon, ZoneProps, ZonesFC } from './types';
@@ -25,6 +25,8 @@ import { SearchBar, type SearchItem } from './components/SearchBar';
 import { ImportDialog, type PendingImport } from './components/ImportDialog';
 import { RefreshDialog, useRefresh } from './components/RefreshDialog';
 import type { RefreshTarget } from './lib/refreshRun';
+import { unpublishedEdits } from './lib/publish';
+import { isCompactNow, useCompact } from './lib/useCompact';
 
 interface MapData {
   plots: PlotsFC;
@@ -94,14 +96,45 @@ export default function App() {
   const [basemap, setBasemap] = useState<Basemap>('satellite');
   const [viewMode, setViewMode] = useState<ViewMode>('plots');
   const [calcMode, setCalcMode] = useState<CalcMode>('area');
-  const [leftOpen, setLeftOpen] = useState(true);
-  const [rightOpen, setRightOpen] = useState(true);
+  /** phone or narrow window: panels and details are sheets from the bottom, one at a time, closed at first */
+  const compact = useCompact();
+  const [leftOpen, setLeftOpen] = useState(() => !isCompactNow());
+  const [rightOpen, setRightOpen] = useState(() => !isCompactNow());
   const [pending, setPending] = useState<PendingImport | null>(null);
   const refresh = useRefresh();
 
   useEffect(() => {
     loadMapData().then(setData).catch((e) => setLoadError(String(e)));
   }, []);
+
+  // turning the phone or resizing across the limit: wide shows both panels, narrow starts with the map alone
+  const wasCompact = useRef(compact);
+  useEffect(() => {
+    if (wasCompact.current === compact) return;
+    wasCompact.current = compact;
+    setLeftOpen(!compact);
+    setRightOpen(!compact);
+  }, [compact]);
+
+  /** Opens plot / zone details; on a phone they take the place of an open panel. */
+  const showPopup = useCallback(
+    (p: Popup) => {
+      setPopup(p);
+      if (compact && p) {
+        setLeftOpen(false);
+        setRightOpen(false);
+      }
+    },
+    [compact],
+  );
+  /** Room to leave free around what the map zooms to: the panels beside it, or the sheet below it on a phone. */
+  const padding = useCallback(
+    (top: number, bottom: number, sheet = true) =>
+      compact
+        ? { top: Math.min(top, 90), bottom: sheet ? Math.round(window.innerHeight * 0.55) : bottom, left: 24, right: 24 }
+        : { top, bottom, left: leftOpen ? 360 : 60, right: rightOpen ? 360 : 60 },
+    [compact, leftOpen, rightOpen],
+  );
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -186,13 +219,9 @@ export default function App() {
     (geoms: PlotGeometry[], maxZoom = 19) => {
       if (!map) return;
       const b = bboxOf(geoms);
-      map.fitBounds(b, {
-        padding: { top: 110, bottom: 60, left: leftOpen ? 360 : 60, right: rightOpen ? 360 : 60 },
-        maxZoom,
-        duration: 900,
-      });
+      map.fitBounds(b, { padding: padding(110, 60), maxZoom, duration: 900 });
     },
-    [map, leftOpen, rightOpen],
+    [map, padding],
   );
 
   const openFeature = useCallback(
@@ -200,9 +229,9 @@ export default function App() {
       const f = featureById.get(featureId);
       if (!f) return;
       if (fly) fit([f.geometry]);
-      setPopup({ type: 'feature', featureId, lngLat: interiorPoint(f.geometry) });
+      showPopup({ type: 'feature', featureId, lngLat: interiorPoint(f.geometry) });
     },
-    [featureById, fit],
+    [featureById, fit, showPopup],
   );
 
   const openPlotNumber = useCallback(
@@ -212,9 +241,9 @@ export default function App() {
       if (!feats.length) return;
       fit(feats.map((f) => f.geometry));
       const main = feats.find((f) => f.properties.kind === 'plot') ?? feats[0];
-      setPopup({ type: 'feature', featureId: main.properties.id, lngLat: interiorPoint(main.geometry) });
+      showPopup({ type: 'feature', featureId: main.properties.id, lngLat: interiorPoint(main.geometry) });
     },
-    [plotIndex, featureById, fit],
+    [plotIndex, featureById, fit, showPopup],
   );
 
   const openZone = useCallback(
@@ -222,9 +251,9 @@ export default function App() {
       const z = zoneByName.get(zone);
       if (!z) return;
       if (fly) fit([z.geometry], 18);
-      setPopup({ type: 'zone', zone, lngLat: interiorPoint(z.geometry) });
+      showPopup({ type: 'zone', zone, lngLat: interiorPoint(z.geometry) });
     },
-    [zoneByName, fit],
+    [zoneByName, fit, showPopup],
   );
 
   // ---------- search ----------
@@ -342,7 +371,7 @@ export default function App() {
     const ids = [id, ...cornerNeighbours(id, features.map((f) => ({ id: f.properties.id, geometry: f.geometry })))];
     if (map) {
       const b = bboxOf(ids.map((x) => featureById.get(x)!.geometry));
-      map.fitBounds(b, { padding: { top: 230, bottom: 50, left: leftOpen ? 360 : 60, right: rightOpen ? 360 : 60 }, maxZoom: 19.5, duration: 700 });
+      map.fitBounds(b, { padding: compact ? { top: 230, bottom: 50, left: 24, right: 24 } : padding(230, 50), maxZoom: 19.5, duration: 700 });
     }
     setEditingId(id);
   };
@@ -428,6 +457,21 @@ export default function App() {
     [data, doc],
   );
 
+  /** On a phone only one sheet is open at a time: a panel replaces the other panel and the details. */
+  const togglePanel = (side: 'left' | 'right') => {
+    const open = side === 'left' ? !leftOpen : !rightOpen;
+    if (compact) {
+      setLeftOpen(side === 'left' && open);
+      setRightOpen(side === 'right' && open);
+      if (open) setPopup(null);
+    } else if (side === 'left') setLeftOpen(open);
+    else setRightOpen(open);
+  };
+  /** On a phone the details cover the lower half: move the tapped spot into the part that stays visible. */
+  const bringAboveSheet = (ll: maplibregl.LngLat) => {
+    if (compact && map) map.easeTo({ center: [ll.lng, ll.lat], offset: [0, -Math.round(window.innerHeight * 0.22)], duration: 350 });
+  };
+
   // ---------- refresh ownership from the land registry ----------
   /** Plots that can be checked: exactly one shape, and that shape is an official parcel with an OSS parcel id. */
   const refreshPlan = useMemo(() => {
@@ -442,6 +486,15 @@ export default function App() {
     }
     return { targets, uncheckable };
   }, [plotIndex, sourceById]);
+
+  /** Deployed site: how much of the browser's data is not published (for the one-line note in the menu). */
+  const publishedDoc = repo.publishState().published;
+  const canPublish = repo.publishState().canPublish;
+  const unpublished = useMemo(() => {
+    if (!doc || !canPublish || !publishedDoc) return null;
+    const u = unpublishedEdits(doc, publishedDoc);
+    return u.plots.length + u.shapes;
+  }, [doc, canPublish, publishedDoc]);
 
   // ---------- import ----------
   const onImportFile = async (file: File) => {
@@ -477,9 +530,25 @@ export default function App() {
         viewMode={viewMode}
         selectedFeatureIds={selectedFeatureIds}
         selectedZone={selectedZone}
-        onPlotClick={(id, ll) => !editingId && setPopup({ type: 'feature', featureId: id, lngLat: [ll.lng, ll.lat] })}
-        onZoneClick={(z, ll) => !editingId && setPopup({ type: 'zone', zone: z, lngLat: [ll.lng, ll.lat] })}
-        onBackgroundClick={() => !editingId && setPopup(null)}
+        compact={compact}
+        onPlotClick={(id, ll) => {
+          if (editingId) return;
+          showPopup({ type: 'feature', featureId: id, lngLat: [ll.lng, ll.lat] });
+          bringAboveSheet(ll);
+        }}
+        onZoneClick={(z, ll) => {
+          if (editingId) return;
+          showPopup({ type: 'zone', zone: z, lngLat: [ll.lng, ll.lat] });
+          bringAboveSheet(ll);
+        }}
+        onBackgroundClick={() => {
+          if (editingId) return;
+          setPopup(null);
+          if (compact) {
+            setLeftOpen(false);
+            setRightOpen(false);
+          }
+        }}
         onReady={(m) => {
           setMap(m);
           if (import.meta.env.DEV) (window as unknown as { __map: maplibregl.Map }).__map = m; // for automated UI checks
@@ -493,7 +562,7 @@ export default function App() {
 
       <LayersPanel
         open={leftOpen}
-        onToggleOpen={() => setLeftOpen(!leftOpen)}
+        onToggleOpen={() => togglePanel('left')}
         layers={layers}
         onLayers={setLayers}
         basemap={basemap}
@@ -516,14 +585,18 @@ export default function App() {
           )
         }
         onImportFile={onImportFile}
-        onRefreshOwnership={() => refresh.begin(refreshPlan.targets, refreshPlan.uncheckable, repo.publishState().diverged)}
+        onRefreshOwnership={() => {
+          refresh.begin(refreshPlan.targets, refreshPlan.uncheckable, repo.publishState().diverged);
+          if (compact) setLeftOpen(false); // on a phone the progress is shown over the map, not over the menu
+        }}
         refreshBusy={refresh.busy}
         registryCheckedAt={doc.registryCheckedAt}
+        unpublished={unpublished}
       />
 
       <ZoneSummaryPanel
         open={rightOpen}
-        onToggleOpen={() => setRightOpen(!rightOpen)}
+        onToggleOpen={() => togglePanel('right')}
         zones={zoneList}
         stats={stats}
         calcMode={calcMode}
@@ -539,7 +612,7 @@ export default function App() {
       )}
 
       {map && popup && popupContent && (
-        <MapPopup map={map} lngLat={popup.lngLat} onClose={() => setPopup(null)}>
+        <MapPopup map={map} lngLat={popup.lngLat} sheet={compact} onClose={() => setPopup(null)}>
           {popupContent}
         </MapPopup>
       )}

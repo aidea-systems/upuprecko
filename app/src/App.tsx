@@ -516,8 +516,9 @@ export default function App() {
           )
         }
         onImportFile={onImportFile}
-        onRefreshOwnership={() => refresh.begin(refreshPlan.targets, refreshPlan.uncheckable)}
+        onRefreshOwnership={() => refresh.begin(refreshPlan.targets, refreshPlan.uncheckable, repo.publishState().diverged)}
         refreshBusy={refresh.busy}
+        registryCheckedAt={doc.registryCheckedAt}
       />
 
       <ZoneSummaryPanel
@@ -559,7 +560,7 @@ export default function App() {
 
       {pending && <ImportDialog pending={pending} onApply={applyImport} onClose={() => setPending(null)} />}
 
-      <RefreshDialog r={refresh} doc={doc} persistence={own.persistence} saveError={own.error} onApply={own.mergePlots} />
+      <RefreshDialog r={refresh} doc={doc} persistence={own.persistence} saveError={own.error} repo={repo} onApply={own.applyRefresh} />
     </div>
   );
 }

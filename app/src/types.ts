@@ -106,4 +106,9 @@ export interface OwnershipDoc {
   plots: Record<string, PlotRecord>;
   reviews: Record<string, Resolution>;
   edits: Record<string, FeatureEdit>;
+  /**
+   * When "Update" last went through every plot and its result was confirmed (even if nothing changed).
+   * Absent until that has happened once.
+   */
+  registryCheckedAt?: string;
 }

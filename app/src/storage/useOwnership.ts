@@ -23,9 +23,9 @@ export function useOwnership(repo: OwnershipRepository) {
   }, [repo]);
 
   /** Applies a change locally right away, then saves; saves run one after another. */
-  const commit = useCallback((change: (d: OwnershipDoc) => OwnershipDoc, save: (d: OwnershipDoc) => Promise<Persistence>) => {
+  const commit = useCallback((change: (d: OwnershipDoc) => OwnershipDoc, save: (d: OwnershipDoc) => Promise<Persistence>): OwnershipDoc | null => {
     const cur = docRef.current;
-    if (!cur) return;
+    if (!cur) return null;
     const next = { ...change(cur), savedAt: new Date().toISOString() };
     docRef.current = next;
     setDoc(next);
@@ -36,6 +36,7 @@ export function useOwnership(repo: OwnershipRepository) {
         setError(null);
       })
       .catch((e) => setError(String(e)));
+    return next;
   }, []);
 
   const updatePlot = useCallback(
@@ -89,11 +90,21 @@ export function useOwnership(repo: OwnershipRepository) {
     [commit, repo],
   );
 
+  /**
+   * Result of "Update": the given plot records replace the stored ones and, when the run went through every
+   * plot, the date of the check is noted. Returns the document as saved (the one to publish).
+   */
+  const applyRefresh = useCallback(
+    (records: Record<string, PlotRecord>, registryCheckedAt: string | null) =>
+      commit((d) => ({ ...d, plots: { ...d.plots, ...records }, ...(registryCheckedAt ? { registryCheckedAt } : {}) }), (d) => repo.replaceAll(d)),
+    [commit, repo],
+  );
+
   const replaceAll = useCallback((nd: OwnershipDoc) => commit(() => nd, (d) => repo.replaceAll(d)), [commit, repo]);
 
   return {
     doc, persistence, notice, error,
-    updatePlot, setResolution, saveFeatureEdits, mergePlots, replaceAll,
+    updatePlot, setResolution, saveFeatureEdits, mergePlots, applyRefresh, replaceAll,
     dismissNotice: () => setNotice(null),
   };
 }

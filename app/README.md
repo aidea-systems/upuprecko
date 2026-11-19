@@ -9,8 +9,8 @@ npm test         # unit tests (percent-owned calculation, shares, import, land-r
 npm run build    # static build in dist/
 ```
 
-The site is static except for one server function, `api/oss-parcel.ts`, used by **Refresh ownership**
-(see below).
+The site is static except for two server functions used by the **Update** button (see below):
+`api/oss-parcel.ts` reads the land registry, `api/publish.ts` publishes the result.
 
 ## Where the ownership data lives
 
@@ -22,6 +22,8 @@ The site is static except for one server function, `api/oss-parcel.ts`, used by 
   "Saved in this browser only". Use **Export JSON** and replace `data/ownership.json` with it.
 - On start, whichever of the two has the newer `savedAt` wins. On the deployed (static) site the same rule
   applies between the published data and the browser copy, so newly published data replaces an older browser copy.
+- On the deployed site **Update** publishes: it commits `data/ownership.json` to the `main` branch on GitHub
+  (see "Publishing" below). Run `git pull` before you edit the file locally, or your next push will be refused.
 
 Storage is behind `src/storage/repository.ts` (`OwnershipRepository`). To move to a database,
 write another class implementing that interface and pass it in `App.tsx` instead of
@@ -110,10 +112,14 @@ assignments and border edits that no longer apply, and a report of what changed)
 The dev server refuses a save from a browser tab whose data is older than the file (HTTP 409); the
 app then asks you to reload, so an old tab can never overwrite newer data.
 
-## Refresh ownership (land registry)
+## Update (land registry)
 
-**Data → Refresh ownership** checks every plot against the land registry and shows what differs from the
-stored data. Nothing is saved until you confirm.
+**Data → Update** checks every plot against the land registry and shows what differs from the stored data.
+Nothing is saved until you confirm. On the deployed site, confirming also publishes the data for everyone.
+
+Next to the button stands **Last updated: 19 Nov 2026, 10:47** (local time) – when Update last went through
+every plot and its result was confirmed, even if nothing had changed. It is the field `registryCheckedAt` of
+the ownership file; "never" when the field is missing. A run that was cancelled or stopped does not change it.
 
 **What it reads.** Two public services of oss.uredjenazemlja.hr, per plot:
 
@@ -161,22 +167,52 @@ such note; the file format is still version 1.
   except that a Negotiating set by hand stays Negotiating.
 - OIBs are used for comparing only. No OIB is stored with an owner.
 
-**Saving and publishing** work as for every other edit: on the deployed site the result is saved in that
-browser only. To publish it: **Export JSON**, replace `data/ownership.json` with the file, commit and push.
+### Publishing
 
-### The service behind it: `/api/oss-parcel`
+**On the deployed site**, after you confirm the list:
 
-The browser cannot call OSS directly, so a small server function does: `api/oss-parcel.ts` on Vercel, and the
-same handler inside the dev server (`npm run dev`, `npm run preview`). The logic is in `server/ossParcel.ts`.
+1. the result is saved in the browser, so you see the new data at once;
+2. the app sends the whole ownership document to `/api/publish` ("Publishing…");
+3. the function commits it as `app/data/ownership.json` to `main` ("Update ownership from land registry
+   (19 Nov 2026)"); Vercel builds the site from that commit – "Published. Live for everyone in about a minute".
 
-- `GET /api/oss-parcel?parcelId=<number>` with header `X-Refresh-Token`.
-- **`REFRESH_TOKEN`** (environment variable) is the secret the header must equal. Not set → the service
-  answers 503 and the refresh is switched off; wrong or missing token → 401. The app asks for the token on
-  first use and keeps it in that browser's localStorage; after a 401 it asks again.
-  - Vercel: Project → Settings → Environment Variables → add `REFRESH_TOKEN` (any long random text), then
-    redeploy. The function needs the project's Root Directory to be `app` (Settings → Build and Deployment →
-    Root Directory).
-  - Locally: put `REFRESH_TOKEN=…` in `app/.env.local` (not committed) or set it in the shell.
+If publishing fails, the reason is shown with **Retry**; the result stays in the browser meanwhile.
+
+The document is published whole, so **edits that exist only in this browser are published with it**. The list
+says so before you confirm ("This browser has edits that are not in the published data: …").
+
+Nobody's published data is overwritten unseen. The browser notes which published version its data was made
+from and sends it along (`baseSavedAt`); if the file on GitHub is a different version, nothing is committed
+(HTTP 409) and the app says that newer data was published meanwhile. Then: wait about a minute, press **Load
+the published data** (this drops the browser copy and reloads) and run Update again. If the browser copy was
+made from an older published version, Update says so at once instead of running for seven minutes first.
+
+**Under the dev server** (`npm run dev`) nothing is published: confirming writes `data/ownership.json` as every
+other edit does, and you commit and push it yourself.
+
+### The two server functions
+
+Both live in `api/` (Vercel functions); the logic is in `server/`. `vercel.json` runs them in the Frankfurt
+region (`fra1`) with a time limit of 30 s. Both need the header `X-Refresh-Token`, compared in constant time,
+answer with `Cache-Control: no-store`, and never log an answer, the document or a token.
+
+**Environment variables** (Vercel: Project → Settings → Environment Variables; redeploy after a change):
+
+| Variable | Used by | What it is |
+|---|---|---|
+| `REFRESH_TOKEN` | both | The secret the header must equal. Any long random text. The app asks for it on first use and keeps it in that browser's localStorage; after a 401 it asks again. |
+| `GITHUB_TOKEN` | `/api/publish` | A GitHub token that may write the repository's contents (fine-grained token: this repository only, "Contents: Read and write"). |
+| `GITHUB_REPO` | `/api/publish` | The repository as `owner/name`, e.g. `aidea-systems/upuprecko`. |
+
+A function whose variables are missing answers 503. The project's Root Directory must be `app`
+(Settings → Build and Deployment → Root Directory). Locally only `REFRESH_TOKEN` is needed: put it in
+`app/.env.local` (not committed) or set it in the shell.
+
+**`GET /api/oss-parcel?parcelId=<number>`** – the land-registry owners of one parcel. The browser cannot call
+OSS directly, so this function does; the dev server (`npm run dev`, `npm run preview`) runs the same handler.
+
+- 401 wrong or missing token · 400 the id is not a number · 403 the parcel is not on the map · 502 / 504 OSS
+  failed or did not answer in time.
 - Only parcels on the map are accepted (403 otherwise). The list is `server/parcelAllowlist.generated.ts`,
   written by `scripts/sync-data.mjs` on every `npm run dev` / `npm run build` and also committed; a unit test
   fails if it does not match `plots.geojson`.
@@ -188,6 +224,20 @@ same handler inside the dev server (`npm run dev`, `npm run preview`). The logic
 
 After the cadastre changes (`tools/fetch_cadastre.py`, `tools/build_plots.py`) the parcel ids are refreshed
 with the plots; run `npm run sync-data` and commit `server/parcelAllowlist.generated.ts` with them.
+
+**`POST /api/publish`** with body `{ "doc": <ownership document>, "baseSavedAt": "<savedAt of the published
+version the document was made from>" }` – commits the document to `app/data/ownership.json` on `main` through
+the GitHub Contents API and answers `{ "ok": true, "commit": "<sha>" }`. Not available under the dev server.
+
+- 401 wrong or missing token · 413 body over 2 MB · 400 the body is not `{ doc, baseSavedAt }` or the document
+  is not a version-1 ownership document (unknown fields are refused too).
+- It first reads the file as it is on `main`. If its `savedAt` is not `baseSavedAt` → **409**, nothing is
+  committed. The same happens if the file changes between that read and the write.
+- A repeated request for a document that is already published answers 200 without a second commit.
+- 422 if the document has fewer than half the plots of the published file (a guard against publishing an
+  empty or damaged copy).
+- 502 / 504 when GitHub refuses or does not answer; the answer names the step (`read` / `write`) and GitHub's
+  status (401 or 403: the token; 404: the repository name or the token's access).
 
 ## Testing without touching real data
 

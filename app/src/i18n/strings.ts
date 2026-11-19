@@ -190,6 +190,8 @@ export const strings = {
     exportExcel: 'Export Excel',
     exportGeojson: 'Export plots GeoJSON',
     import: 'Import…',
+    lastUpdated: (when: string) => `Last updated: ${when}`,
+    never: 'never',
     savedFile: 'Saved to data/ownership.json',
     savedBrowser: 'Saved in this browser only – use Export JSON to keep a copy',
     saveFailed: 'Saving failed',
@@ -221,9 +223,9 @@ export const strings = {
   },
 
   refresh: {
-    title: 'Refresh ownership',
-    button: 'Refresh ownership',
-    buttonBusy: 'Refreshing ownership…',
+    title: 'Update from the land registry',
+    button: 'Update',
+    buttonBusy: 'Updating…',
     buttonHint: 'Checks every plot against the land registry (oss.uredjenazemlja.hr) and shows what changed before anything is saved.',
     // token
     tokenIntro: (n: number, minutes: number) =>
@@ -263,8 +265,9 @@ export const strings = {
     notOnePlot: 'Not a single official parcel on the map – cannot be checked.',
     unlistedOibs: 'These owners match our company names, but their OIB is not in ourOwnerOibs (src/config.ts):',
     nothingToApply: 'Nothing to save.',
-    apply: (changes: number, unchanged: number) =>
-      changes ? `Apply ${changes} change(s)` : `Save the check of ${unchanged} plot(s)`,
+    apply: (changes: number, publish: boolean) => (changes ? `Apply ${changes} change(s)` : 'Confirm') + (publish ? ' and publish' : ''),
+    notComplete: 'The run did not go through every plot, so "Last updated" will not change.',
+    willPublish: 'Confirming publishes the data for everyone.',
     close: 'Close',
     discard: 'Discard',
     // after Apply
@@ -293,6 +296,29 @@ export const strings = {
     notePlumbs: (list: string) => `Pending registration (plomba): ${list}`,
     noteNotHarmonized: 'Cadastre and land registry are not harmonised for this parcel.',
     noteAnnotations: (n: number) => `${n} remark(s) (zabilježba) on the shares – they do not change the owners.`,
+  },
+
+  publish: {
+    working: 'Publishing…',
+    done: 'Published. Live for everyone in about a minute.',
+    commit: (sha: string) => `commit ${sha}`,
+    conflict:
+      'Newer data was published while you were working, so nothing was published. Wait about a minute for it to go live, then load the published data and run Update again. What this run found stays in this browser until you do.',
+    blocked:
+      'The published data has changed since the copy in this browser was made, so an update made from this copy could not be published. Load the published data first – edits that are saved only in this browser will be replaced by it.',
+    loadPublished: 'Load the published data',
+    retry: 'Retry',
+    publishNow: 'Publish',
+    unauthorized: 'The token was not accepted for publishing. Enter it again.',
+    unavailable: 'Publishing is not set up on this site, so nothing was published.',
+    unpublished: (plots: number, list: string, shapes: number) =>
+      `This browser has edits that are not in the published data: ${[plots ? `${plots} plot record(s) (${list})` : '', shapes ? `${shapes} shape or review edit(s)` : ''].filter(Boolean).join(' and ')}. Publishing will include them.`,
+    failNetwork: 'No connection to the publishing service.',
+    failTimeout: 'The publishing service did not answer in time.',
+    failServer: (status: number) => `The publishing service answered with an error (HTTP ${status}).`,
+    failGithub: (step: string, status: number | null) => `GitHub refused or did not answer (${step}${status ? `: HTTP ${status}` : ''}).`,
+    failTooLarge: 'The data is too large to publish (over 2 MB).',
+    failRefused: (detail: string) => `The publishing service refused the data: ${detail}.`,
   },
 
   excel: {

@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { STATUSES } from '../types';
 import { config } from '../config';
 import { strings as t } from '../i18n/strings';
-import { fmtPct } from '../lib/format';
+import { fmtPct, lastUpdatedLabel } from '../lib/format';
 import type { Basemap, LayerVisibility, ViewMode } from './MapView';
 import type { Persistence } from '../storage/repository';
 
@@ -28,6 +28,8 @@ interface Props {
   onRefreshOwnership: () => void;
   /** true while a refresh is open or running - the button cannot be pressed again */
   refreshBusy: boolean;
+  /** OwnershipDoc.registryCheckedAt: when Update last went through every plot */
+  registryCheckedAt: string | undefined;
 }
 
 const LANDUSE_LEGEND = ['M1', 'M2', 'D4', 'Z1', 'IS'];
@@ -175,9 +177,12 @@ export function LayersPanel(p: Props) {
           <button className="btn" onClick={() => fileInput.current?.click()}>
             {t.data.import}
           </button>
-          <button className="btn" onClick={p.onRefreshOwnership} disabled={p.refreshBusy} title={t.refresh.buttonHint}>
-            {p.refreshBusy ? t.refresh.buttonBusy : t.refresh.button}
-          </button>
+          <div className="update-row">
+            <button className="btn" onClick={p.onRefreshOwnership} disabled={p.refreshBusy} title={t.refresh.buttonHint}>
+              {p.refreshBusy ? t.refresh.buttonBusy : t.refresh.button}
+            </button>
+            <span className="muted small last-updated">{lastUpdatedLabel(p.registryCheckedAt)}</span>
+          </div>
           <input
             ref={fileInput}
             type="file"

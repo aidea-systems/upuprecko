@@ -98,6 +98,8 @@ export const config = {
 
   /** localStorage key for the browser copy of the ownership data. */
   storageKey: 'upu-precko-zapad.ownership.v1',
+  /** localStorage key: which published version the browser copy was made from (see LocalJsonRepository). */
+  storageBaseKey: 'upu-precko-zapad.ownership.base',
 };
 
 export type Band = 'green' | 'yellow' | 'red' | 'none';

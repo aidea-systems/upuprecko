@@ -78,6 +78,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .legend-row .muted { margin-left: auto; }
 
 .btn-col { display: grid; gap: 6px; }
+.update-row { display: flex; align-items: center; gap: 10px; }
+.update-row .btn { flex: none; min-width: 96px; }
 .save-state { margin-top: 8px; font-size: 11.5px; color: var(--muted); }
 .save-state.file { color: var(--ok); }
 .save-state.browser { color: var(--warn); }
@@ -167,6 +169,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .note.warn { background: rgba(251, 191, 36, 0.12); color: #fcd34d; border: 1px solid rgba(251, 191, 36, 0.3); }
 .note.error { background: rgba(248, 113, 113, 0.12); color: #fca5a5; border: 1px solid rgba(248, 113, 113, 0.3); }
 .note.info { background: rgba(34, 211, 238, 0.1); color: #a5f3fc; border: 1px solid rgba(34, 211, 238, 0.25); }
+.note.ok { background: rgba(52, 211, 153, 0.12); color: #6ee7b7; border: 1px solid rgba(52, 211, 153, 0.3); }
+.note .btn { margin: 6px 6px 0 0; }
 
 .status-counts { display: grid; gap: 2px; }
 .status-counts i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; }

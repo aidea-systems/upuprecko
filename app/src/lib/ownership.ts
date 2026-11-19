@@ -164,6 +164,7 @@ export function normalizeDoc(raw: unknown): OwnershipDoc {
       if (registry) doc.plots[pn].registry = registry;
     }
   }
+  if (typeof raw.registryCheckedAt === 'string' && !Number.isNaN(Date.parse(raw.registryCheckedAt))) doc.registryCheckedAt = raw.registryCheckedAt;
   if (isObj(raw.reviews)) {
     for (const [id, r] of Object.entries(raw.reviews)) {
       if (!isObj(r)) continue;

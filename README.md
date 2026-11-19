@@ -2,8 +2,8 @@
 
 Interactive map of plot ownership in the UPU (urban development plan) Prečko-zapad area, Zagreb.
 
-- `app/` – the web app (React + Vite + TypeScript + MapLibre), plus one server function (`app/api/`,
-  `app/server/`) that reads the land registry for **Refresh ownership**. See [app/README.md](app/README.md).
+- `app/` – the web app (React + Vite + TypeScript + MapLibre), plus two server functions (`app/api/`,
+  `app/server/`) behind the **Update** button: they read the land registry and publish the result. See [app/README.md](app/README.md).
 - `upu-precko-zapad-map-data/` – map data as WGS84 GeoJSON: plots (the official cadastral parcels, exactly as
   published by DGU), zones / roads / UPU boundary (from the UPU plan PDF), the untouched cadastre download in
   `official/`, the scripts that build the data in `tools/`, and backups of earlier data versions.
@@ -20,4 +20,5 @@ npm run dev     # http://localhost:5173
 npm test
 ```
 
-Ownership data entered in the app is saved to `app/data/ownership.json`.
+Ownership data entered in the app is saved to `app/data/ownership.json`. On the deployed site the **Update**
+button commits that file to `main` – run `git pull` before editing it locally.

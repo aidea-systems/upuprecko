@@ -6,10 +6,20 @@ import { getRecord } from '../lib/ownership';
 import type { OssParcelResult } from '../lib/ossParcel';
 import { applyDiff, diffPlot, type PlotDiff } from '../lib/registryRefresh';
 import { fetchParcelFromApi, runRefresh, type RefreshTarget } from '../lib/refreshRun';
-import type { Persistence } from '../storage/repository';
+import { publishDoc, unpublishedEdits } from '../lib/publish';
+import type { OwnershipRepository, Persistence } from '../storage/repository';
 
 type Outcome = { kind: 'ok'; result: OssParcelResult; checkedAt: string } | { kind: 'failed'; message: string };
-type Phase = 'token' | 'running' | 'review' | 'done';
+type Phase = 'blocked' | 'token' | 'running' | 'review' | 'done';
+
+/** Where publishing stands after Apply (deployed site only). */
+export type PublishStep =
+  | { state: 'working' }
+  | { state: 'ok'; commit: string | null }
+  | { state: 'conflict' }
+  | { state: 'unauthorized' }
+  | { state: 'unavailable' }
+  | { state: 'error'; message: string };
 
 const readToken = () => {
   try {
@@ -28,7 +38,7 @@ const writeToken = (v: string | null) => {
 };
 
 /**
- * State of one "Refresh ownership" run: token → running → review → done.
+ * State of one "Update" run: (blocked →) token → running → review → done.
  * Runs are started from click handlers only (never from an effect), so a run cannot start twice.
  */
 export function useRefresh() {
@@ -41,21 +51,27 @@ export function useRefresh() {
   const [stopNote, setStopNote] = useState<string | null>(null);
   const [ticks, setTicks] = useState<Record<string, boolean>>({});
   const [applied, setApplied] = useState<{ changes: number; unchanged: number } | null>(null);
+  /** when the last run that reached its end did so */
+  const [finishedAt, setFinishedAt] = useState<string | null>(null);
+  const [publish, setPublish] = useState<PublishStep | null>(null);
   const run = useRef<AbortController | null>(null);
   /** what to ask about once a token has been entered */
   const pending = useRef<RefreshTarget[]>([]);
   const outcomeCount = useRef(0);
+  /** the token in use, also when the browser cannot store it */
+  const token = useRef('');
 
-  const start = useCallback((list: RefreshTarget[], token: string) => {
+  const start = useCallback((list: RefreshTarget[], tok: string) => {
     const ctl = new AbortController();
     run.current = ctl;
+    token.current = tok;
     let answered = 0;
     setPhase('running');
     setStopNote(null);
     setTokenError(null);
     setProgress({ index: 0, total: list.length, current: null });
     void runRefresh(list, {
-      fetchOne: (target, signal) => fetchParcelFromApi(target.parcelId, token, signal),
+      fetchOne: (target, signal) => fetchParcelFromApi(target.parcelId, tok, signal),
       pauseMs: config.refreshPauseMs,
       signal: ctl.signal,
       onStart: (i, target) => setProgress({ index: i + 1, total: list.length, current: target.plotNumber }),
@@ -70,20 +86,25 @@ export function useRefresh() {
       run.current = null;
       if (end.ended === 'fatal' && end.reason === 'unauthorized') {
         writeToken(null);
+        token.current = '';
         pending.current = list.slice(answered);
         setTokenError(t.refresh.tokenRejected);
         setPhase('token');
         return;
       }
+      if (end.ended === 'done') setFinishedAt(new Date().toISOString());
       if (end.ended === 'cancelled') setStopNote(t.refresh.stopCancelled);
       if (end.ended === 'fatal') setStopNote(end.reason === 'not_configured' ? t.refresh.stopNotConfigured : t.refresh.stopUnavailable);
       setPhase('review');
     });
   }, []);
 
-  /** The button: opens the dialog and starts the run (or asks for the token first). */
+  /**
+   * The button: opens the dialog and starts the run (or asks for the token first).
+   * `blocked`: the published data has moved on since this browser's copy was made - a run could not be published.
+   */
   const begin = useCallback(
-    (list: RefreshTarget[], cannotCheck: string[]) => {
+    (list: RefreshTarget[], cannotCheck: string[], blocked = false) => {
       if (phase !== null) return; // already open
       setTargets(list);
       setUncheckable(cannotCheck);
@@ -91,10 +112,13 @@ export function useRefresh() {
       outcomeCount.current = 0;
       setTicks({});
       setApplied(null);
+      setFinishedAt(null);
+      setPublish(null);
       setStopNote(null);
       setTokenError(null);
-      const token = readToken();
-      if (token) start(list, token);
+      if (blocked) return setPhase('blocked');
+      const tok = readToken();
+      if (tok) start(list, tok);
       else {
         pending.current = list;
         setPhase('token');
@@ -104,9 +128,9 @@ export function useRefresh() {
   );
 
   const submitToken = useCallback(
-    (token: string) => {
-      writeToken(token);
-      start(pending.current, token);
+    (tok: string) => {
+      writeToken(tok);
+      start(pending.current, tok);
     },
     [start],
   );
@@ -127,9 +151,9 @@ export function useRefresh() {
 
   const retryFailed = useCallback(() => {
     const failed = targets.filter((x) => outcomes[x.plotNumber]?.kind === 'failed');
-    const token = readToken();
+    const tok = token.current || readToken();
     if (!failed.length) return;
-    if (token) start(failed, token);
+    if (tok) start(failed, tok);
     else {
       pending.current = failed;
       setPhase('token');
@@ -141,8 +165,20 @@ export function useRefresh() {
     setApplied({ changes, unchanged });
     setPhase('done');
   }, []);
+  const getToken = useCallback(() => token.current || readToken(), []);
+  const rememberToken = useCallback((tok: string) => {
+    token.current = tok;
+    writeToken(tok);
+  }, []);
+  const dropToken = useCallback(() => {
+    token.current = '';
+    writeToken(null);
+  }, []);
 
-  return { phase, busy: phase !== null, targets, uncheckable, outcomes, progress, tokenError, stopNote, ticks, applied, begin, submitToken, cancel, close, retryFailed, setTick, finish };
+  return {
+    phase, busy: phase !== null, targets, uncheckable, outcomes, progress, tokenError, stopNote, ticks, applied, finishedAt, publish,
+    begin, submitToken, cancel, close, retryFailed, setTick, finish, setPublish, getToken, rememberToken, dropToken,
+  };
 }
 
 export type RefreshState = ReturnType<typeof useRefresh>;
@@ -153,7 +189,12 @@ interface Props {
   doc: OwnershipDoc;
   persistence: Persistence | null;
   saveError: string | null;
-  onApply: (records: Record<string, PlotRecord>) => void;
+  /** knows whether this site publishes, and which published version the data was made from */
+  repo: Pick<OwnershipRepository, 'publishState' | 'markPublished' | 'markConflict' | 'discardLocal'>;
+  /** Saves the records and, when given, the date of the check; returns the document as saved. */
+  onApply: (records: Record<string, PlotRecord>, registryCheckedAt: string | null) => OwnershipDoc | null;
+  /** reloads the page (after the browser copy was discarded) */
+  onReload?: () => void;
 }
 
 interface Row {
@@ -183,8 +224,10 @@ function ByHand({ plotNumber }: { plotNumber: string }) {
   );
 }
 
-export function RefreshDialog({ r, doc, persistence, saveError, onApply }: Props) {
+export function RefreshDialog({ r, doc, persistence, saveError, repo, onApply, onReload = () => window.location.reload() }: Props) {
   const [tokenInput, setTokenInput] = useState('');
+  /** the document Apply saved - the one that is published, also on Retry */
+  const saved = useRef<OwnershipDoc | null>(null);
 
   const rows = useMemo(() => {
     const changed: Row[] = [];
@@ -208,6 +251,51 @@ export function RefreshDialog({ r, doc, persistence, saveError, onApply }: Props
   }, [r.targets, r.outcomes, doc]);
 
   if (r.phase === null) return null;
+
+  const loadPublished = () => {
+    repo.discardLocal();
+    onReload();
+  };
+
+  /** Sends the saved document to /api/publish and records how it went. */
+  const publishSaved = async () => {
+    const toPublish = saved.current;
+    if (!toPublish) return;
+    r.setPublish({ state: 'working' });
+    const out = await publishDoc(toPublish, repo.publishState().baseSavedAt, r.getToken());
+    if (out.kind === 'ok') {
+      repo.markPublished(toPublish);
+      r.setPublish({ state: 'ok', commit: out.commit });
+    } else if (out.kind === 'conflict') {
+      repo.markConflict();
+      r.setPublish({ state: 'conflict' });
+    } else if (out.kind === 'unauthorized') {
+      r.dropToken();
+      r.setPublish({ state: 'unauthorized' });
+    } else if (out.kind === 'unavailable') r.setPublish({ state: 'unavailable' });
+    else r.setPublish({ state: 'error', message: out.message });
+  };
+
+  if (r.phase === 'blocked') {
+    return (
+      <div className="modal-backdrop">
+        <div className="modal refresh">
+          <h3>{t.refresh.title}</h3>
+          <div className="modal-body">
+            <div className="note warn">{t.publish.blocked}</div>
+          </div>
+          <div className="form-actions">
+            <button className="btn ghost" onClick={r.close}>
+              {t.refresh.cancel}
+            </button>
+            <button className="btn primary" onClick={loadPublished}>
+              {t.publish.loadPublished}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (r.phase === 'running') {
     const { index, total, current } = r.progress;
@@ -273,20 +361,81 @@ export function RefreshDialog({ r, doc, persistence, saveError, onApply }: Props
   }
 
   if (r.phase === 'done') {
+    const p = r.publish;
     return (
       <div className="modal-backdrop">
         <div className="modal refresh">
           <h3>{t.refresh.title}</h3>
           <div className="modal-body">
             <p>{t.refresh.applied(r.applied?.changes ?? 0, r.applied?.unchanged ?? 0)}</p>
-            {saveError ? (
-              <div className="note error">{`${t.data.saveFailed}: ${saveError}`}</div>
-            ) : (
-              <div className="note warn">{persistence === 'file' ? t.refresh.remindFile : t.refresh.remindBrowser}</div>
+            {saveError && <div className="note error">{`${t.data.saveFailed}: ${saveError}`}</div>}
+            {/* dev server: the file was written, nothing is published from here */}
+            {!p && !saveError && <div className="note warn">{persistence === 'file' ? t.refresh.remindFile : t.refresh.remindBrowser}</div>}
+            {p?.state === 'working' && (
+              <div className="note info" role="status">
+                {t.publish.working}
+              </div>
+            )}
+            {p?.state === 'ok' && (
+              <div className="note ok" role="status">
+                {t.publish.done}
+                {p.commit && <div className="muted small">{t.publish.commit(p.commit.slice(0, 7))}</div>}
+              </div>
+            )}
+            {p?.state === 'conflict' && (
+              <div className="note error" role="alert">
+                {t.publish.conflict}
+                <div>
+                  <button className="btn small" onClick={loadPublished}>
+                    {t.publish.loadPublished}
+                  </button>
+                </div>
+              </div>
+            )}
+            {p?.state === 'error' && (
+              <div className="note error" role="alert">
+                {p.message}
+                <div>
+                  <button className="btn small" onClick={() => void publishSaved()}>
+                    {t.publish.retry}
+                  </button>
+                </div>
+              </div>
+            )}
+            {p?.state === 'unavailable' && (
+              <>
+                <div className="note error" role="alert">
+                  {t.publish.unavailable}
+                </div>
+                <div className="note warn">{t.refresh.remindBrowser}</div>
+              </>
+            )}
+            {p?.state === 'unauthorized' && (
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const v = tokenInput.trim();
+                  if (!v) return;
+                  setTokenInput('');
+                  r.rememberToken(v);
+                  void publishSaved();
+                }}
+              >
+                <div className="note error" role="alert">
+                  {t.publish.unauthorized}
+                </div>
+                <label className="field">
+                  {t.refresh.tokenLabel}
+                  <input type="password" autoFocus autoComplete="off" value={tokenInput} onChange={(e) => setTokenInput(e.target.value)} />
+                </label>
+                <button type="submit" className="btn small" disabled={!tokenInput.trim()}>
+                  {t.publish.publishNow}
+                </button>
+              </form>
             )}
           </div>
           <div className="form-actions">
-            <button className="btn primary" onClick={r.close}>
+            <button className="btn primary" onClick={r.close} disabled={p?.state === 'working'}>
               {t.refresh.close}
             </button>
           </div>
@@ -296,9 +445,13 @@ export function RefreshDialog({ r, doc, persistence, saveError, onApply }: Props
   }
 
   // ---------- review ----------
+  const pub = repo.publishState();
   const ticked = (pn: string) => r.ticks[pn] ?? !isProtected(pn);
   const toApply = rows.changed.filter((x) => ticked(x.plotNumber));
-  const canApply = toApply.length + rows.unchanged.length > 0;
+  /** every plot was asked about (a failed plot was asked too): the run reached its end */
+  const complete = r.targets.length > 0 && rows.notChecked === 0;
+  const canApply = complete || toApply.length + rows.unchanged.length > 0;
+  const notPublished = pub.canPublish ? unpublishedEdits(doc, pub.published) : { plots: [], shapes: 0 };
   const apply = () => {
     const now = new Date().toISOString();
     const records: Record<string, PlotRecord> = {};
@@ -306,8 +459,9 @@ export function RefreshDialog({ r, doc, persistence, saveError, onApply }: Props
       const next = applyDiff(getRecord(doc, x.plotNumber), x.diff, now);
       if (next) records[x.plotNumber] = next;
     }
-    onApply(records);
+    saved.current = onApply(records, complete ? r.finishedAt ?? now : null);
     r.finish(toApply.length, rows.unchanged.length);
+    if (pub.canPublish && saved.current) void publishSaved();
   };
 
   return (
@@ -319,7 +473,17 @@ export function RefreshDialog({ r, doc, persistence, saveError, onApply }: Props
           <p>
             {t.refresh.summary(rows.checked)}
             {rows.notChecked > 0 && ` ${t.refresh.notChecked(rows.notChecked)}`}
+            {!complete && ` ${t.refresh.notComplete}`}
           </p>
+          {notPublished.plots.length + notPublished.shapes > 0 && (
+            <div className="note warn unpublished">
+              {t.publish.unpublished(
+                notPublished.plots.length,
+                notPublished.plots.slice(0, 12).join(', ') + (notPublished.plots.length > 12 ? ', …' : ''),
+                notPublished.shapes,
+              )}
+            </div>
+          )}
           {rows.oibs.length > 0 && (
             <div className="note info">
               {t.refresh.unlistedOibs}
@@ -399,13 +563,13 @@ export function RefreshDialog({ r, doc, persistence, saveError, onApply }: Props
           </div>
         </div>
         <div className="form-actions">
-          {!canApply && <span className="muted small refresh-nothing">{t.refresh.nothingToApply}</span>}
+          <span className="muted small refresh-nothing">{!canApply ? t.refresh.nothingToApply : pub.canPublish ? t.refresh.willPublish : ''}</span>
           <button className="btn ghost" onClick={r.close}>
             {canApply ? t.refresh.discard : t.refresh.close}
           </button>
           {canApply && (
             <button className="btn primary" onClick={apply}>
-              {t.refresh.apply(toApply.length, rows.unchanged.length)}
+              {t.refresh.apply(toApply.length, pub.canPublish)}
             </button>
           )}
         </div>

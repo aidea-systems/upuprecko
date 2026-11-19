@@ -158,7 +158,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 .chip { display: inline-flex; align-items: center; gap: 5px; padding: 1px 8px; border-radius: 999px; border: 1px solid; font-size: 11.5px; white-space: nowrap; }
 .chip i { width: 7px; height: 7px; border-radius: 50%; }
-.chip.warn { background: rgba(251, 191, 36, 0.14); border-color: var(--warn); color: #fcd34d; white-space: normal; margin-top: 4px; }
+.chip.warn { background: rgba(251, 191, 36, 0.14); border-color: var(--warn); color: #fcd34d; white-space: normal; margin-top: 4px; border-radius: 10px; padding: 2px 8px; }
+.nowrap { white-space: nowrap; }
 .chip.warn i { background: var(--warn); flex: none; }
 .chip.hand { background: rgba(34, 211, 238, 0.1); border-color: var(--cyan); color: #a5f3fc; }
 
@@ -218,6 +219,28 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .issues ul { margin: 0; padding-left: 18px; max-height: 160px; overflow-y: auto; }
 .issues.error h4 { color: var(--error); }
 .issues.warn h4 { color: var(--warn); }
+
+/* refresh ownership */
+.refresh-progress {
+  position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 21;
+  width: min(380px, calc(100vw - 32px)); display: grid; gap: 8px;
+  background: var(--panel-solid); border: 1px solid var(--accent); border-radius: var(--radius); box-shadow: var(--shadow); padding: 12px 14px;
+}
+.refresh-progress-head, .refresh-progress-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.modal.wide { width: min(720px, 100%); }
+.modal.refresh p { margin: 0 0 10px; }
+.field { display: grid; gap: 4px; margin: 10px 0 4px; color: var(--muted); }
+.field input { width: 100%; background: #0f0d22; border: 1px solid var(--border); border-radius: 7px; padding: 7px 9px; outline: none; color: var(--text); }
+.field input:focus { border-color: var(--accent); }
+.refresh-group { margin-top: 12px; }
+.refresh-group h4 { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent-2); }
+.refresh-group.warn h4 { color: var(--warn); }
+.refresh-group.error h4 { color: var(--error); }
+.refresh-group > ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.refresh-group > ul > li { border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px; }
+.refresh-pick { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.refresh-diff { margin: 4px 0 2px; padding-left: 20px; }
+.refresh-nothing { margin-right: auto; }
 
 /* maplibre controls in dark */
 .maplibregl-ctrl-group { background: var(--panel-solid) !important; border: 1px solid var(--border); }

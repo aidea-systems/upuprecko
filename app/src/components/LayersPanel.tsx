@@ -25,6 +25,9 @@ interface Props {
   onExportGeojson: () => void;
   onExportExcel: () => void;
   onImportFile: (f: File) => void;
+  onRefreshOwnership: () => void;
+  /** true while a refresh is open or running - the button cannot be pressed again */
+  refreshBusy: boolean;
 }
 
 const LANDUSE_LEGEND = ['M1', 'M2', 'D4', 'Z1', 'IS'];
@@ -171,6 +174,9 @@ export function LayersPanel(p: Props) {
           </button>
           <button className="btn" onClick={() => fileInput.current?.click()}>
             {t.data.import}
+          </button>
+          <button className="btn" onClick={p.onRefreshOwnership} disabled={p.refreshBusy} title={t.refresh.buttonHint}>
+            {p.refreshBusy ? t.refresh.buttonBusy : t.refresh.button}
           </button>
           <input
             ref={fileInput}

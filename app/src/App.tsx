@@ -23,6 +23,8 @@ import { LayersPanel } from './components/LayersPanel';
 import { ZoneSummaryPanel, type CalcMode } from './components/ZoneSummaryPanel';
 import { SearchBar, type SearchItem } from './components/SearchBar';
 import { ImportDialog, type PendingImport } from './components/ImportDialog';
+import { RefreshDialog, useRefresh } from './components/RefreshDialog';
+import type { RefreshTarget } from './lib/refreshRun';
 
 interface MapData {
   plots: PlotsFC;
@@ -95,6 +97,7 @@ export default function App() {
   const [leftOpen, setLeftOpen] = useState(true);
   const [rightOpen, setRightOpen] = useState(true);
   const [pending, setPending] = useState<PendingImport | null>(null);
+  const refresh = useRefresh();
 
   useEffect(() => {
     loadMapData().then(setData).catch((e) => setLoadError(String(e)));
@@ -425,6 +428,21 @@ export default function App() {
     [data, doc],
   );
 
+  // ---------- refresh ownership from the land registry ----------
+  /** Plots that can be checked: exactly one shape, and that shape is an official parcel with an OSS parcel id. */
+  const refreshPlan = useMemo(() => {
+    const targets: RefreshTarget[] = [];
+    const uncheckable: string[] = [];
+    for (const pn of [...plotIndex.keys()].sort(sortPlotNumbers)) {
+      const ids = plotIndex.get(pn)!;
+      const src = ids.length === 1 ? sourceById.get(ids[0])?.properties : undefined;
+      if (src && src.kind === 'plot' && src.plot_number && src.oss_parcel_id && src.cadastral_ref)
+        targets.push({ plotNumber: pn, parcelId: src.oss_parcel_id, identity: { plotNumber: src.plot_number, municipalityRegNum: src.cadastral_ref.split('-')[0] } });
+      else uncheckable.push(pn);
+    }
+    return { targets, uncheckable };
+  }, [plotIndex, sourceById]);
+
   // ---------- import ----------
   const onImportFile = async (file: File) => {
     if (!doc) return;
@@ -498,6 +516,8 @@ export default function App() {
           )
         }
         onImportFile={onImportFile}
+        onRefreshOwnership={() => refresh.begin(refreshPlan.targets, refreshPlan.uncheckable)}
+        refreshBusy={refresh.busy}
       />
 
       <ZoneSummaryPanel
@@ -538,6 +558,8 @@ export default function App() {
       )}
 
       {pending && <ImportDialog pending={pending} onApply={applyImport} onClose={() => setPending(null)} />}
+
+      <RefreshDialog r={refresh} doc={doc} persistence={own.persistence} saveError={own.error} onApply={own.mergePlots} />
     </div>
   );
 }

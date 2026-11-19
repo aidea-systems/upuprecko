@@ -178,7 +178,15 @@ export function PlotPopup(props: Props) {
                 {record.registry.activePlumbs.length > 0 && (
                   <span className="chip warn" title={t.plot.plumbsHint}>
                     <i />
-                    {t.plot.plumbs(record.registry.activePlumbs.join(', '))}
+                    <span>
+                      {t.plot.plumbs}{' '}
+                      {record.registry.activePlumbs.map((z, i) => (
+                        <span className="nowrap" key={z}>
+                          {i > 0 && ', '}
+                          {z}
+                        </span>
+                      ))}
+                    </span>
                   </span>
                 )}
               </dd>

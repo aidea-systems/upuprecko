@@ -118,7 +118,7 @@ export const strings = {
     lrUnit: (n: string) => `ZK uložak ${n}`,
     lastEntry: (z: string) => `last entry ${z}`,
     checkedOn: (d: string) => `checked on ${d}`,
-    plumbs: (list: string) => `Pending registration: ${list}`,
+    plumbs: 'Pending registration:',
     plumbsHint: 'A registration was pending (plomba) when the land registry was checked – the owners may be about to change.',
   },
 
@@ -221,6 +221,56 @@ export const strings = {
   },
 
   refresh: {
+    title: 'Refresh ownership',
+    button: 'Refresh ownership',
+    buttonBusy: 'Refreshing ownership…',
+    buttonHint: 'Checks every plot against the land registry (oss.uredjenazemlja.hr) and shows what changed before anything is saved.',
+    // token
+    tokenIntro: (n: number, minutes: number) =>
+      `Checks the owners of ${n} plots in the land registry, one plot after another (about ${minutes} min). Nothing is saved until you confirm the changes.`,
+    tokenLabel: 'Refresh token',
+    tokenHint: 'The secret set as REFRESH_TOKEN on the server. It is kept in this browser.',
+    tokenRejected: 'The token was not accepted. Enter it again.',
+    start: 'Start',
+    // progress
+    progress: (done: number, total: number) => `${done}/${total}`,
+    current: (pn: string) => `checking plot ${pn}`,
+    waiting: 'starting…',
+    failedSoFar: (n: number) => `${n} failed`,
+    cancel: 'Cancel',
+    // why a plot failed
+    failNetwork: 'No connection to the refresh service.',
+    failTimeout: 'The refresh service did not answer in time.',
+    failUnexpected: 'The refresh service gave an unexpected answer.',
+    failServer: (status: number) => `The refresh service answered with an error (HTTP ${status}).`,
+    failUpstream: (stage: string, detail: string) => `The registry did not answer properly (${stage}: ${detail}).`,
+    failNotAllowed: 'The server does not know this parcel – the site has to be built and deployed again.',
+    // why the whole run stopped
+    stopNotConfigured: 'The refresh service is switched off: REFRESH_TOKEN is not set on the server.',
+    stopUnavailable: 'This site has no refresh service (/api/oss-parcel did not answer).',
+    stopCancelled: 'Stopped before the end.',
+    notChecked: (n: number) => `${n} plot(s) were not checked.`,
+    // review
+    summary: (checked: number) => `${checked} plot(s) checked against the land registry.`,
+    changed: 'Changed',
+    flagged: 'Needs a look – no change proposed',
+    failed: 'Failed',
+    unchanged: 'Unchanged',
+    unchangedInfo: (n: number) => `${n} plot(s) match the land registry. Only the ZK uložak, the last Z number and the date of the check are stored for them.`,
+    retryFailed: 'Retry failed',
+    byHand: 'edited by hand',
+    byHandHint: 'This record was set by hand on purpose. Tick it only if the land registry should replace it.',
+    notOnePlot: 'Not a single official parcel on the map – cannot be checked.',
+    unlistedOibs: 'These owners match our company names, but their OIB is not in ourOwnerOibs (src/config.ts):',
+    nothingToApply: 'Nothing to save.',
+    apply: (changes: number, unchanged: number) =>
+      changes ? `Apply ${changes} change(s)` : `Save the check of ${unchanged} plot(s)`,
+    close: 'Close',
+    discard: 'Discard',
+    // after Apply
+    applied: (changes: number, unchanged: number) => `${changes} plot(s) updated; the check was noted on ${unchanged} unchanged plot(s).`,
+    remindBrowser: 'The data is saved in this browser only. To publish it: Export JSON, replace app/data/ownership.json with that file, commit and push.',
+    remindFile: 'The data is saved to data/ownership.json. Commit and push the file to publish it.',
     // differences between the stored record and the land registry
     ownerAdded: (name: string, share: string) => `New owner: ${name} (${share})`,
     ownerRemoved: (name: string, share: string) => `No longer an owner: ${name} (was ${share})`,
